@@ -1,0 +1,437 @@
+---
+layout: default
+title: Brand Guide – Fix My AI Rank
+permalink: /brand/
+---
+<style>
+  .brand-section { padding: 3rem 0; border-bottom: 1px solid var(--color-border); }
+  .brand-section:last-child { border-bottom: none; }
+  .brand-h2 { font-size: 1.5rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.35rem; }
+  .brand-sub { color: var(--color-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+
+  /* Swatches */
+  .swatch-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .swatch { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--color-border); width: 160px; }
+  .swatch-color { height: 80px; }
+  .swatch-info { padding: 0.65rem 0.75rem; background: var(--color-bg); }
+  .swatch-name { font-size: 0.8rem; font-weight: 700; color: var(--color-text); display: block; }
+  .swatch-hex  { font-size: 0.75rem; color: var(--color-muted); font-family: monospace; }
+  .swatch-role { font-size: 0.7rem; color: var(--color-muted); margin-top: 0.2rem; display: block; }
+
+  /* Type scale */
+  .type-row { padding: 1rem 0; border-bottom: 1px solid var(--color-border); display: flex; align-items: baseline; gap: 2rem; }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { min-width: 180px; font-size: 0.8rem; color: var(--color-muted); font-family: monospace; line-height: 1.6; flex-shrink: 0; }
+  .type-sample { color: var(--color-text); }
+
+  /* Buttons row */
+  .btn-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+
+  /* Logo */
+  .logo-row { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+  .logo-box { padding: 2rem; border: 1px solid var(--color-border); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; }
+  .logo-box--dark { background: var(--color-text); }
+
+  /* Spacing scale */
+  .spacing-row { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 0.75rem; }
+  .spacing-bar { background: var(--color-cyan); height: 8px; border-radius: 4px; }
+  .spacing-label { font-size: 0.8rem; font-family: monospace; color: var(--color-muted); min-width: 200px; }
+</style>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Brand Guide</h1>
+    <p class="page-lead">Design tokens, typography, and component patterns for Fix My AI Rank.</p>
+  </div>
+</div>
+
+<div class="page-content">
+<div class="container">
+
+  <!-- Logo -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Logo</h2>
+    <p class="brand-sub">Two variants. Never use CSS filters, invert, or recolor either version.</p>
+
+    <div class="logo-row" style="margin-bottom:2rem">
+
+      <div style="flex:1;min-width:300px">
+        <div class="logo-box" style="min-height:120px">
+          <img src="/assets/images/logo-light.webp" alt="Fix My AI Rank — full wordmark" style="max-height:72px;width:auto">
+        </div>
+        <p style="font-size:0.8rem;font-weight:700;color:var(--color-text);margin-top:0.65rem">Full wordmark</p>
+        <p style="font-size:0.8rem;color:var(--color-muted);margin-top:0.2rem">Light backgrounds · white (#ffffff) and surface (#f8fafc) only<br>File: <code>assets/images/logo-light.webp</code></p>
+      </div>
+
+      <div style="flex:1;min-width:300px">
+        <div class="logo-box logo-box--dark" style="min-height:120px">
+          <img src="/assets/images/logo-dark.webp" alt="Fix My AI Rank — compact mark" style="max-height:72px;width:auto">
+        </div>
+        <p style="font-size:0.8rem;font-weight:700;color:var(--color-text);margin-top:0.65rem">Compact mark</p>
+        <p style="font-size:0.8rem;color:var(--color-muted);margin-top:0.2rem">Dark backgrounds · navy (#0d1426) and near-black only<br>File: <code>assets/images/logo-dark.webp</code></p>
+      </div>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem">
+      <div class="card" style="padding:1.25rem">
+        <h3 style="font-size:0.85rem;margin-bottom:0.5rem">✓ Do</h3>
+        <ul style="font-size:0.85rem;color:var(--color-muted);list-style:none;line-height:2">
+          <li>Use full wordmark in header and email</li>
+          <li>Use compact mark reversed on dark sections</li>
+          <li>Maintain clear space equal to the icon height on all sides</li>
+          <li>Use PNG or WebP source files</li>
+        </ul>
+      </div>
+      <div class="card" style="padding:1.25rem">
+        <h3 style="font-size:0.85rem;margin-bottom:0.5rem">✗ Don't</h3>
+        <ul style="font-size:0.85rem;color:var(--color-muted);list-style:none;line-height:2">
+          <li>Don't recolor, filter, or invert either version</li>
+          <li>Don't use the full wordmark on dark backgrounds</li>
+          <li>Don't stretch or distort the aspect ratio</li>
+          <li>Don't place on busy photos or gradients</li>
+        </ul>
+      </div>
+      <div class="card" style="padding:1.25rem">
+        <h3 style="font-size:0.85rem;margin-bottom:0.5rem">Size specs</h3>
+        <ul style="font-size:0.85rem;color:var(--color-muted);list-style:none;line-height:2">
+          <li>Header: 32px tall</li>
+          <li>Footer: 28px tall</li>
+          <li>Minimum: 24px tall</li>
+          <li>Favicon: use icon only, cropped square</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:700;color:var(--color-text);margin-bottom:0.75rem">Logo color breakdown</h3>
+    <p style="font-size:0.875rem;color:var(--color-muted);margin-bottom:1rem">The logo encodes the full brand palette. These are the source-of-truth values for all brand color decisions.</p>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:linear-gradient(135deg,#1b3a6b,#1e8bc3)"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Icon arc</span>
+          <span class="swatch-hex">#1b3a6b → #1e8bc3</span>
+          <span class="swatch-role">Speedometer dial gradient</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:linear-gradient(135deg,#22c55e,#4ade80)"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Arrow / "Rank"</span>
+          <span class="swatch-hex">#22c55e → #4ade80</span>
+          <span class="swatch-role">Upward arrow + "Rank" text</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:linear-gradient(135deg,#0ea5e9,#06b6d4)"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">"AI" text</span>
+          <span class="swatch-hex">#0ea5e9 → #06b6d4</span>
+          <span class="swatch-role">Cyan gradient on "AI"</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1b3a6b"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">"Fix My" text</span>
+          <span class="swatch-hex">#1b3a6b</span>
+          <span class="swatch-role">Dark navy wordmark text</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:linear-gradient(180deg,#0d1f4e,#1a3a6b)"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Icon base</span>
+          <span class="swatch-hex">#0d1f4e → #1a3a6b</span>
+          <span class="swatch-role">Dark navy pill base with sparkle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Color Palette -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Color palette</h2>
+    <p class="brand-sub">Sourced from theme.json and global styles on the live WordPress site.</p>
+    <div class="swatch-grid">
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#22c55e"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Green</span>
+          <span class="swatch-hex">#22c55e</span>
+          <span class="swatch-role">Primary CTA · theme-2</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#16a34a"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Green Dark</span>
+          <span class="swatch-hex">#16a34a</span>
+          <span class="swatch-role">CTA hover state</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#06b6d4"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Cyan</span>
+          <span class="swatch-hex">#06b6d4</span>
+          <span class="swatch-role">Accent · links · labels · theme-4</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0d1426"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Navy</span>
+          <span class="swatch-hex">#0d1426</span>
+          <span class="swatch-role">Headings · theme-5</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#2d2d2d"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Charcoal</span>
+          <span class="swatch-hex">#2d2d2d</span>
+          <span class="swatch-role">Body text</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#64748b"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Slate</span>
+          <span class="swatch-hex">#64748b</span>
+          <span class="swatch-role">Muted text · theme-3</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#f8fafc;border-bottom:1px solid #e5e7eb"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Surface</span>
+          <span class="swatch-hex">#f8fafc</span>
+          <span class="swatch-role">Alt section bg · theme-1</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#e5e7eb"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Border</span>
+          <span class="swatch-hex">#e5e7eb</span>
+          <span class="swatch-role">Dividers · input borders</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#ffffff;border-bottom:1px solid #e5e7eb"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">White</span>
+          <span class="swatch-hex">#ffffff</span>
+          <span class="swatch-role">Page background</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:2rem">
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.75rem;color:var(--color-text)">CSS variables</h3>
+      <pre style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:1.25rem;font-size:0.8rem;overflow-x:auto"><code>--color-green:       #22c55e   /* primary CTA */
+--color-green-hover: #16a34a
+--color-cyan:        #06b6d4   /* accent, links, labels */
+--color-text:        #0d1426   /* headings */
+--color-text-dark:   #2d2d2d   /* body */
+--color-muted:       #64748b   /* secondary */
+--color-surface:     #f8fafc   /* alt backgrounds */
+--color-border:      #e5e7eb
+--color-bg:          #ffffff</code></pre>
+    </div>
+  </div>
+
+  <!-- Typography -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Typography</h2>
+    <p class="brand-sub">Inter variable font (100–800 weight range). Self-hosted on WordPress; referenced via CDN in static build.</p>
+
+    <div class="type-row">
+      <div class="type-meta">XX-Large<br>clamp(40px → 80px)<br>weight 800<br>lh 1.1 · ls -0.02em</div>
+      <div class="type-sample" style="font-size:clamp(32px,4vw,56px);font-weight:800;line-height:1.1;letter-spacing:-0.02em">Fix Your AI Rank</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">X-Large<br>clamp(33px → 60px)<br>weight 800<br>lh 1.1 · ls -0.02em</div>
+      <div class="type-sample" style="font-size:clamp(28px,3.5vw,46px);font-weight:800;line-height:1.1;letter-spacing:-0.02em">Is your brand showing up?</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">Large / H1<br>clamp(23px → 38px)<br>weight 800<br>lh 1.1 · ls -0.02em</div>
+      <div class="type-sample" style="font-size:clamp(22px,2.5vw,34px);font-weight:800;line-height:1.1;letter-spacing:-0.02em">AI Visibility Reports</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">Medium / H2<br>clamp(20px → 24px)<br>weight 700<br>lh 1.2 · ls -0.015em</div>
+      <div class="type-sample" style="font-size:clamp(20px,2vw,24px);font-weight:700;line-height:1.2;letter-spacing:-0.015em">Your AI visibility, benchmarked</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">H3<br>~1.05–1.1rem<br>weight 700<br>lh 1.3</div>
+      <div class="type-sample" style="font-size:1.05rem;font-weight:700;line-height:1.3">AI Citation &amp; Entity Building</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">Body<br>16px (base)<br>weight 400<br>lh 1.7</div>
+      <div class="type-sample" style="font-size:1rem;line-height:1.7;max-width:480px">We analyze how your company appears across ChatGPT, Perplexity, and Claude — and show you exactly how to close the gaps. Delivered as a clear, actionable report.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">Small / UI<br>clamp(14px → 16px)<br>weight 400–600<br>lh 1.6</div>
+      <div class="type-sample" style="font-size:0.875rem;color:var(--color-muted)">June 10, 2026 · Takes 30 seconds · Report delivered to your inbox.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">Label / eyebrow<br>0.75rem<br>weight 700<br>uppercase · ls 0.1em</div>
+      <div class="type-sample" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-cyan)">Free report</div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Buttons</h2>
+    <p class="brand-sub">All buttons use <code>border-radius: 9999px</code> (pill). Padding scales with em so font-size changes are safe.</p>
+
+    <div class="btn-row">
+      <a class="btn btn-primary">Primary — green CTA</a>
+      <a class="btn btn-outline">Secondary — outline</a>
+      <a class="btn btn-cyan">Cyan variant</a>
+      <a class="btn btn-nav" style="display:inline-block">Nav CTA</a>
+    </div>
+
+    <pre style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:1.25rem;font-size:0.8rem;margin-top:1rem"><code>/* Primary */   background: #22c55e;  color: #fff;          border-radius: 9999px;
+/* Secondary */  background: transparent; border: 1.5px solid #0d1426;  border-radius: 9999px;
+/* Cyan */       background: #06b6d4;  color: #fff;          border-radius: 9999px;
+/* Nav CTA */    background: #22c55e;  font-size: 0.875rem;  padding: 0.5rem 1.2rem;</code></pre>
+  </div>
+
+  <!-- Spacing -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Spacing scale</h2>
+    <p class="brand-sub">Fluid spacing using <code>min(spacing-unit × increment × 1px, increment × n × viewport)</code>. Base unit: 10, increment: 2.5.</p>
+
+    <div class="spacing-row"><div class="spacing-bar" style="width:25px"></div><span class="spacing-label">2X-Small — ~25px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:50px"></div><span class="spacing-label">X-Small — ~50px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:75px"></div><span class="spacing-label">Small — ~75px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:100px"></div><span class="spacing-label">Medium — ~100px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:125px"></div><span class="spacing-label">Large — ~125px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:150px"></div><span class="spacing-label">Extra Large — ~150px</span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:175px"></div><span class="spacing-label">2X Large — ~175px</span></div>
+  </div>
+
+  <!-- Layout -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Layout</h2>
+    <p class="brand-sub">Two widths from theme.json. Most marketing sections use wide; blog content uses content width.</p>
+    <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
+      <thead>
+        <tr style="border-bottom:2px solid var(--color-border)">
+          <th style="text-align:left;padding:0.6rem 0;color:var(--color-text)">Token</th>
+          <th style="text-align:left;padding:0.6rem 0;color:var(--color-text)">Value</th>
+          <th style="text-align:left;padding:0.6rem 0;color:var(--color-text)">Used for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0;font-family:monospace">--max-width</td>
+          <td style="padding:0.6rem 0">1440px</td>
+          <td style="padding:0.6rem 0;color:var(--color-muted)">Marketing sections, nav, footer</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0;font-family:monospace">--content-width</td>
+          <td style="padding:0.6rem 0">620px</td>
+          <td style="padding:0.6rem 0;color:var(--color-muted)">Blog posts, long-form prose</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0;font-family:monospace">--radius</td>
+          <td style="padding:0.6rem 0">8px</td>
+          <td style="padding:0.6rem 0;color:var(--color-muted)">Cards, form fields, inputs</td>
+        </tr>
+        <tr>
+          <td style="padding:0.6rem 0;font-family:monospace">--radius-pill</td>
+          <td style="padding:0.6rem 0">9999px</td>
+          <td style="padding:0.6rem 0;color:var(--color-muted)">All buttons</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Voice -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Voice &amp; tone</h2>
+    <p class="brand-sub">How the copy reads across all touchpoints.</p>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+      <div class="card">
+        <h3>Direct</h3>
+        <p>No hedging. Say what we do and what happens next. "Your report is on its way" not "You should receive a report soon."</p>
+      </div>
+      <div class="card">
+        <h3>Specific</h3>
+        <p>Name the platforms (ChatGPT, Perplexity, Claude). Name the signal types (entity footprint, schema markup). Vague claims erode trust.</p>
+      </div>
+      <div class="card">
+        <h3>Peer-to-peer</h3>
+        <p>Written for B2B marketers who are smart and busy. No jargon explanation unless it's genuinely new (GEO, AEO). Skip the preamble.</p>
+      </div>
+      <div class="card">
+        <h3>Low pressure</h3>
+        <p>The free report speaks for itself. No countdown timers, no artificial scarcity. Confidence, not urgency theatre.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Analytics -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Analytics</h2>
+    <p class="brand-sub">Google Tag (Site Kit) — add to <code>_includes/head.html</code> before launch.</p>
+    <pre style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:1.25rem;font-size:0.8rem"><code>&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=GT-P3HT7456"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GT-P3HT7456');
+&lt;/script&gt;</code></pre>
+  </div>
+
+  <!-- Schema -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Schema markup</h2>
+    <p class="brand-sub">Organization + WebSite schema is in the live site's <code>&lt;head&gt;</code>. Add to <code>_includes/head.html</code> (homepage only).</p>
+    <pre style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:1.25rem;font-size:0.8rem;overflow-x:auto"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://fixmyairank.com/#organization",
+      "name": "Fix My AI Rank",
+      "url": "https://fixmyairank.com/",
+      "logo": { "@type": "ImageObject", "url": "https://fixmyairank.com/assets/images/logo-dark.webp" },
+      "sameAs": ["https://x.com/FixMyAIRank", "https://bsky.app/profile/fixmyairank.bsky.social"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://fixmyairank.com/#website",
+      "url": "https://fixmyairank.com/",
+      "name": "Fix My AI Rank",
+      "publisher": { "@id": "https://fixmyairank.com/#organization" }
+    }
+  ]
+}
+&lt;/script&gt;</code></pre>
+  </div>
+
+</div>
+</div>

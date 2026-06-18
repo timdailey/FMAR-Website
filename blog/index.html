@@ -1,0 +1,30 @@
+---
+layout: default
+title: Blog – Fix My AI Rank
+description: Insights on AI visibility, GEO, AEO, and getting your brand cited by AI systems.
+permalink: /blog/
+---
+<div class="page-hero">
+  <div class="container">
+    <h1>Blog</h1>
+    <p class="page-lead">Insights on AI visibility, GEO, AEO, and getting your brand cited by AI systems.</p>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="container container--narrow">
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li class="post-list-item">
+        <p class="post-list-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <h2 class="post-list-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {% if post.description %}
+        <p class="post-list-excerpt">{{ post.description }}</p>
+        {% elsif post.excerpt %}
+        <p class="post-list-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

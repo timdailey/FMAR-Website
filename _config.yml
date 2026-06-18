@@ -1,0 +1,28 @@
+title: Fix My AI Rank
+description: AI visibility analysis for B2B marketers
+url: "https://fixmyairank.com"
+baseurl: ""
+
+permalink: /blog/:slug/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+theme: null
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitattributes

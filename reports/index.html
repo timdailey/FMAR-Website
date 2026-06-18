@@ -1,0 +1,69 @@
+---
+layout: default
+title: Reports – Fix My AI Rank
+description: Three reports that show exactly where you stand in AI-generated answers.
+permalink: /reports/
+---
+<div class="page-hero">
+  <div class="container">
+    <h1>AI Visibility Reports</h1>
+    <p class="page-lead">Three reports that show exactly where you stand — and what to do about it.</p>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="container">
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>AI Visibility Report</h3>
+        <p>Benchmarks your brand against up to three competitors across standardized buyer-intent queries on ChatGPT, Perplexity, and Claude. Delivered within 2–3 business days.</p>
+        <div style="margin-top:1.25rem">
+          <a href="/#visibility-check" class="btn btn-primary">Request free report</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Entity Report</h3>
+        <p>Deep analysis of your entity footprint across industry publications, review platforms, and knowledge bases. Delivered within 2–3 business days.</p>
+        <div style="margin-top:1.25rem">
+          <a href="/contact/" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Page Optimization Report</h3>
+        <p>Automated audit of a specific page — heading structure, schema markup, and content formatting. Delivered to your inbox within minutes.</p>
+        <div style="margin-top:1.25rem">
+          <a href="#page-report-form" class="btn btn-primary">Get a page report</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Page Optimization Report form -->
+    <div style="margin-top:4rem" id="page-report-form">
+      <h2 style="margin-bottom:0.5rem">Page Optimization Report</h2>
+      <p style="color:var(--color-muted); margin-bottom:2rem">Paste a URL and get a structured checklist delivered to your inbox in minutes.</p>
+
+      <form class="form-card"
+            data-webhook="REPLACE_WITH_N8N_PAGE_REPORT_WEBHOOK_URL"
+            data-success-msg="Your Page Optimization Report is on its way — check your inbox in a few minutes.">
+        <div class="form-group">
+          <label for="page_url">Page URL</label>
+          <input type="url" id="page_url" name="page_url" required placeholder="https://yoursite.com/page-to-audit">
+        </div>
+        <div class="form-group">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" required placeholder="you@company.com">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Service</a>.</label>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit" data-label="Get my page report">Get my page report</button>
+        <div class="form-message"></div>
+      </form>
+    </div>
+  </div>
+</div>

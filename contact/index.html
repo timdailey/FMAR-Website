@@ -1,0 +1,61 @@
+---
+layout: default
+title: Contact – Fix My AI Rank
+description: Talk to us about your AI visibility gaps.
+permalink: /contact/
+---
+<div class="page-hero">
+  <div class="container">
+    <h1>Contact us</h1>
+    <p class="page-lead">If your brand isn't appearing in AI-generated answers, competitors are filling that space.</p>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; max-width:900px">
+
+      <div>
+        <h2 style="margin-bottom:0.75rem">Book a meeting</h2>
+        <p style="color:var(--color-muted); margin-bottom:1.25rem">Talk through your AI visibility gaps with our team. We'll follow up within one business day.</p>
+        <a href="https://app.reclaim.ai/m/frank-days/meet-the-fixmyairank-team"
+           target="_blank" rel="noopener"
+           class="btn btn-primary">Book a meeting</a>
+      </div>
+
+      <div>
+        <h2 style="margin-bottom:0.75rem">Send a message</h2>
+        <form data-webhook="REPLACE_WITH_N8N_CONTACT_WEBHOOK_URL"
+              data-success-msg="Message received — we'll be in touch within one business day.">
+          <div class="form-group">
+            <label for="first_name">First name</label>
+            <input type="text" id="first_name" name="first_name" required>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Company email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company name</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span style="color:var(--color-muted)">(optional)</span></label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <div class="form-check" style="margin-bottom:0">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Service</a>.</label>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" data-label="Send message">Send message</button>
+          <div class="form-message"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
