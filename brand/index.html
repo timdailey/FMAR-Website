@@ -57,18 +57,18 @@ permalink: /brand/
 
       <div style="flex:1;min-width:300px">
         <div class="logo-box" style="min-height:120px">
-          <img src="/assets/images/logo-light.webp" alt="Fix My AI Rank — full wordmark" style="max-height:72px;width:auto">
+          <img src="{{ '/assets/images/logo-light.webp' | relative_url }}" alt="Fix My AI Rank — full wordmark" style="max-height:72px;width:auto">
         </div>
-        <p style="font-size:0.8rem;font-weight:700;color:var(--color-text);margin-top:0.65rem">Full wordmark</p>
-        <p style="font-size:0.8rem;color:var(--color-muted);margin-top:0.2rem">Light backgrounds · white (#ffffff) and surface (#f8fafc) only<br>File: <code>assets/images/logo-light.webp</code></p>
+        <p style="font-size:0.8rem;font-weight:700;color:var(--color-text);margin-top:0.65rem">Full wordmark — light backgrounds</p>
+        <p style="font-size:0.8rem;color:var(--color-muted);margin-top:0.2rem">White (#ffffff) and surface (#f8fafc) only · emails, light-bg pages<br>File: <code>assets/images/logo-light.webp</code></p>
       </div>
 
       <div style="flex:1;min-width:300px">
         <div class="logo-box logo-box--dark" style="min-height:120px">
-          <img src="/assets/images/logo-dark.webp" alt="Fix My AI Rank — compact mark" style="max-height:72px;width:auto">
+          <img src="{{ '/assets/images/logo-dark.webp' | relative_url }}" alt="Fix My AI Rank — dark background mark" style="max-height:72px;width:auto">
         </div>
-        <p style="font-size:0.8rem;font-weight:700;color:var(--color-text);margin-top:0.65rem">Compact mark</p>
-        <p style="font-size:0.8rem;color:var(--color-muted);margin-top:0.2rem">Dark backgrounds · navy (#0d1426) and near-black only<br>File: <code>assets/images/logo-dark.webp</code></p>
+        <p style="font-size:0.8rem;font-weight:700;color:var(--color-text);margin-top:0.65rem">Dark background mark</p>
+        <p style="font-size:0.8rem;color:var(--color-muted);margin-top:0.2rem">Dark backgrounds only · header (#0a1628), footer (#060e1a), hero<br>File: <code>assets/images/logo-dark.webp</code></p>
       </div>
 
     </div>
@@ -77,8 +77,8 @@ permalink: /brand/
       <div class="card" style="padding:1.25rem">
         <h3 style="font-size:0.85rem;margin-bottom:0.5rem">✓ Do</h3>
         <ul style="font-size:0.85rem;color:var(--color-muted);list-style:none;line-height:2">
-          <li>Use full wordmark in header and email</li>
-          <li>Use compact mark reversed on dark sections</li>
+          <li>Use dark mark (logo-dark.webp) in header and footer</li>
+          <li>Use full wordmark (logo-light.webp) in emails and light-bg pages</li>
           <li>Maintain clear space equal to the icon height on all sides</li>
           <li>Use PNG or WebP source files</li>
         </ul>
@@ -87,7 +87,7 @@ permalink: /brand/
         <h3 style="font-size:0.85rem;margin-bottom:0.5rem">✗ Don't</h3>
         <ul style="font-size:0.85rem;color:var(--color-muted);list-style:none;line-height:2">
           <li>Don't recolor, filter, or invert either version</li>
-          <li>Don't use the full wordmark on dark backgrounds</li>
+          <li>Don't use logo-light.webp on dark backgrounds</li>
           <li>Don't stretch or distort the aspect ratio</li>
           <li>Don't place on busy photos or gradients</li>
         </ul>
@@ -95,8 +95,8 @@ permalink: /brand/
       <div class="card" style="padding:1.25rem">
         <h3 style="font-size:0.85rem;margin-bottom:0.5rem">Size specs</h3>
         <ul style="font-size:0.85rem;color:var(--color-muted);list-style:none;line-height:2">
-          <li>Header: 32px tall</li>
-          <li>Footer: 28px tall</li>
+          <li>Header: 38px tall</li>
+          <li>Footer: 39px tall</li>
           <li>Minimum: 24px tall</li>
           <li>Favicon: use icon only, cropped square</li>
         </ul>
@@ -236,6 +236,42 @@ permalink: /brand/
         </div>
       </div>
 
+      <div class="swatch">
+        <div class="swatch-color" style="background:#eef9ff"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Cyan Tint</span>
+          <span class="swatch-hex">#eef9ff</span>
+          <span class="swatch-role">Tint sections (.section--tint)</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0d2744"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Dark Navy</span>
+          <span class="swatch-hex">#0d2744</span>
+          <span class="swatch-role">Dark section gradient end</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0a1628"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Header Dark</span>
+          <span class="swatch-hex">#0a1628</span>
+          <span class="swatch-role">Sticky header background</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#060e1a"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Deepest Dark</span>
+          <span class="swatch-hex">#060e1a</span>
+          <span class="swatch-role">Footer · CTA · hero gradient start</span>
+        </div>
+      </div>
+
     </div>
 
     <div style="margin-top:2rem">
@@ -246,55 +282,120 @@ permalink: /brand/
 --color-text:        #0d1426   /* headings */
 --color-text-dark:   #2d2d2d   /* body */
 --color-muted:       #64748b   /* secondary */
---color-surface:     #f8fafc   /* alt backgrounds */
+--color-surface:     #f8fafc   /* alt section backgrounds */
 --color-border:      #e5e7eb
 --color-bg:          #ffffff</code></pre>
     </div>
   </div>
 
+  <!-- Section color system -->
+  <div class="brand-section">
+    <h2 class="brand-h2">Section color system</h2>
+    <p class="brand-sub">Each section class controls background, text color, and child component styles. The homepage uses this sequence top to bottom.</p>
+    <table style="width:100%;border-collapse:collapse;font-size:0.875rem">
+      <thead>
+        <tr style="border-bottom:2px solid var(--color-border)">
+          <th style="text-align:left;padding:0.6rem 0.5rem;color:var(--color-text)">Class</th>
+          <th style="text-align:left;padding:0.6rem 0.5rem;color:var(--color-text)">Background</th>
+          <th style="text-align:left;padding:0.6rem 0.5rem;color:var(--color-text)">Used for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0.5rem;font-family:monospace">.hero</td>
+          <td style="padding:0.6rem 0.5rem"><span style="display:inline-block;width:12px;height:12px;background:linear-gradient(135deg,#060e1a,#1a3a6b);border-radius:2px;vertical-align:middle;margin-right:6px"></span>#060e1a → #1a3a6b gradient</td>
+          <td style="padding:0.6rem 0.5rem;color:var(--color-muted)">Hero + integrated report form (2-col)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0.5rem;font-family:monospace">.section</td>
+          <td style="padding:0.6rem 0.5rem"><span style="display:inline-block;width:12px;height:12px;background:#ffffff;border:1px solid #e5e7eb;border-radius:2px;vertical-align:middle;margin-right:6px"></span>#ffffff</td>
+          <td style="padding:0.6rem 0.5rem;color:var(--color-muted)">Default white sections</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0.5rem;font-family:monospace">.section--alt</td>
+          <td style="padding:0.6rem 0.5rem"><span style="display:inline-block;width:12px;height:12px;background:#f8fafc;border:1px solid #e5e7eb;border-radius:2px;vertical-align:middle;margin-right:6px"></span>#f8fafc</td>
+          <td style="padding:0.6rem 0.5rem;color:var(--color-muted)">Alternating light gray (FAQ, inner pages)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0.5rem;font-family:monospace">.section--tint</td>
+          <td style="padding:0.6rem 0.5rem"><span style="display:inline-block;width:12px;height:12px;background:#eef9ff;border-radius:2px;vertical-align:middle;margin-right:6px"></span>#eef9ff</td>
+          <td style="padding:0.6rem 0.5rem;color:var(--color-muted)">Subtle cyan tint (testimonials)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0.5rem;font-family:monospace">.section--dark</td>
+          <td style="padding:0.6rem 0.5rem"><span style="display:inline-block;width:12px;height:12px;background:linear-gradient(135deg,#060e1a,#0d2744);border-radius:2px;vertical-align:middle;margin-right:6px"></span>#060e1a → #0d2744 gradient</td>
+          <td style="padding:0.6rem 0.5rem;color:var(--color-muted)">Dark mid-page sections (How it works)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--color-border)">
+          <td style="padding:0.6rem 0.5rem;font-family:monospace">.section--cta</td>
+          <td style="padding:0.6rem 0.5rem"><span style="display:inline-block;width:12px;height:12px;background:linear-gradient(135deg,#060e1a,#0d2744);border-radius:2px;vertical-align:middle;margin-right:6px"></span>#060e1a → #0a1628 → #0d2744</td>
+          <td style="padding:0.6rem 0.5rem;color:var(--color-muted)">Bottom CTA — centered text, dark gradient</td>
+        </tr>
+        <tr>
+          <td style="padding:0.6rem 0.5rem;font-family:monospace">.site-footer</td>
+          <td style="padding:0.6rem 0.5rem"><span style="display:inline-block;width:12px;height:12px;background:#060e1a;border-radius:2px;vertical-align:middle;margin-right:6px"></span>#060e1a solid</td>
+          <td style="padding:0.6rem 0.5rem;color:var(--color-muted)">Footer — deepest dark, logo-dark.webp</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <!-- Typography -->
   <div class="brand-section">
     <h2 class="brand-h2">Typography</h2>
-    <p class="brand-sub">Inter variable font (100–800 weight range). Self-hosted on WordPress; referenced via CDN in static build.</p>
+    <p class="brand-sub">Two typefaces. Space Grotesk for H1 and H2 — geometric, confident, distinctive. Inter for everything else — clean, highly legible at small sizes.</p>
 
-    <div class="type-row">
-      <div class="type-meta">XX-Large<br>clamp(40px → 80px)<br>weight 800<br>lh 1.1 · ls -0.02em</div>
-      <div class="type-sample" style="font-size:clamp(32px,4vw,56px);font-weight:800;line-height:1.1;letter-spacing:-0.02em">Fix Your AI Rank</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem">
+      <div class="card" style="padding:1.25rem">
+        <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-cyan);margin-bottom:0.5rem">Headings — H1, H2</p>
+        <p style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--color-text);line-height:1.2">Space Grotesk</p>
+        <p style="font-size:0.8rem;color:var(--color-muted);margin-top:0.35rem">Weights 500, 600, 700 · Google Fonts</p>
+      </div>
+      <div class="card" style="padding:1.25rem">
+        <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-cyan);margin-bottom:0.5rem">Body — H3 and below</p>
+        <p style="font-family:'Inter',sans-serif;font-size:1.5rem;font-weight:400;color:var(--color-text);line-height:1.2">Inter</p>
+        <p style="font-size:0.8rem;color:var(--color-muted);margin-top:0.35rem">Variable 100–800 · Self-hosted via WordPress CDN</p>
+      </div>
     </div>
 
     <div class="type-row">
-      <div class="type-meta">X-Large<br>clamp(33px → 60px)<br>weight 800<br>lh 1.1 · ls -0.02em</div>
-      <div class="type-sample" style="font-size:clamp(28px,3.5vw,46px);font-weight:800;line-height:1.1;letter-spacing:-0.02em">Is your brand showing up?</div>
+      <div class="type-meta">XX-Large / Hero<br>clamp(40px → 80px)<br>Space Grotesk 700<br>lh 1.1 · ls -0.02em</div>
+      <div class="type-sample" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4vw,56px);font-weight:700;line-height:1.1;letter-spacing:-0.02em">Fix Your AI Rank</div>
     </div>
 
     <div class="type-row">
-      <div class="type-meta">Large / H1<br>clamp(23px → 38px)<br>weight 800<br>lh 1.1 · ls -0.02em</div>
-      <div class="type-sample" style="font-size:clamp(22px,2.5vw,34px);font-weight:800;line-height:1.1;letter-spacing:-0.02em">AI Visibility Reports</div>
+      <div class="type-meta">X-Large / H1<br>clamp(33px → 60px)<br>Space Grotesk 700<br>lh 1.1 · ls -0.02em</div>
+      <div class="type-sample" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3.5vw,46px);font-weight:700;line-height:1.1;letter-spacing:-0.02em">Is your brand showing up?</div>
     </div>
 
     <div class="type-row">
-      <div class="type-meta">Medium / H2<br>clamp(20px → 24px)<br>weight 700<br>lh 1.2 · ls -0.015em</div>
-      <div class="type-sample" style="font-size:clamp(20px,2vw,24px);font-weight:700;line-height:1.2;letter-spacing:-0.015em">Your AI visibility, benchmarked</div>
+      <div class="type-meta">Large / H1<br>clamp(23px → 38px)<br>Space Grotesk 700<br>lh 1.1 · ls -0.02em</div>
+      <div class="type-sample" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,2.5vw,34px);font-weight:700;line-height:1.1;letter-spacing:-0.02em">AI Visibility Reports</div>
     </div>
 
     <div class="type-row">
-      <div class="type-meta">H3<br>~1.05–1.1rem<br>weight 700<br>lh 1.3</div>
-      <div class="type-sample" style="font-size:1.05rem;font-weight:700;line-height:1.3">AI Citation &amp; Entity Building</div>
+      <div class="type-meta">H2<br>clamp(20px → 24px)<br>Space Grotesk 700<br>lh 1.2 · ls -0.015em</div>
+      <div class="type-sample" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,2vw,24px);font-weight:700;line-height:1.2;letter-spacing:-0.015em">Your AI visibility, benchmarked</div>
     </div>
 
     <div class="type-row">
-      <div class="type-meta">Body<br>16px (base)<br>weight 400<br>lh 1.7</div>
-      <div class="type-sample" style="font-size:1rem;line-height:1.7;max-width:480px">We analyze how your company appears across ChatGPT, Perplexity, and Claude — and show you exactly how to close the gaps. Delivered as a clear, actionable report.</div>
+      <div class="type-meta">H3<br>~1.05–1.1rem<br>Inter 700<br>lh 1.3</div>
+      <div class="type-sample" style="font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:700;line-height:1.3">AI Citation &amp; Entity Building</div>
     </div>
 
     <div class="type-row">
-      <div class="type-meta">Small / UI<br>clamp(14px → 16px)<br>weight 400–600<br>lh 1.6</div>
-      <div class="type-sample" style="font-size:0.875rem;color:var(--color-muted)">June 10, 2026 · Takes 30 seconds · Report delivered to your inbox.</div>
+      <div class="type-meta">Body<br>16px (base)<br>Inter 400<br>lh 1.7</div>
+      <div class="type-sample" style="font-family:'Inter',sans-serif;font-size:1rem;line-height:1.7;max-width:480px">We analyze how your company appears across ChatGPT, Perplexity, and Claude — and show you exactly how to close the gaps. Delivered as a clear, actionable report.</div>
     </div>
 
     <div class="type-row">
-      <div class="type-meta">Label / eyebrow<br>0.75rem<br>weight 700<br>uppercase · ls 0.1em</div>
-      <div class="type-sample" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-cyan)">Free report</div>
+      <div class="type-meta">Small / UI<br>clamp(14px → 16px)<br>Inter 400–600<br>lh 1.6</div>
+      <div class="type-sample" style="font-family:'Inter',sans-serif;font-size:0.875rem;color:var(--color-muted)">June 10, 2026 · Takes 30 seconds · Report delivered to your inbox.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">Label / eyebrow<br>0.75rem<br>Inter 700<br>uppercase · ls 0.1em</div>
+      <div class="type-sample" style="font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-cyan)">Free report</div>
     </div>
   </div>
 

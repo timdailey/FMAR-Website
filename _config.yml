@@ -1,7 +1,7 @@
 title: Fix My AI Rank
 description: AI visibility analysis for B2B marketers
-url: "https://fixmyairank.com"
-baseurl: ""
+url: "https://timdailey.github.io"
+baseurl: "/FMAR-Website"
 
 permalink: /blog/:slug/
 

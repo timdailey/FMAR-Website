@@ -1,110 +1,221 @@
 ---
 layout: default
-title: Fix My AI Rank – AI Visibility for B2B Marketers
-description: Find out if your brand appears when buyers ask AI. Free AI visibility analysis.
+title: Fix My AI Rank — Free AI Visibility Report for Your Business
+description: See how your brand appears in ChatGPT, Perplexity, and Google AI Overviews. Free AI visibility report that benchmarks your entity signals, content gaps, and schema markup against your top competitors.
 ---
 
-<!-- Hero -->
-<section class="hero">
+<!-- ── Hero + Form ── -->
+<section class="hero" id="report-form">
   <div class="container">
-    <h1>Is your brand showing up<br>when buyers ask AI?</h1>
-    <p>We analyze how your company appears across ChatGPT, Perplexity, and Claude — and show you exactly how to close the gaps.</p>
-    <div class="hero-actions">
-      <a href="#visibility-check" class="btn btn-primary">Check your AI visibility</a>
-      <a href="/reports/" class="btn btn-outline">See the reports</a>
+    <div class="hero-layout">
+
+      <div class="hero-copy">
+        <h1>Fix your AI visibility</h1>
+        <p class="hero-sub">The rules of search just changed</p>
+        <p class="hero-body">We run standardized buyer‑intent queries, benchmark your entity signals across trusted sources like Google Business Profile, LinkedIn, and Crunchbase, and give you a simple monthly framework to track improvements.</p>
+        <p class="hero-trust">Free &middot; Delivered to your inbox in minutes</p>
+      </div>
+
+      <div class="hero-form-wrap">
+        <form class="form-card"
+              data-webhook="REPLACE_WITH_N8N_WEBHOOK_URL"
+              data-success-msg="Got it! Your AI visibility report is on its way.">
+          <h3 class="form-card-title">Run your free AI visibility report</h3>
+          <div class="form-group">
+            <label for="company">Your company <span class="req">*</span></label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          <div class="form-group">
+            <label for="website">Your website <span class="req">*</span></label>
+            <input type="url" id="website" name="website" required placeholder="https://">
+          </div>
+          <div class="form-group">
+            <label for="competitor1">Competitor 1 <span class="req">*</span></label>
+            <input type="text" id="competitor1" name="competitor1" required>
+          </div>
+          <div class="form-group">
+            <label for="competitor2">Competitor 2 <span class="req">*</span></label>
+            <input type="text" id="competitor2" name="competitor2" required>
+          </div>
+          <div class="form-group">
+            <label for="competitor3">Competitor 3 <span class="req">*</span></label>
+            <input type="text" id="competitor3" name="competitor3" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your work email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I accept the <a href="{{ '/terms/' | relative_url }}">terms of service</a> and <a href="{{ '/privacy/' | relative_url }}">privacy policy</a>.</label>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" data-label="Run my free report">Run my free report</button>
+          <div class="form-message"></div>
+          <p class="form-disclaimer">AI-generated snapshot. Results reflect a point-in-time analysis.</p>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- How it works -->
-<section class="section section--alt">
+<!-- ── Testimonials ── -->
+<section class="section section--tint">
   <div class="container">
-    <p class="section-label">How it works</p>
-    <h2 class="section-title">Your AI visibility, benchmarked</h2>
-    <p class="section-lead">We run standardized buyer-intent queries across major AI platforms and assess your entity signals against competitors.</p>
+    <p class="section-label">What people are saying</p>
+    <div class="testimonial-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote">
+          <p>"We've spent years optimizing for Google. Fixmyairank.com was a wake-up call that the game has shifted. The report gave me a query-by-query breakdown of how ChatGPT, Perplexity, and Claude actually see our brand versus our competitors. For any CMO still focused only on traditional SEO, this is the briefing you need."</p>
+        </div>
+        <div class="testimonial-name">
+          <strong>Pete Billante</strong>
+          <em>Chief Product &amp; Marketing Officer, RapidWorks</em>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote">
+          <p>"FixMyAIRank.com took us from almost zero visibility into GEO to a clear, prioritized view of what matters. It cut through the noise and gave us a real starting point."</p>
+        </div>
+        <div class="testimonial-name">
+          <strong>Amanda Bohne</strong>
+          <em>Chief Marketing Officer, Motus</em>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote">
+          <p>"AI has changed the game for marketers. This tool offers actionable steps to close gaps in key areas limiting site visibility, while also highlighting possible opportunities compared to your competition, all within one clear dashboard and scorecard."</p>
+        </div>
+        <div class="testimonial-name">
+          <strong>Monica Sullivan</strong>
+          <em>Principal, GrowthCMO.ai</em>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── How the report works ── -->
+<section class="section section--dark">
+  <div class="container">
+    <p class="section-label">How the report works</p>
+    <h2 class="section-title">Three steps. One clear picture.</h2>
     <div class="card-grid">
       <div class="card">
-        <h3>1. Submit your details</h3>
-        <p>Tell us your company, website, and up to three competitors you want to benchmark against.</p>
+        <div class="card-step">01</div>
+        <h3>We audit how AI sees you</h3>
+        <p>We run a standardized set of buyer-intent queries across the major AI platforms — the questions your customers are actually asking. We record where you appear, where you don't, and who's being recommended instead.</p>
       </div>
       <div class="card">
-        <h3>2. We run the queries</h3>
-        <p>Our system tests real buyer-intent prompts across ChatGPT, Perplexity, and Claude.</p>
+        <div class="card-step">02</div>
+        <h3>We map the gaps against your competitors</h3>
+        <p>We analyze your entity signals, schema markup, content structure, and third-party citation footprint — then benchmark each against your top competitors. You see exactly where they have an edge, and why AI systems are citing them over you.</p>
       </div>
       <div class="card">
-        <h3>3. Get your report</h3>
-        <p>Receive a clear breakdown of where you appear, where you don't, and what to fix first.</p>
+        <div class="card-step">03</div>
+        <h3>You get a prioritized action plan</h3>
+        <p>Every report closes with a ranked list of actions — organized by impact and implementation effort. Quick wins first, structural improvements next. No vague recommendations. Each action gives you a clear starting direction — what to build, where to publish it, and which AI platform it targets.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Lead capture form -->
-<section class="section" id="visibility-check">
+<!-- ── What you get ── -->
+<section class="section">
   <div class="container">
-    <p class="section-label" style="text-align:center">Free report</p>
-    <h2 class="section-title" style="text-align:center">Check your AI visibility</h2>
-    <p class="section-lead" style="text-align:center; margin: 0 auto 2rem;">Takes 30 seconds. Report delivered to your inbox.</p>
+    <p class="section-label">What you get</p>
+    <h2 class="section-title">What you get in your AI Visibility Report</h2>
+    <div class="feature-grid">
 
-    <form class="form-card"
-          data-webhook="REPLACE_WITH_N8N_WEBHOOK_URL"
-          data-success-msg="Got it! Your AI visibility report is on its way.">
-      <div class="form-group">
-        <label for="company">Company name</label>
-        <input type="text" id="company" name="company" required placeholder="Acme Corp">
+      <div class="feature-item">
+        <h3>AI Citation Rate and Competitive Query Breakdown</h3>
+        <p>See exactly how often ChatGPT, Perplexity, and Claude mention your brand — broken down query by query — and find out which competitors are being recommended instead of you.</p>
       </div>
-      <div class="form-group">
-        <label for="website">Website</label>
-        <input type="url" id="website" name="website" required placeholder="https://acme.com">
+
+      <div class="feature-item">
+        <h3>Entity Signal Assessment</h3>
+        <p>We check every external source AI systems use to verify your brand: Wikipedia, G2, Capterra, Crunchbase, Google Business Profile, Reddit presence, press coverage, and more.</p>
       </div>
-      <div class="form-group">
-        <label for="competitor1">Competitor 1</label>
-        <input type="text" id="competitor1" name="competitor1" placeholder="Competitor name or URL">
+
+      <div class="feature-item">
+        <h3>Content Freshness Assessment</h3>
+        <p>Stale content limits AI citations. We review how recently your key pages were updated and flag which assets are aging out of contention.</p>
       </div>
-      <div class="form-group">
-        <label for="competitor2">Competitor 2</label>
-        <input type="text" id="competitor2" name="competitor2" placeholder="Competitor name or URL">
+
+      <div class="feature-item">
+        <h3>Schema Markup Gap Analysis</h3>
+        <p>We identify every missing or incomplete JSON-LD schema type on your site — Organization, FAQPage, Article, BreadcrumbList, and others — so AI platforms can machine-read your content with confidence.</p>
       </div>
-      <div class="form-group">
-        <label for="competitor3">Competitor 3</label>
-        <input type="text" id="competitor3" name="competitor3" placeholder="Competitor name or URL">
+
+      <div class="feature-item">
+        <h3>Content Gap Review</h3>
+        <p>We compare your existing content against the formats AI platforms cite most: FAQs, case studies, comparison pages, how-to guides, and original research.</p>
       </div>
-      <div class="form-group">
-        <label for="email">Your email</label>
-        <input type="email" id="email" name="email" required placeholder="you@company.com">
+
+      <div class="feature-item">
+        <h3>Prioritized Quick Wins List</h3>
+        <p>Every gap gets a fix. A checklist of specific actions, ranked by impact, with the target AI platform and the data source behind each recommendation.</p>
       </div>
-      <div class="form-check">
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">I agree to the <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Service</a>.</label>
-      </div>
-      <button type="submit" class="btn btn-primary form-submit" data-label="Get my free report">Get my free report</button>
-      <div class="form-message"></div>
-    </form>
+
+    </div>
   </div>
 </section>
 
-<!-- Services teaser -->
-<section class="section section--alt">
+<!-- ── FAQ ── -->
+<section class="section section--alt" id="faq">
+  <div class="container container--narrow">
+    <p class="section-label">Frequently asked questions</p>
+    <h2 class="section-title">Common questions</h2>
+    <ul class="faq-list">
+
+      <li class="faq-item">
+        <button class="faq-question">What is AI visibility and why does it matter for my business?</button>
+        <div class="faq-answer">
+          <p>AI visibility is how often — and how accurately — your business appears in answers generated by AI platforms when buyers ask questions about your industry. As AI becomes the default starting point for product research, companies that don't appear in those answers are being removed from consideration before a single sales conversation happens. AI visibility is now a direct driver of pipeline, not just a brand metric.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">Why doesn't my Google ranking help me appear in AI-generated answers?</button>
+        <div class="faq-answer">
+          <p>Traditional search rankings and AI citations are driven by different signals. Google rankings depend on keyword relevance, backlinks, and page authority. AI systems weight entity clarity, Wikipedia and Wikidata presence, schema markup, third-party validation, and content structured around direct questions. A company can rank number one on Google and still be invisible to AI platforms — and most are.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">What does an AI Visibility Report actually include?</button>
+        <div class="faq-answer">
+          <p>The report maps your current position across the major AI platforms, identifies which buyer-intent queries you appear in and which you don't, and benchmarks your entity signals, content gaps, and schema markup against your top competitors. Every report closes with a prioritized action plan organized by impact and implementation effort — specific directional actions to help you prioritize where to start — not a replacement for a full technical audit.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">How quickly can AI visibility be improved?</button>
+        <div class="faq-answer">
+          <p>Several factors that influence AI citation can show results within weeks, not months. Schema markup improvements are often reflected in AI answers within two to four weeks. New FAQ pages and structured content typically get indexed and cited within four to eight weeks. Entity profile improvements — Wikipedia, Wikidata, and review platform presence — take longer but have the most durable long-term impact. Results in your free snapshot are based on a point-in-time analysis and should be treated as a baseline, not a final audit.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">Which AI platforms does the report cover?</button>
+        <div class="faq-answer">
+          <p>The report covers the major AI answer platforms where B2B buyers are conducting research today, including conversational AI assistants and AI-powered search overviews. Each platform weights different signals, so we analyze your visibility separately across each one and identify where the gaps are most significant for your category.</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ── Bottom CTA ── -->
+<section class="section section--cta">
   <div class="container">
-    <p class="section-label">Services</p>
-    <h2 class="section-title">Fix what the report finds</h2>
-    <p class="section-lead">We don't just show you the gaps — we close them.</p>
-    <div class="card-grid">
-      <div class="card">
-        <h3>AI Citation &amp; Entity Building</h3>
-        <p>Build the cross-referenced entity footprint that makes AI systems trust and cite your brand.</p>
-      </div>
-      <div class="card">
-        <h3>Generative Engine Optimization</h3>
-        <p>Restructure your existing content so AI systems can retrieve and surface it for the right queries.</p>
-      </div>
-      <div class="card">
-        <h3>AI-Powered Lead Generation</h3>
-        <p>Custom reporting tools that analyze prospects and generate personalized insights for your sales team.</p>
-      </div>
-    </div>
-    <div style="margin-top:2rem">
-      <a href="/services/" class="btn btn-outline">Learn more about services</a>
-    </div>
+    <h2 class="section-title">See where you stand</h2>
+    <p class="section-lead">It takes 30 seconds. Your report is delivered to your inbox.</p>
+    <a href="#report-form" class="btn btn-primary">Free AI visibility report</a>
   </div>
 </section>
