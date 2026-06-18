@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<article class="post">
-  <div class="container container--narrow">
-    <header class="post-header">
-      <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
-      <h1>{{ page.title }}</h1>
-      {% if page.description %}<p class="post-lead">{{ page.description }}</p>{% endif %}
-    </header>
-    <div class="post-content">
-      {{ content }}
-    </div>
+<div class="page-hero">
+  <div class="container--narrow">
+    <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="page-lead">{{ page.description }}</p>{% endif %}
   </div>
-</article>
+</div>
+<div class="page-content">
+  <div class="container--narrow post-content prose">
+    {{ content }}
+  </div>
+</div>

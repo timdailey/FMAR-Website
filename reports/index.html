@@ -1,69 +1,212 @@
 ---
 layout: default
-title: Reports – Fix My AI Rank
-description: Three reports that show exactly where you stand in AI-generated answers.
+title: GEO Reports – Fix My AI Rank
+description: Three free audits covering the three things that determine your AI visibility — how often you're cited, how strong your entity signals are, and whether your pages are built for AI citation.
 permalink: /reports/
 ---
+
 <div class="page-hero">
   <div class="container">
-    <h1>AI Visibility Reports</h1>
-    <p class="page-lead">Three reports that show exactly where you stand — and what to do about it.</p>
+    <p class="section-label">GEO Reports</p>
+    <h1>Every report we offer, in one place</h1>
+    <p class="page-lead">Three free audits covering the three things that determine your AI visibility: how often you're cited, how strong your entity signals are, and whether your pages are built for AI citation.</p>
+    <nav class="report-index">
+      <a href="#ai-visibility" class="report-index-item">
+        <svg class="report-index-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="report-index-name">AI Visibility Report</span>
+        <span class="report-index-desc">Citation rates across ChatGPT, Perplexity, and Claude</span>
+      </a>
+      <a href="#page-optimization" class="report-index-item">
+        <svg class="report-index-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+        <span class="report-index-name">Page Optimization Report</span>
+        <span class="report-index-desc">Page-level GEO and SEO audit delivered in minutes</span>
+      </a>
+      <a href="#entity-contribution" class="report-index-item">
+        <svg class="report-index-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        <span class="report-index-name">Entity and Contribution Report</span>
+        <span class="report-index-desc">External signal footprint benchmarked against competitors</span>
+      </a>
+    </nav>
   </div>
 </div>
 
-<div class="page-content">
+<!-- ── AI Visibility Report ── -->
+<section class="section" id="ai-visibility">
   <div class="container">
-    <div class="card-grid">
 
-      <div class="card">
-        <h3>AI Visibility Report</h3>
-        <p>Benchmarks your brand against up to three competitors across standardized buyer-intent queries on ChatGPT, Perplexity, and Claude. Delivered within 2–3 business days.</p>
-        <div style="margin-top:1.25rem">
-          <a href="{{ '/#visibility-check' | relative_url }}" class="btn btn-primary">Request free report</a>
-        </div>
+    <div class="report-intro">
+      <h2 class="section-title">AI Visibility Report</h2>
+      <p class="report-lead">See how often ChatGPT, Perplexity, and Claude recommend your brand — and who they recommend instead.</p>
+      <div class="report-actions">
+        <a href="{{ '/#report-form' | relative_url }}" class="btn btn-primary">Get the report</a>
+        <a href="{{ '/' | relative_url }}" class="btn btn-outline">Learn more</a>
       </div>
-
-      <div class="card">
-        <h3>Entity Report</h3>
-        <p>Deep analysis of your entity footprint across industry publications, review platforms, and knowledge bases. Delivered within 2–3 business days.</p>
-        <div style="margin-top:1.25rem">
-          <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">Get in touch</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Page Optimization Report</h3>
-        <p>Automated audit of a specific page — heading structure, schema markup, and content formatting. Delivered to your inbox within minutes.</p>
-        <div style="margin-top:1.25rem">
-          <a href="#page-report-form" class="btn btn-primary">Get a page report</a>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Page Optimization Report form -->
-    <div style="margin-top:4rem" id="page-report-form">
-      <h2 style="margin-bottom:0.5rem">Page Optimization Report</h2>
-      <p style="color:var(--color-muted); margin-bottom:2rem">Paste a URL and get a structured checklist delivered to your inbox in minutes.</p>
+    <hr class="report-divider">
 
-      <form class="form-card"
-            data-webhook="REPLACE_WITH_N8N_PAGE_REPORT_WEBHOOK_URL"
-            data-success-msg="Your Page Optimization Report is on its way — check your inbox in a few minutes.">
-        <div class="form-group">
-          <label for="page_url">Page URL</label>
-          <input type="url" id="page_url" name="page_url" required placeholder="https://yoursite.com/page-to-audit">
-        </div>
-        <div class="form-group">
-          <label for="email">Your email</label>
-          <input type="email" id="email" name="email" required placeholder="you@company.com">
-        </div>
-        <div class="form-check">
-          <input type="checkbox" id="terms" name="terms" required>
-          <label for="terms">I agree to the <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> and <a href="{{ '/terms/' | relative_url }}">Terms of Service</a>.</label>
-        </div>
-        <button type="submit" class="btn btn-primary form-submit" data-label="Get my page report">Get my page report</button>
-        <div class="form-message"></div>
-      </form>
+    <div class="report-details">
+      <p>We run standardized buyer-intent queries across the major AI platforms and record where you appear, where you don't, and which competitors are named instead. Every report closes with a ranked action plan: schema fixes, entity gaps, and content improvements in priority order.</p>
+      <p class="section-label" style="margin-top:1.25rem">What you get</p>
+      <ul class="check-list">
+        <li>AI citation rate across ChatGPT, Perplexity, and Claude</li>
+        <li>Query-by-query competitor comparison</li>
+        <li>Entity signal assessment (Wikipedia, G2, Crunchbase, and more)</li>
+        <li>Schema markup gap analysis</li>
+        <li>Content gap review</li>
+        <li>Prioritized quick wins checklist</li>
+      </ul>
     </div>
+
   </div>
-</div>
+</section>
+
+<!-- ── Page Optimization Report ── -->
+<section class="section section--alt" id="page-optimization">
+  <div class="container">
+
+    <div class="report-intro">
+      <h2 class="section-title">Page Optimization Report</h2>
+      <p class="report-lead">A high Google ranking doesn't mean AI platforms are citing your content. Find out what's missing.</p>
+      <div class="report-actions">
+        <a href="#page-report-form" class="btn btn-primary">Get the report</a>
+      </div>
+    </div>
+
+    <hr class="report-divider">
+
+    <div class="report-details">
+      <p>Submit any page URL and receive a full GEO and SEO audit delivered to your inbox. The report covers schema gaps, H2 rewrites, entity signals, internal linking, image alt text, content structure, and quick wins — with a structured checklist file you can hand directly to an LLM to apply every fix automatically.</p>
+      <p class="section-label" style="margin-top:1.25rem">What you get</p>
+      <ul class="check-list">
+        <li>Page baseline snapshot (title, meta, H1, schema, CTA)</li>
+        <li>Schema fix recommendations with copy-paste JSON-LD</li>
+        <li>H2 rewrite suggestions optimized for AI citation</li>
+        <li>Entity signal and internal linking gaps</li>
+        <li>Image alt text audit</li>
+        <li>LLM-ready checklist file attached to the delivery email</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Entity and Contribution Report ── -->
+<section class="section" id="entity-contribution">
+  <div class="container">
+
+    <div class="report-intro">
+      <h2 class="section-title">Entity and Contribution Report</h2>
+      <p class="report-lead">Find out why AI recommends your competitors first — and exactly what to do about it.</p>
+      <div class="report-actions">
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Contact us</a>
+      </div>
+    </div>
+
+    <hr class="report-divider">
+
+    <div class="report-details">
+      <p>AI engines don't cite the best product. They cite the brand with the strongest external signal footprint. This report audits your third-party mention volume, named expert presence, earned media footprint, anchoring events, and directory coverage — then benchmarks every signal against your top competitors.</p>
+      <p class="section-label" style="margin-top:1.25rem">What you get</p>
+      <ul class="check-list">
+        <li>Competitor mention volume comparison</li>
+        <li>AI visibility level classification (Authoritative / Aware / Invisible)</li>
+        <li>Named expert status and amplification gaps</li>
+        <li>Concept ownership map and uncontested territory</li>
+        <li>Anchoring event comparison</li>
+        <li>Ranked action plan across earned media, directories, and owned content</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Comparison table ── -->
+<section class="section section--tint">
+  <div class="container">
+    <h2 class="section-title">Which report do you need?</h2>
+    <p class="section-lead">All three are free. Most people start with the AI Visibility Report, then go deeper.</p>
+    <div style="overflow-x:auto">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Question you're asking</th>
+            <th>AI Visibility</th>
+            <th>Entity</th>
+            <th>Page Optimizer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Am I appearing in AI-generated answers?</td>
+            <td class="check">✓</td><td>—</td><td>—</td>
+          </tr>
+          <tr>
+            <td>Which competitors are being cited instead of me?</td>
+            <td class="check">✓</td><td class="check">✓</td><td>—</td>
+          </tr>
+          <tr>
+            <td>Why does AI recommend competitors over me?</td>
+            <td>—</td><td class="check">✓</td><td>—</td>
+          </tr>
+          <tr>
+            <td>Which third-party channels should I prioritize?</td>
+            <td>—</td><td class="check">✓</td><td>—</td>
+          </tr>
+          <tr>
+            <td>Is this specific page optimized for AI citation?</td>
+            <td>—</td><td>—</td><td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>What schema markup is missing from my site?</td>
+            <td class="check">✓</td><td>—</td><td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Do I need a ready-to-implement fix file?</td>
+            <td>—</td><td>—</td><td class="check">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.825rem;color:var(--color-muted);margin-top:1.25rem">Entity Report available on request — <a href="{{ '/contact/' | relative_url }}">get in touch</a>.</p>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <p class="section-label">Frequently asked questions</p>
+    <h2 class="section-title">Common questions</h2>
+    <ul class="faq-list">
+
+      <li class="faq-item">
+        <button class="faq-question">Are all three reports really free?</button>
+        <div class="faq-answer">
+          <p>Yes. All three reports are free. The AI Visibility Report and Entity Report are produced by our team and delivered as a PDF. The Page Optimization Report is generated automatically and delivered to your inbox within minutes of submission. We offer paid consulting and implementation services for companies that want hands-on help executing the recommendations.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">Which report should I start with?</button>
+        <div class="faq-answer">
+          <p>Start with the AI Visibility Report. It gives you a baseline: where you appear across ChatGPT, Perplexity, and Claude, which competitors are being recommended instead, and the highest-priority gaps to close. If you want to understand why competitors outrank you in AI answers, the Entity Report goes deeper on third-party signal volume. If you want page-level fixes you can implement this week, the Page Optimization Report is the fastest path to action.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">How long does each report take?</button>
+        <div class="faq-answer">
+          <p>The Page Optimization Report is delivered in minutes — it's fully automated. The AI Visibility Report and Entity Report involve research and analysis and are typically delivered within two to three business days.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">What AI platforms do the reports cover?</button>
+        <div class="faq-answer">
+          <p>The AI Visibility Report covers ChatGPT (GPT-4o), Perplexity AI, and Claude. The Entity Report analyzes signal gaps relevant to all major platforms. The Page Optimization Report targets the content and schema signals that influence all AI citation platforms, with specific notes where platform behavior differs.</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
