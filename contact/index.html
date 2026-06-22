@@ -1,61 +1,60 @@
 ---
 layout: default
 title: Contact – Fix My AI Rank
-description: Talk to us about your AI visibility gaps.
+description: Talk to us about your AI visibility gaps. Book a call or send a message and we'll follow up within one business day.
 permalink: /contact/
 ---
+
 <div class="page-hero">
   <div class="container">
-    <h1>Contact us</h1>
-    <p class="page-lead">If your brand isn't appearing in AI-generated answers, competitors are filling that space.</p>
-  </div>
-</div>
-
-<div class="page-content">
-  <div class="container">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; max-width:900px">
-
-      <div>
-        <h2 style="margin-bottom:0.75rem">Book a meeting</h2>
-        <p style="color:var(--color-muted); margin-bottom:1.25rem">Talk through your AI visibility gaps with our team. We'll follow up within one business day.</p>
-        <a href="https://app.reclaim.ai/m/frank-days/meet-the-fixmyairank-team"
-           target="_blank" rel="noopener"
-           class="btn btn-primary">Book a meeting</a>
-      </div>
-
-      <div>
-        <h2 style="margin-bottom:0.75rem">Send a message</h2>
-        <form data-webhook="REPLACE_WITH_N8N_CONTACT_WEBHOOK_URL"
-              data-success-msg="Message received — we'll be in touch within one business day.">
-          <div class="form-group">
-            <label for="first_name">First name</label>
-            <input type="text" id="first_name" name="first_name" required>
-          </div>
-          <div class="form-group">
-            <label for="last_name">Last name</label>
-            <input type="text" id="last_name" name="last_name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Company email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="company">Company name</label>
-            <input type="text" id="company" name="company" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message <span style="color:var(--color-muted)">(optional)</span></label>
-            <textarea id="message" name="message"></textarea>
-          </div>
-          <div class="form-check" style="margin-bottom:0">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I agree to the <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> and <a href="{{ '/terms/' | relative_url }}">Terms of Service</a>.</label>
-          </div>
-          <button type="submit" class="btn btn-primary form-submit" data-label="Send message">Send message</button>
-          <div class="form-message"></div>
-        </form>
-      </div>
-
+    <p class="section-label">Contact</p>
+    <h1>Let's talk about your AI visibility</h1>
+    <p class="page-lead">The fastest way to get answers. We'll look at where you stand in AI-generated answers, walk through the gaps, and talk through which services make sense for your situation. No pitch. Just a practical conversation.</p>
+    <div class="hero-actions" style="margin-top:2rem">
+      <a href="https://app.reclaim.ai/m/frank-days/meet-the-fixmyairank-team"
+         target="_blank" rel="noopener"
+         class="btn btn-primary">Book a meeting</a>
     </div>
   </div>
 </div>
+
+<section class="section">
+  <div class="container">
+    <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:0.5rem">Not ready for a call?</h2>
+    <p style="color:var(--color-muted);margin-bottom:2rem">Send us a note and we'll get back to you within one business day.</p>
+    <form data-webhook="REPLACE_WITH_N8N_CONTACT_WEBHOOK_URL"
+          data-success-msg="Message received — we'll be in touch within one business day."
+          style="max-width:560px">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem">
+        <div class="form-group" style="margin-bottom:0">
+          <label for="first_name">First name <span class="req">*</span></label>
+          <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label for="last_name">Last name <span class="req">*</span></label>
+          <input type="text" id="last_name" name="last_name" required>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem">
+        <div class="form-group" style="margin-bottom:0">
+          <label for="email">Company email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label for="company">Company name <span class="req">*</span></label>
+          <input type="text" id="company" name="company" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message <span style="color:var(--color-muted);font-weight:400">(optional)</span></label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+      <div class="form-check" style="margin-bottom:0">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> and <a href="{{ '/terms/' | relative_url }}">Terms of Service</a>.</label>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit" data-label="Send message">Send message</button>
+      <div class="form-message"></div>
+    </form>
+  </div>
+</section>

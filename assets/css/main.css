@@ -486,6 +486,9 @@ h3 { line-height: 1.3; }
 .page-lead { font-size: 1.1rem; color: rgba(255,255,255,0.68); margin-top: 0.5rem; line-height: 1.6; }
 .page-hero .post-date { font-size: 0.825rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 .page-content { padding: 3rem 0 5rem; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.contact-col-title { font-size: 1.3rem; font-weight: 700; color: var(--color-text); margin-bottom: 1rem; }
+.contact-col p { color: var(--color-muted); line-height: 1.7; }
 
 /* ── Prose (page layout content) ── */
 .prose h2 { font-size: 1.4rem; font-weight: 700; color: var(--color-text); margin: 2.5rem 0 0.75rem; }
