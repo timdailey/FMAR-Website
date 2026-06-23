@@ -4,27 +4,168 @@ title: Blog – Fix My AI Rank
 description: Insights on AI visibility, GEO, AEO, and getting your brand cited by AI systems.
 permalink: /blog/
 ---
+
 <div class="page-hero">
   <div class="container">
-    <h1>Blog</h1>
-    <p class="page-lead">Insights on AI visibility, GEO, AEO, and getting your brand cited by AI systems.</p>
+    <p class="section-label">Blog</p>
+    <h1>Insights on AI visibility</h1>
+    <p class="page-lead">How brands get cited by AI systems — and what to do when they don't.</p>
+    <p class="blog-post-count">{{ site.posts | size }} articles</p>
   </div>
 </div>
 
-<div class="page-content">
-  <div class="container container--narrow">
-    <ul class="post-list">
-      {% for post in site.posts %}
-      <li class="post-list-item">
-        <p class="post-list-date">{{ post.date | date: "%B %-d, %Y" }}</p>
-        <h2 class="post-list-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        {% if post.description %}
-        <p class="post-list-excerpt">{{ post.description }}</p>
-        {% elsif post.excerpt %}
-        <p class="post-list-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        {% endif %}
-      </li>
+<div class="blog-index-wrap">
+  <div class="container">
+
+    {% assign all_categories = site.posts | map: "category" | compact | uniq | sort %}
+    {% if all_categories.size > 0 %}
+    <div class="blog-filter" role="group" aria-label="Filter by category">
+      <button class="blog-filter-btn active" data-category="all">All</button>
+      {% for cat in all_categories %}
+      <button class="blog-filter-btn" data-category="{{ cat | downcase | replace: ' ', '-' }}">{{ cat }}</button>
       {% endfor %}
-    </ul>
+    </div>
+    {% endif %}
+
+    {% if paginator.page == 1 %}
+    {% assign featured = paginator.posts.first %}
+    {% assign featured_author = site.data.authors[featured.author] %}
+    {% assign featured_words = featured.content | number_of_words %}
+    {% assign featured_read = featured_words | divided_by: 200 | plus: 1 %}
+    <a href="{{ featured.url | relative_url }}" class="blog-featured" data-category="{{ featured.category | downcase | replace: ' ', '-' }}">
+      <div class="blog-featured-body">
+        <div class="blog-featured-meta">
+          {% if featured.category %}<span class="post-category-badge">{{ featured.category }}</span>{% endif %}
+          <span class="blog-meta-item">{{ featured.date | date: "%b %-d, %Y" }}</span>
+          <span class="blog-meta-sep">·</span>
+          <span class="blog-meta-item">{{ featured.read_time | default: featured_read }} min read</span>
+        </div>
+        <h2 class="blog-featured-title">{{ featured.title }}</h2>
+        {% if featured.description %}<p class="blog-featured-excerpt">{{ featured.description }}</p>{% endif %}
+        <div class="blog-author-row">
+          {% if featured_author %}
+          {% if featured_author.photo %}
+          <img src="{{ featured_author.photo | relative_url }}" alt="{{ featured_author.name }}" class="blog-author-avatar blog-author-avatar--photo">
+          {% else %}
+          {% assign np = featured_author.name | split: ' ' %}
+          <span class="blog-author-avatar">{{ np[0] | slice: 0 }}{{ np | last | slice: 0 }}</span>
+          {% endif %}
+          <span class="blog-author-name">{{ featured_author.name }}</span>
+          {% endif %}
+          <span class="blog-read-link">Read article →</span>
+        </div>
+      </div>
+      <div class="blog-featured-flag">Latest</div>
+    </a>
+    {% endif %}
+
+    <div class="blog-grid" id="blog-grid">
+      {% if paginator.page == 1 %}
+      {% for post in paginator.posts offset:1 %}
+      {% assign post_author = site.data.authors[post.author] %}
+      {% assign post_words = post.content | number_of_words %}
+      {% assign post_read = post_words | divided_by: 200 | plus: 1 %}
+      <a href="{{ post.url | relative_url }}" class="blog-card" data-category="{{ post.category | downcase | replace: ' ', '-' }}">
+        <div class="blog-card-top">
+          {% if post.category %}<span class="post-category-badge">{{ post.category }}</span>{% endif %}
+          <h3 class="blog-card-title">{{ post.title }}</h3>
+          {% if post.description %}<p class="blog-card-excerpt">{{ post.description }}</p>{% endif %}
+        </div>
+        <div class="blog-card-footer">
+          {% if post_author %}
+          {% if post_author.photo %}
+          <img src="{{ post_author.photo | relative_url }}" alt="{{ post_author.name }}" class="blog-author-avatar blog-author-avatar--photo blog-author-avatar--sm">
+          {% else %}
+          {% assign np = post_author.name | split: ' ' %}
+          <span class="blog-author-avatar blog-author-avatar--sm">{{ np[0] | slice: 0 }}{{ np | last | slice: 0 }}</span>
+          {% endif %}
+          <span class="blog-author-name">{{ post_author.name }}</span>
+          <span class="blog-meta-sep">·</span>
+          {% endif %}
+          <span class="blog-meta-item">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="blog-meta-sep">·</span>
+          <span class="blog-meta-item">{{ post.read_time | default: post_read }} min</span>
+        </div>
+      </a>
+      {% endfor %}
+      {% else %}
+      {% for post in paginator.posts %}
+      {% assign post_author = site.data.authors[post.author] %}
+      {% assign post_words = post.content | number_of_words %}
+      {% assign post_read = post_words | divided_by: 200 | plus: 1 %}
+      <a href="{{ post.url | relative_url }}" class="blog-card" data-category="{{ post.category | downcase | replace: ' ', '-' }}">
+        <div class="blog-card-top">
+          {% if post.category %}<span class="post-category-badge">{{ post.category }}</span>{% endif %}
+          <h3 class="blog-card-title">{{ post.title }}</h3>
+          {% if post.description %}<p class="blog-card-excerpt">{{ post.description }}</p>{% endif %}
+        </div>
+        <div class="blog-card-footer">
+          {% if post_author %}
+          {% if post_author.photo %}
+          <img src="{{ post_author.photo | relative_url }}" alt="{{ post_author.name }}" class="blog-author-avatar blog-author-avatar--photo blog-author-avatar--sm">
+          {% else %}
+          {% assign np = post_author.name | split: ' ' %}
+          <span class="blog-author-avatar blog-author-avatar--sm">{{ np[0] | slice: 0 }}{{ np | last | slice: 0 }}</span>
+          {% endif %}
+          <span class="blog-author-name">{{ post_author.name }}</span>
+          <span class="blog-meta-sep">·</span>
+          {% endif %}
+          <span class="blog-meta-item">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="blog-meta-sep">·</span>
+          <span class="blog-meta-item">{{ post.read_time | default: post_read }} min</span>
+        </div>
+      </a>
+      {% endfor %}
+      {% endif %}
+    </div>
+
+    {% if paginator.total_pages > 1 %}
+    <nav class="blog-pagination" aria-label="Blog pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="blog-page-btn blog-page-btn--arrow" aria-label="Previous page">←</a>
+      {% else %}
+      <span class="blog-page-btn blog-page-btn--arrow blog-page-btn--disabled">←</span>
+      {% endif %}
+
+      {% for i in (1..paginator.total_pages) %}
+        {% if i == paginator.page %}
+        <span class="blog-page-btn blog-page-btn--current">{{ i }}</span>
+        {% elsif i == 1 %}
+        <a href="{{ '/blog/' | relative_url }}" class="blog-page-btn">{{ i }}</a>
+        {% else %}
+        <a href="{{ '/blog/page' | append: i | append: '/' | relative_url }}" class="blog-page-btn">{{ i }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="blog-page-btn blog-page-btn--arrow" aria-label="Next page">→</a>
+      {% else %}
+      <span class="blog-page-btn blog-page-btn--arrow blog-page-btn--disabled">→</span>
+      {% endif %}
+    </nav>
+    {% endif %}
+
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btns = document.querySelectorAll('.blog-filter-btn');
+  var cards = document.querySelectorAll('.blog-card, .blog-featured');
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var cat = this.dataset.category;
+      btns.forEach(function (b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      cards.forEach(function (card) {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>

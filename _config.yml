@@ -5,6 +5,12 @@ baseurl: "/FMAR-Website"
 
 permalink: /blog/:slug/
 
+plugins:
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/blog/page:num/"
+
 collections:
   posts:
     output: true

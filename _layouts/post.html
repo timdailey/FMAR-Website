@@ -1,15 +1,229 @@
 ---
 layout: default
 ---
-<div class="page-hero">
-  <div class="container--narrow">
-    <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
+{% assign author = site.data.authors[page.author] %}
+{% assign words = content | number_of_words %}
+{% assign calc_read_time = words | divided_by: 200 | plus: 1 %}
+{% assign read_time = page.read_time | default: calc_read_time %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "datePublished": "{{ page.date | date: '%Y-%m-%dT%H:%M:%S+00:00' }}",
+  "dateModified": "{{ page.last_modified | default: page.date | date: '%Y-%m-%dT%H:%M:%S+00:00' }}",
+  {% if author %}"author": { "@type": "Person", "name": {{ author.name | jsonify }} },{% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fix My AI Rank",
+    "url": "https://fixmyairank.com"
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" }
+}
+</script>
+
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | jsonify }} }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<div class="page-hero page-hero--post">
+  <div class="container--post">
+    <nav class="post-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      {% if page.category %}
+      <span aria-hidden="true">›</span>
+      <span class="post-category-badge">{{ page.category }}</span>
+      {% endif %}
+    </nav>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p class="page-lead">{{ page.description }}</p>{% endif %}
+    <div class="post-meta">
+      {% if author %}
+      <span class="post-meta-author">
+        {% assign name_parts = author.name | split: ' ' %}
+        <span class="post-meta-avatar" aria-hidden="true">{{ name_parts[0] | slice: 0 }}{{ name_parts | last | slice: 0 }}</span>
+        {{ author.name }}
+      </span>
+      <span class="post-meta-sep" aria-hidden="true">·</span>
+      {% endif %}
+      <time class="post-meta-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.last_modified %}
+      <span class="post-meta-sep" aria-hidden="true">·</span>
+      <span class="post-meta-updated">Updated {{ page.last_modified | date: "%b %-d, %Y" }}</span>
+      {% endif %}
+      <span class="post-meta-sep" aria-hidden="true">·</span>
+      <span class="post-meta-read">{{ read_time }} min read</span>
+      {% if page.tags %}
+      <span class="post-meta-sep" aria-hidden="true">·</span>
+      {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
+      {% endif %}
+    </div>
   </div>
 </div>
-<div class="page-content">
-  <div class="container--narrow post-content prose">
-    {{ content }}
+
+{% if page.takeaways %}
+<div class="post-takeaways-wrap">
+  <div class="container--post">
+    <div class="post-takeaways">
+      <p class="post-takeaways-label">Key takeaways</p>
+      <ul>
+        {% for item in page.takeaways %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
+{% endif %}
+
+<div class="post-body-wrap">
+  <div class="post-layout">
+    <article class="post-content" id="post-content">
+      {{ content }}
+    </article>
+    <aside class="post-sidebar" aria-label="Post navigation">
+      <nav class="post-toc" id="post-toc" aria-label="Table of contents">
+        <p class="post-toc-label">On this page</p>
+      </nav>
+      <div class="post-share">
+        <p class="post-toc-label">Share</p>
+        <div class="post-share-buttons">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" class="post-share-btn" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" class="post-share-btn" target="_blank" rel="noopener" aria-label="Share on X">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <button class="post-share-btn" id="copy-link" aria-label="Copy link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% if page.faq %}
+<div class="post-faq-wrap">
+  <div class="container--narrow">
+    <h2 class="post-section-heading">Frequently asked questions</h2>
+    <ul class="faq-list">
+      {% for item in page.faq %}
+      <li class="faq-item">
+        <button class="faq-question">{{ item.q }}</button>
+        <div class="faq-answer"><p>{{ item.a }}</p></div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+{% if author %}
+<div class="post-author-wrap">
+  <div class="container--narrow">
+    <div class="post-author">
+      {% if author.photo %}
+      <img src="{{ author.photo | relative_url }}" alt="{{ author.name }}" class="post-author-photo">
+      {% else %}
+      {% assign name_parts = author.name | split: ' ' %}
+      <div class="post-author-avatar" aria-hidden="true">{{ name_parts[0] | slice: 0 }}{{ name_parts | last | slice: 0 }}</div>
+      {% endif %}
+      <div class="post-author-body">
+        <strong class="post-author-name">{{ author.name }}</strong>
+        <span class="post-author-title">{{ author.title }}</span>
+        <p>{{ author.bio }}</p>
+        <div class="post-author-links">
+          {% if author.linkedin %}<a href="{{ author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="post-related-wrap">
+  <div class="container--narrow">
+    <h2 class="post-section-heading">More to read</h2>
+    <div class="post-related-grid">
+      {% assign related = site.posts | where_exp: "p", "p.url != page.url" | limit: 3 %}
+      {% for post in related %}
+      <a href="{{ post.url | relative_url }}" class="post-related-card">
+        {% if post.category %}<span class="post-category-badge">{{ post.category }}</span>{% endif %}
+        <h3>{{ post.title }}</h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+        <span class="post-related-meta">
+          {{ post.date | date: "%b %-d, %Y" }}{% if post.read_time %} · {{ post.read_time }} min{% endif %}
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include cta-reports.html %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var headings = document.querySelectorAll('#post-content h2');
+  var toc = document.getElementById('post-toc');
+
+  if (toc && headings.length > 0) {
+    var list = document.createElement('ul');
+    list.className = 'post-toc-list';
+    headings.forEach(function (h) {
+      if (!h.id) {
+        h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      }
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      a.className = 'post-toc-item';
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+    toc.appendChild(list);
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.post-toc-item').forEach(function (a) { a.classList.remove('active'); });
+          var active = toc.querySelector('a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px' });
+
+    headings.forEach(function (h) { observer.observe(h); });
+  }
+
+  document.querySelectorAll('.faq-question').forEach(function (btn) {
+    btn.addEventListener('click', function () { this.closest('.faq-item').classList.toggle('open'); });
+  });
+
+  var copyBtn = document.getElementById('copy-link');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      navigator.clipboard.writeText(window.location.href).then(function () {
+        copyBtn.classList.add('copied');
+        setTimeout(function () { copyBtn.classList.remove('copied'); }, 2000);
+      });
+    });
+  }
+});
+</script>
