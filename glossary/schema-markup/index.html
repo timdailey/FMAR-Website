@@ -1,0 +1,423 @@
+---
+layout: default
+title: Schema Markup Checklist for AI Visibility (GEO)
+description: "The complete schema markup checklist for AI visibility. Covers Organization, FAQPage, Article, Product, and WebSite JSON-LD with ready-to-use code for each type."
+permalink: /glossary/schema-markup/
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Schema Markup Checklist That Makes AI Systems Take You Seriously",
+  "description": "The complete schema markup checklist for AI visibility. Covers Organization, FAQPage, Article, Product, and WebSite JSON-LD with ready-to-use code for each type.",
+  "url": "https://fixmyairank.com/schema-markup-checklist-ai-visibility",
+  "datePublished": "2026-04-03",
+  "dateModified": "2026-04-03",
+  "author": {
+    "@type": "Organization",
+    "name": "Fix My AI Rank",
+    "url": "https://fixmyairank.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fix My AI Rank",
+    "url": "https://fixmyairank.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://fixmyairank.com/wp-content/uploads/2026/04/schema-markup-checklist-ai.webp",
+    "width": 1200,
+    "height": 630
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fixmyairank.com/schema-markup-checklist-ai-visibility"
+  },
+  "keywords": "schema markup checklist, JSON-LD AI visibility, Organization schema, FAQPage schema, structured data GEO",
+  "articleSection": "GEO Implementation"
+}
+</script>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="section-label"><a href="{{ '/glossary/' | relative_url }}" style="color:inherit;text-decoration:none">Glossary</a></p>
+    <h1>The Schema Markup Checklist That Makes AI Systems Take You Seriously</h1>
+    <p class="page-lead">Schema markup is the part of <a href="{{ '/glossary/ai-visibility/' | relative_url }}">AI visibility</a> that most marketing teams never see and most developers never think about in terms of AI citation.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container--narrow">
+    <div class="prose">
+
+      <p>It sits in the page source, invisible to visitors, doing a job that quietly determines whether AI systems can confidently describe and recommend your brand.</p>
+
+      <p>In most AI visibility audits, it's missing. Not partially implemented. Missing entirely. No Organization schema on the homepage, no FAQPage schema on FAQ content, no Article schema on blog posts. The company has a website. The AI systems reading that website are left guessing at the facts.</p>
+
+      <p>This checklist covers every schema type that matters for AI visibility, what fields each one requires, and the exact JSON-LD to implement. Work through it top to bottom. The first two items alone will move the needle.</p>
+
+      <h2 id="before-you-start">Before You Start: How to Check What's Already There</h2>
+
+      <p>Before implementing anything, run a quick audit of your current state. View the source of your homepage (Ctrl+U or Cmd+U in most browsers) and search for <code>application/ld+json</code>. If you find nothing, you're starting from zero. If you find something, note which schema types are already present so you don't duplicate work.</p>
+
+      <p>Then run your homepage URL through Google's Rich Results Test. It will show you every schema type detected, flag any errors, and tell you whether each type is eligible for rich results in Google search. This is your baseline.</p>
+
+      <p>Keep this tool open throughout implementation. Run it after each addition to confirm the markup is valid before moving to the next item.</p>
+
+      <h2 id="1-organization-schema">1. Organization Schema (Homepage, Highest Priority)</h2>
+
+      <p><strong>Organization schema is the single most important schema type for AI visibility. It tells AI systems and search engines exactly who your company is, reducing the inference they have to do when deciding whether to cite you.</strong></p>
+
+      <p>In most AI visibility audits, this is the first gap found. It takes under an hour to implement and affects every AI platform simultaneously.</p>
+
+      <p>Add this to your homepage <code>&lt;head&gt;</code> inside a <code>&lt;script type="application/ld+json"&gt;</code> tag. Fill in every field.</p>
+
+      <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Your Company Name",
+  "legalName": "Your Legal Entity Name",
+  "url": "https://yourcompany.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://yourcompany.com/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "description": "One or two sentences describing what your company does, who it serves, and what category it belongs to.",
+  "foundingDate": "YYYY",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": 50
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://yourcompany.com/contact"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/your-company",
+    "https://www.crunchbase.com/organization/your-company",
+    "https://www.g2.com/products/your-product/reviews",
+    "https://www.capterra.com/p/your-product",
+    "https://twitter.com/yourcompany"
+  ]
+}</code></pre>
+
+      <p><strong>The <code>sameAs</code> array is where most of the AI citation value lives.</strong> Each URL you add is a signal that your company identity has been independently verified on that platform. Add every profile you have: G2, Capterra, Crunchbase, LinkedIn, Google Business Profile, Wikipedia if it exists, and any relevant industry directories.</p>
+
+      <p><strong>Checklist for Organization schema:</strong></p>
+      <ul>
+        <li>name matches exactly how your company appears on G2, LinkedIn, and Crunchbase</li>
+        <li>description is written as a plain, accurate statement of what you do (not marketing copy)</li>
+        <li>logo URL points to a real, publicly accessible image</li>
+        <li>sameAs includes all active third-party profiles</li>
+        <li>No fields left blank or placeholder text remaining</li>
+        <li>Validated in Rich Results Test with no errors</li>
+      </ul>
+
+      <h2 id="2-website-schema">2. WebSite Schema (Homepage, Implement Alongside Organization)</h2>
+
+      <p><strong>WebSite schema declares your canonical domain to AI crawlers and search engines, reducing entity ambiguity when your brand name is shared with other companies or common terms.</strong></p>
+
+      <p>It also enables the sitelinks search box for branded queries in Google. Add it to the homepage alongside Organization in a separate <code>&lt;script&gt;</code> block.</p>
+
+      <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Your Company Name",
+  "url": "https://yourcompany.com",
+  "description": "Brief site description matching your Organization schema description.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://yourcompany.com/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}</code></pre>
+
+      <p>If your site doesn't have a search function, omit the potentialAction block. The rest is still worth implementing.</p>
+
+      <p><strong>Checklist for WebSite schema:</strong></p>
+      <ul>
+        <li>url matches the canonical domain exactly (with or without trailing slash, consistent with your canonical tags)</li>
+        <li>name matches Organization name exactly</li>
+        <li>Implemented in a separate <code>&lt;script&gt;</code> block from Organization</li>
+        <li>Validated in Rich Results Test</li>
+      </ul>
+
+      <h2 id="3-faqpage-schema">3. FAQPage Schema (FAQ Pages and Product Pages with Q&amp;A Sections)</h2>
+
+      <p><strong>FAQPage schema marks up question-and-answer content in a format that maps directly to how buyers prompt AI systems. It is the highest-impact schema type for Google AI Overviews and conversational AI citation.</strong></p>
+
+      <p>Any page with a genuine FAQ section is a candidate: your main FAQ page, your pricing page if it answers common questions, your product pages if they include a Q&amp;A section.</p>
+
+      <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does your company do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plain text answer here. Do not use HTML tags inside the text field."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is your product designed for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plain text answer here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is your product different from competitors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plain text answer here."
+      }
+    }
+  ]
+}</code></pre>
+
+      <p>The questions in your schema must exactly match the questions visible on the page. Google will not surface FAQ rich results if the schema questions don't correspond to actual on-page content.</p>
+
+      <p><strong>Checklist for FAQPage schema:</strong></p>
+      <ul>
+        <li>Every question in the schema appears verbatim on the page</li>
+        <li>Answer text is plain text with no HTML markup</li>
+        <li>Answers are complete and self-contained (they should make sense quoted out of context)</li>
+        <li>Questions are written the way a buyer would actually ask them, not as keyword strings</li>
+        <li>Implemented on every page with genuine Q&amp;A content</li>
+        <li>Validated in Rich Results Test</li>
+      </ul>
+
+      <h2 id="4-article-and-blogposting-schema">4. Article and BlogPosting Schema (Blog Posts and How-To Content)</h2>
+
+      <p><strong>Article schema (or the more specific BlogPosting subtype) signals to AI systems that content is authored, dated, and from an identifiable source. This increases citation likelihood on retrieval-based platforms like Perplexity and Claude.</strong></p>
+
+      <p>This is typically a template-level implementation: add it once to your blog post template and it applies to all existing and future posts automatically. If your CMS supports it (WordPress with Yoast, Rank Math, or a custom template), this is a developer task measured in minutes rather than hours.</p>
+
+      <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Exact Post Title",
+  "description": "The post meta description or first paragraph.",
+  "url": "https://yourcompany.com/blog/post-slug",
+  "datePublished": "2026-04-03",
+  "dateModified": "2026-04-03",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name",
+    "url": "https://yourcompany.com/author/author-name"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Your Company Name",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yourcompany.com/logo.png"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://yourcompany.com/blog/post-featured-image.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yourcompany.com/blog/post-slug"
+  }
+}</code></pre>
+
+      <p>If content is published by the company rather than an individual author, replace the Person type in author with an Organization type matching your Organization schema.</p>
+
+      <p><strong>Checklist for Article/BlogPosting schema:</strong></p>
+      <ul>
+        <li>headline matches the H1 of the post exactly</li>
+        <li>datePublished reflects the actual publish date</li>
+        <li>dateModified is updated whenever the post content changes</li>
+        <li>image URL points to the post's featured image (1200x630px recommended)</li>
+        <li>Templated across all blog posts, not just new ones</li>
+        <li>Validated on at least three posts to confirm the template is working correctly</li>
+      </ul>
+
+      <h2 id="5-product-schema">5. Product Schema (Product and Service Pages)</h2>
+
+      <p><strong>Product schema communicates what your product or service does, who it's for, and how it compares — in a structured format that AI systems draw on when generating vendor comparison responses.</strong></p>
+
+      <p>This is particularly valuable for queries like "best tools for X" or "how does Product A compare to Product B." AI systems generating these answers look for structured product data. Without it, your product description is unstructured prose that AI systems have to parse and interpret.</p>
+
+      <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Your Product Name",
+  "description": "Clear, specific description of what the product does and who it is for.",
+  "url": "https://yourcompany.com/product",
+  "brand": {
+    "@type": "Brand",
+    "name": "Your Company Name"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Your Company Name",
+    "url": "https://yourcompany.com"
+  },
+  "category": "Your Product Category",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "priceType": "https://schema.org/InvoicePrice",
+      "name": "Starting price or pricing model description"
+    },
+    "url": "https://yourcompany.com/pricing"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "142",
+    "bestRating": "5"
+  }
+}</code></pre>
+
+      <p>Only include aggregateRating if you have verified public reviews to back it up. The rating value and review count should match what appears on G2, Capterra, or another public review platform.</p>
+
+      <p><strong>Checklist for Product schema:</strong></p>
+      <ul>
+        <li>description is factual and specific, not marketing copy</li>
+        <li>category matches how your product is categorized on G2 and Capterra</li>
+        <li>aggregateRating only included if verifiable public reviews exist</li>
+        <li>Rating values match your most prominent public review source</li>
+        <li>Implemented on every product or service page</li>
+        <li>Validated in Rich Results Test</li>
+      </ul>
+
+      <h2 id="6-breadcrumblist-schema">6. BreadcrumbList Schema (All Multi-Level Pages)</h2>
+
+      <p><strong>BreadcrumbList schema helps AI systems and search engines understand your site architecture, which improves the indexability of deeper content pages that might otherwise be underweighted in AI retrieval.</strong></p>
+
+      <p>It also generates breadcrumb trails in Google search results, which can improve click-through rates for content deeper in the site hierarchy.</p>
+
+      <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yourcompany.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://yourcompany.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Post Title",
+      "item": "https://yourcompany.com/blog/post-slug"
+    }
+  ]
+}</code></pre>
+
+      <p>Adjust the itemListElement array to reflect the actual page hierarchy. A product page would have Home, Products, and the specific product name.</p>
+
+      <p><strong>Checklist for BreadcrumbList schema:</strong></p>
+      <ul>
+        <li>Implemented on all pages beyond the homepage</li>
+        <li>position numbers are sequential with no gaps</li>
+        <li>Each item URL is the canonical URL for that level of the hierarchy</li>
+        <li>Matches the visual breadcrumb navigation on the page (if present)</li>
+      </ul>
+
+      <h2 id="7-the-full-implementation-checklist">7. The Full Implementation Checklist</h2>
+
+      <p>Run through this after completing all schema types. Every checked box is a signal that AI systems can read.</p>
+
+      <p><strong>Homepage:</strong></p>
+      <ul>
+        <li>Organization JSON-LD with a complete sameAs array</li>
+        <li>WebSite JSON-LD</li>
+        <li>No placeholder text remaining in any field</li>
+        <li>Validated in Rich Results Test with zero errors</li>
+      </ul>
+
+      <p><strong>FAQ and Q&amp;A Pages:</strong></p>
+      <ul>
+        <li>FAQPage JSON-LD on every page with genuine Q&amp;A content</li>
+        <li>Questions match page content verbatim</li>
+        <li>Answers are plain text, self-contained, quotable</li>
+      </ul>
+
+      <p><strong>Blog and Content Pages:</strong></p>
+      <ul>
+        <li>BlogPosting or Article JSON-LD templated across all posts</li>
+        <li>dateModified updates automatically on content changes</li>
+        <li>BreadcrumbList is present on all posts</li>
+      </ul>
+
+      <p><strong>Product and Service Pages:</strong></p>
+      <ul>
+        <li>Product JSON-LD on each product or service page</li>
+        <li>aggregateRating only if backed by public reviews</li>
+        <li>BreadcrumbList present</li>
+      </ul>
+
+      <p><strong>Validation:</strong></p>
+      <ul>
+        <li>Every schema type tested in Rich Results Test</li>
+        <li>No errors (warnings are acceptable, errors are not)</li>
+        <li>Re-validated after any content or schema update</li>
+      </ul>
+
+      <h2>What Happens After You've Done This</h2>
+
+      <p>Implementing this checklist changes what AI systems can do with your website. Before: inference from unstructured text, which introduces uncertainty and suppresses citation. After: confirmed, structured facts that AI crawlers can read and use directly.</p>
+
+      <p>The fastest results show up in Google AI Overviews, which often reflects new FAQPage schema within two to four weeks. Perplexity, which retrieves live content, responds quickly to schema changes on newly indexed pages. ChatGPT and Claude, which rely more on training data, take longer to update but schema still contributes through any live browsing they perform.</p>
+
+      <p>What this checklist doesn't replace is the entity work: your third-party profiles, your press coverage, your review volume. Schema tells AI systems what your company is. <a href="{{ '/glossary/entity-signals/' | relative_url }}">Entity signals</a> tell AI systems that independent sources agree. Both are required.</p>
+
+      <p>Implementing the checklist is the faster half of the job. Most teams can get through it in a few days. Finding out whether it worked, and where the remaining gaps are, is where an AI Visibility Report comes in. It runs your brand across ChatGPT, Perplexity, Claude, and Google AI Overviews after implementation and shows you exactly which signals are landing and which ones aren't.</p>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+
+      <h3>What schema markup types matter most for AI visibility?</h3>
+      <p>The highest-priority schema types for AI visibility are Organization (homepage, establishes verified brand identity), FAQPage (any page with Q&amp;A content, maps directly to conversational AI queries), Article or BlogPosting (blog and how-to content, signals authorship and freshness), and Product (product and service pages, helps AI comparison responses). WebSite and BreadcrumbList round out a complete implementation.</p>
+
+      <h3>What is JSON-LD and how is it different from other schema formats?</h3>
+      <p>JSON-LD (JavaScript Object Notation for Linked Data) is the format recommended by Google and used by AI crawlers for structured data. It sits inside a <code>&lt;script type="application/ld+json"&gt;</code> tag in the page <code>&lt;head&gt;</code> and does not affect the visible page layout or design. Other formats like Microdata and RDFa embed schema directly into HTML elements. JSON-LD is preferred because it's easier to implement, maintain, and validate.</p>
+
+      <h3>How do I check if schema markup is working?</h3>
+      <p>Run the page URL through Google's Rich Results Test (search.google.com/test/rich-results). It shows every schema type detected on the page, flags errors that need fixing, and confirms which types are eligible for rich results. Run it immediately after implementation and after any schema update. A schema block that validates without errors is functioning correctly.</p>
+
+      <h3>Does schema markup directly improve Google rankings?</h3>
+      <p>Schema markup does not directly improve rankings in Google's traditional organic results. It influences rich result eligibility (featured snippets, FAQ boxes, breadcrumbs) and it is a significant signal for AI Overviews, Perplexity, and other AI platforms. The SEO benefit is indirect: better rich results can improve click-through rates, and AI Overviews visibility can drive traffic outside of traditional rankings.</p>
+
+      <h3>What is the most common schema mistake companies make?</h3>
+      <p>The most common mistake is implementing schema on some pages but not others, or implementing it with incomplete fields. An Organization block with a missing sameAs array or a placeholder description is significantly less useful than a complete implementation. The second most common mistake is implementing FAQPage schema with questions that don't exactly match the on-page content. Google requires the schema questions to correspond to actual visible page content.</p>
+
+      <h3>Can schema markup be implemented without a developer?</h3>
+      <p>Some CMS platforms (WordPress with plugins like Yoast SEO or Rank Math) allow non-developers to configure basic schema markup through the admin interface. However, complete Organization schema with a full sameAs array, custom Product schema, and properly templated BlogPosting schema typically require direct access to page templates or a plugin that supports custom JSON-LD blocks. The implementation is not technically complex, but it does require someone who can edit page source or install and configure the right tools.</p>
+
+    </div>
+  </div>
+</section>
+
+{% include cta-reports.html %}
