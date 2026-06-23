@@ -30,6 +30,10 @@ document.querySelectorAll('form[data-webhook]').forEach(form => {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error('Server error');
+      if (form.dataset.redirect) {
+        window.location.href = form.dataset.redirect;
+        return;
+      }
       if (msg) {
         msg.className = 'form-message success';
         msg.textContent = form.dataset.successMsg || 'Thanks! We\'ll be in touch soon.';

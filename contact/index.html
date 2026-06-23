@@ -22,17 +22,18 @@ permalink: /contact/
   <div class="container">
     <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:0.5rem">Not ready for a call?</h2>
     <p style="color:var(--color-muted);margin-bottom:2rem">Send us a note and we'll get back to you within one business day.</p>
-    <form data-webhook="REPLACE_WITH_N8N_CONTACT_WEBHOOK_URL"
+    <form data-webhook="https://tangyslice.app.n8n.cloud/webhook/contact-us"
+          data-redirect="{{ '/contact-thank-you/' | relative_url }}"
           data-success-msg="Message received — we'll be in touch within one business day."
           style="max-width:560px">
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem">
         <div class="form-group" style="margin-bottom:0">
           <label for="first_name">First name <span class="req">*</span></label>
-          <input type="text" id="first_name" name="first_name" required>
+          <input type="text" id="first_name" name="firstname" required>
         </div>
         <div class="form-group" style="margin-bottom:0">
           <label for="last_name">Last name <span class="req">*</span></label>
-          <input type="text" id="last_name" name="last_name" required>
+          <input type="text" id="last_name" name="lastname" required>
         </div>
       </div>
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem">

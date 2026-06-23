@@ -12,20 +12,21 @@ permalink: /page-optimization-report/
 
       <div class="hero-copy">
         <p class="section-label">Page Optimization Report</p>
-        <h1>Is your page invisible to AI?</h1>
+        <h1>Find out why AI skips your page</h1>
         <p class="hero-sub">A high Google ranking doesn't mean AI platforms are citing your content</p>
         <p class="hero-body">Submit any page URL and receive a full GEO and SEO audit delivered as a ready-to-use report — with a prioritized implementation checklist, copy-paste schema markup, and headline rewrites, in minutes.</p>
         <p class="hero-trust">Free &middot; Delivered to your inbox in minutes</p>
       </div>
 
       <div class="hero-form-wrap">
-        <form class="form-card"
-              data-webhook="REPLACE_WITH_N8N_PAGE_REPORT_WEBHOOK_URL"
+        <form class="form-card form-card--two-col"
+              data-webhook="https://tangyslice.app.n8n.cloud/webhook/po-intake"
+              data-redirect="{{ '/page-optimization-thank-you/' | relative_url }}"
               data-success-msg="Got it! Your page optimization report is on its way.">
           <h3 class="form-card-title">Analyze your page for free</h3>
           <div class="form-group">
             <label for="page_url">Page URL <span class="req">*</span></label>
-            <input type="url" id="page_url" name="page_url" required placeholder="https://yoursite.com/your-page">
+            <input type="url" id="page_url" name="url" required placeholder="https://yoursite.com/your-page">
           </div>
           <div class="form-group">
             <label for="email">Your email address <span class="req">*</span></label>
@@ -35,7 +36,7 @@ permalink: /page-optimization-report/
             <input type="checkbox" id="terms" name="terms" required>
             <label for="terms">I accept the <a href="{{ '/terms/' | relative_url }}">terms of service</a> and <a href="{{ '/privacy/' | relative_url }}">privacy policy</a>.</label>
           </div>
-          <button type="submit" class="btn btn-primary form-submit" data-label="Get my free report">Get my free report</button>
+          <button type="submit" class="btn btn-primary form-submit" data-label="Optimize my page">Optimize my page</button>
           <div class="form-message"></div>
           <p class="form-disclaimer">AI-generated audit. Results reflect a point-in-time analysis.</p>
         </form>

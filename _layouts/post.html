@@ -212,10 +212,6 @@ document.addEventListener('DOMContentLoaded', function () {
     headings.forEach(function (h) { observer.observe(h); });
   }
 
-  document.querySelectorAll('.faq-question').forEach(function (btn) {
-    btn.addEventListener('click', function () { this.closest('.faq-item').classList.toggle('open'); });
-  });
-
   var copyBtn = document.getElementById('copy-link');
   if (copyBtn) {
     copyBtn.addEventListener('click', function () {
