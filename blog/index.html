@@ -2,7 +2,6 @@
 layout: default
 title: Blog – Fix My AI Rank
 description: Insights on AI visibility, GEO, AEO, and getting your brand cited by AI systems.
-permalink: /blog/
 ---
 
 <div class="page-hero">
@@ -32,7 +31,12 @@ permalink: /blog/
     {% assign featured_author = site.data.authors[featured.author] %}
     {% assign featured_words = featured.content | number_of_words %}
     {% assign featured_read = featured_words | divided_by: 200 | plus: 1 %}
-    <a href="{{ featured.url | relative_url }}" class="blog-featured" data-category="{{ featured.category | downcase | replace: ' ', '-' }}">
+    <a href="{{ featured.url | relative_url }}" class="blog-featured{% if featured.image %} blog-featured--has-image{% endif %}" data-category="{{ featured.category | downcase | replace: ' ', '-' }}">
+      {% if featured.image %}
+      <div class="blog-featured-image">
+        <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
+      </div>
+      {% endif %}
       <div class="blog-featured-body">
         <div class="blog-featured-meta">
           {% if featured.category %}<span class="post-category-badge">{{ featured.category }}</span>{% endif %}
@@ -65,56 +69,57 @@ permalink: /blog/
       {% assign post_author = site.data.authors[post.author] %}
       {% assign post_words = post.content | number_of_words %}
       {% assign post_read = post_words | divided_by: 200 | plus: 1 %}
-      <a href="{{ post.url | relative_url }}" class="blog-card" data-category="{{ post.category | downcase | replace: ' ', '-' }}">
+      {% assign card_post = post %}
+      {% capture card_html %}
+      <a href="{{ card_post.url | relative_url }}" class="blog-card" data-category="{{ card_post.category | downcase | replace: ' ', '-' }}">
+        {% if card_post.image %}<div class="blog-card-image"><img src="{{ card_post.image | relative_url }}" alt="{{ card_post.title }}"></div>{% endif %}
         <div class="blog-card-top">
-          {% if post.category %}<span class="post-category-badge">{{ post.category }}</span>{% endif %}
-          <h3 class="blog-card-title">{{ post.title }}</h3>
-          {% if post.description %}<p class="blog-card-excerpt">{{ post.description }}</p>{% endif %}
+          {% if card_post.category %}<span class="post-category-badge">{{ card_post.category }}</span>{% endif %}
+          <h3 class="blog-card-title">{{ card_post.title }}</h3>
+          {% if card_post.description %}<p class="blog-card-excerpt">{{ card_post.description }}</p>{% endif %}
         </div>
         <div class="blog-card-footer">
-          {% if post_author %}
-          {% if post_author.photo %}
-          <img src="{{ post_author.photo | relative_url }}" alt="{{ post_author.name }}" class="blog-author-avatar blog-author-avatar--photo blog-author-avatar--sm">
-          {% else %}
-          {% assign np = post_author.name | split: ' ' %}
-          <span class="blog-author-avatar blog-author-avatar--sm">{{ np[0] | slice: 0 }}{{ np | last | slice: 0 }}</span>
-          {% endif %}
-          <span class="blog-author-name">{{ post_author.name }}</span>
+          {% assign ca = site.data.authors[card_post.author] %}
+          {% if ca %}
+          {% if ca.photo %}<img src="{{ ca.photo | relative_url }}" alt="{{ ca.name }}" class="blog-author-avatar blog-author-avatar--photo blog-author-avatar--sm">
+          {% else %}{% assign cnp = ca.name | split: ' ' %}<span class="blog-author-avatar blog-author-avatar--sm">{{ cnp[0] | slice: 0 }}{{ cnp | last | slice: 0 }}</span>{% endif %}
+          <span class="blog-author-name">{{ ca.name }}</span>
           <span class="blog-meta-sep">·</span>
           {% endif %}
-          <span class="blog-meta-item">{{ post.date | date: "%b %-d, %Y" }}</span>
+          {% assign cw = card_post.content | number_of_words %}{% assign cr = cw | divided_by: 200 | plus: 1 %}
+          <span class="blog-meta-item">{{ card_post.date | date: "%b %-d, %Y" }}</span>
           <span class="blog-meta-sep">·</span>
-          <span class="blog-meta-item">{{ post.read_time | default: post_read }} min</span>
+          <span class="blog-meta-item">{{ card_post.read_time | default: cr }} min</span>
         </div>
       </a>
+      {% endcapture %}{{ card_html }}
       {% endfor %}
       {% else %}
       {% for post in paginator.posts %}
-      {% assign post_author = site.data.authors[post.author] %}
-      {% assign post_words = post.content | number_of_words %}
-      {% assign post_read = post_words | divided_by: 200 | plus: 1 %}
-      <a href="{{ post.url | relative_url }}" class="blog-card" data-category="{{ post.category | downcase | replace: ' ', '-' }}">
+      {% assign card_post = post %}
+      {% capture card_html %}
+      <a href="{{ card_post.url | relative_url }}" class="blog-card" data-category="{{ card_post.category | downcase | replace: ' ', '-' }}">
+        {% if card_post.image %}<div class="blog-card-image"><img src="{{ card_post.image | relative_url }}" alt="{{ card_post.title }}"></div>{% endif %}
         <div class="blog-card-top">
-          {% if post.category %}<span class="post-category-badge">{{ post.category }}</span>{% endif %}
-          <h3 class="blog-card-title">{{ post.title }}</h3>
-          {% if post.description %}<p class="blog-card-excerpt">{{ post.description }}</p>{% endif %}
+          {% if card_post.category %}<span class="post-category-badge">{{ card_post.category }}</span>{% endif %}
+          <h3 class="blog-card-title">{{ card_post.title }}</h3>
+          {% if card_post.description %}<p class="blog-card-excerpt">{{ card_post.description }}</p>{% endif %}
         </div>
         <div class="blog-card-footer">
-          {% if post_author %}
-          {% if post_author.photo %}
-          <img src="{{ post_author.photo | relative_url }}" alt="{{ post_author.name }}" class="blog-author-avatar blog-author-avatar--photo blog-author-avatar--sm">
-          {% else %}
-          {% assign np = post_author.name | split: ' ' %}
-          <span class="blog-author-avatar blog-author-avatar--sm">{{ np[0] | slice: 0 }}{{ np | last | slice: 0 }}</span>
-          {% endif %}
-          <span class="blog-author-name">{{ post_author.name }}</span>
+          {% assign ca = site.data.authors[card_post.author] %}
+          {% if ca %}
+          {% if ca.photo %}<img src="{{ ca.photo | relative_url }}" alt="{{ ca.name }}" class="blog-author-avatar blog-author-avatar--photo blog-author-avatar--sm">
+          {% else %}{% assign cnp = ca.name | split: ' ' %}<span class="blog-author-avatar blog-author-avatar--sm">{{ cnp[0] | slice: 0 }}{{ cnp | last | slice: 0 }}</span>{% endif %}
+          <span class="blog-author-name">{{ ca.name }}</span>
           <span class="blog-meta-sep">·</span>
           {% endif %}
-          <span class="blog-meta-item">{{ post.date | date: "%b %-d, %Y" }}</span>
+          {% assign cw = card_post.content | number_of_words %}{% assign cr = cw | divided_by: 200 | plus: 1 %}
+          <span class="blog-meta-item">{{ card_post.date | date: "%b %-d, %Y" }}</span>
           <span class="blog-meta-sep">·</span>
-          <span class="blog-meta-item">{{ post.read_time | default: post_read }} min</span>
+          <span class="blog-meta-item">{{ card_post.read_time | default: cr }} min</span>
         </div>
       </a>
+      {% endcapture %}{{ card_html }}
       {% endfor %}
       {% endif %}
     </div>

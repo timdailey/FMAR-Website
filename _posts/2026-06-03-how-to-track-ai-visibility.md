@@ -1,7 +1,10 @@
 ---
 layout: post
+redirect_from:
+  - /2026/06/03/how-to-track-ai-visibility/
 title: "How to Track Your Brand's AI Visibility"
 description: A step-by-step monthly framework for tracking your brand's citation rate across ChatGPT, Perplexity, Claude, and Google AI Overviews, with a data template.
+image: /assets/images/posts/how-to-track-ai-visibility-thumb.webp
 date: 2026-06-03
 author: tim_dailey
 category: GEO

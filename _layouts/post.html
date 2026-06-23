@@ -160,8 +160,8 @@ layout: default
   <div class="container--narrow">
     <h2 class="post-section-heading">More to read</h2>
     <div class="post-related-grid">
-      {% assign related = site.posts | where_exp: "p", "p.url != page.url" | limit: 3 %}
-      {% for post in related %}
+      {% assign related = site.posts | where_exp: "p", "p.url != page.url" %}
+      {% for post in related limit: 3 %}
       <a href="{{ post.url | relative_url }}" class="post-related-card">
         {% if post.category %}<span class="post-category-badge">{{ post.category }}</span>{% endif %}
         <h3>{{ post.title }}</h3>
