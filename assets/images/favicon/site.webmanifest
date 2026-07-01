@@ -1,0 +1,12 @@
+---
+---
+{
+  "name": "Fix My AI Rank",
+  "icons": [
+    { "src": "{{ '/assets/images/favicon/android-chrome-192x192.png' | relative_url }}", "sizes": "192x192", "type": "image/png" },
+    { "src": "{{ '/assets/images/favicon/android-chrome-512x512.png' | relative_url }}", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0d1f4e",
+  "background_color": "#0d1f4e",
+  "display": "standalone"
+}
