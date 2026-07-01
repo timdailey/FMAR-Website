@@ -1,0 +1,186 @@
+---
+layout: default
+title: Entity and Contribution Report – Fix My AI Rank
+description: Find out why AI recommends your competitors first. See exactly where your third-party signal gaps are and which channels to target to close them.
+permalink: /entity-report/
+---
+
+<!-- ── Hero + Form ── -->
+<section class="hero" id="entity-report-form">
+  <div class="container">
+    <div class="hero-layout">
+
+      <div class="hero-copy">
+        <p class="section-label">Entity and Contribution Report</p>
+        <h1>Find out why AI recommends your competitors first</h1>
+        <p class="hero-sub">AI engines don't cite the best product. They cite the brand with the strongest external signal footprint.</p>
+        <p class="hero-body">Our Entity and Contribution Report shows you exactly where your signal gaps are, and which third-party channels to target to close them.</p>
+        <p class="hero-trust">Free &middot; Delivered to your inbox in minutes</p>
+      </div>
+
+      <div class="hero-form-wrap">
+        <form class="form-card"
+              data-webhook="https://tangyslice.app.n8n.cloud/webhook/entity-recommendations"
+              data-redirect="{{ '/entity-thank-you/' | relative_url }}"
+              data-success-msg="Got it! Your entity report is on its way.">
+          <h3 class="form-card-title">Get your free entity report</h3>
+          <div class="form-group">
+            <label for="company">Your company for analysis <span class="req">*</span></label>
+            <input type="text" id="company" name="companyname" required>
+          </div>
+          <div class="form-group">
+            <label for="website">Your company website <span class="req">*</span></label>
+            <input type="url" id="website" name="companywebsite" required placeholder="https://">
+          </div>
+          <div class="form-group">
+            <label for="email">Your work email <span class="req">*</span></label>
+            <input type="email" id="email" name="your-email" required>
+          </div>
+          <div class="form-group">
+            <label for="competitor1">Competitor 1 <span class="req">*</span></label>
+            <input type="url" id="competitor1" name="competitor1" required placeholder="https://">
+          </div>
+          <div class="form-group">
+            <label for="competitor2">Competitor 2 <span class="req">*</span></label>
+            <input type="url" id="competitor2" name="competitor2" required placeholder="https://">
+          </div>
+          <div class="form-group">
+            <label for="competitor3">Competitor 3 <span class="req">*</span></label>
+            <input type="url" id="competitor3" name="competitor3" required placeholder="https://">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I accept the <a href="{{ '/terms/' | relative_url }}">terms of service</a> and <a href="{{ '/privacy/' | relative_url }}">privacy policy</a>.</label>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" data-label="Generate my free recommendations">Generate my free recommendations</button>
+          <div class="form-message"></div>
+          <p class="form-disclaimer">AI-generated snapshot. Results reflect a point-in-time analysis.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── How it works ── -->
+<section class="section section--dark">
+  <div class="container">
+    <p class="section-label">How the report works</p>
+    <h2 class="section-title">AI engines rank trusted sources. This shows where you sit.</h2>
+    <p class="section-lead">AI engines maintain an internal map of trusted sources for every topic. The entity report shows where your brand sits on that map, and what it takes to move up.</p>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3 class="step-title">See the mention gap</h3>
+        <p>We measure how many third-party sources are validating your brand versus your top competitors. That volume gap is usually the primary reason AI engines don't recommend you first.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3 class="step-title">Map your signal strength</h3>
+        <p>We audit every channel AI engines use to verify brand credibility: named experts, earned media, directory listings, awards, partnerships, and community presence.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3 class="step-title">Know exactly what to do</h3>
+        <p>Every gap comes with a specific tactic, target channel, effort level, and the AI platform it will most influence. Ranked by expected impact, with prerequisites flagged upfront.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── What's in the report ── -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">What you get</p>
+    <h2 class="section-title">What's in your Entity Report</h2>
+    <p class="section-lead">A structured report benchmarking your entity signal footprint against your competitors, with a ranked list of specific actions to close the gap.</p>
+    <div class="feature-grid">
+
+      <div class="feature-item">
+        <h3>Critical Finding and Visibility Verdict</h3>
+        <p>A direct read on where your brand stands: AI Invisible, AI Indexed, AI Aware, or AI Authoritative, and the core reason AI engines aren't confident enough to recommend you yet.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Your Three Priority Actions</h3>
+        <p>The three highest-impact moves to make this month, each with what to do, why it matters, the effort involved, and any prerequisites that need to happen first.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Competitor Comparison Table</h3>
+        <p>Your visibility level, outside mention count, and named expert status benchmarked directly against your top competitors, so you see exactly who's ahead and why.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>What's Driving the Gap</h3>
+        <p>The specific press coverage, named executives, partnerships, and Wikipedia presence your competitors have that you don't, and the assets you already have that aren't being credited.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Channel-by-Channel Opportunity Table</h3>
+        <p>Every trade publication, directory, wire service, community, and podcast worth targeting, each ranked by effort level and confidence, with a direct link to get started.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Schema and Content Gap Checklist</h3>
+        <p>The structured data missing from your website and the specific comparison pages, explainers, and case studies you need to build, each flagged by urgency.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section section--alt" id="faq">
+  <div class="container container--narrow">
+    <p class="section-label">Frequently asked questions</p>
+    <h2 class="section-title">Common questions</h2>
+    <ul class="faq-list">
+
+      <li class="faq-item">
+        <button class="faq-question">What is an entity signal and why does it affect AI recommendations?</button>
+        <div class="faq-answer">
+          <p>An entity signal is any piece of external, third-party information that helps AI engines verify your brand: what it does, who it serves, and whether it's credible. Wikipedia entries, G2 reviews, press mentions, named expert citations, and partnership announcements are all entity signals. AI engines aggregate these signals to assign a confidence level to your brand. Low signal volume means low confidence, which means you don't get recommended even when you're the best fit.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">How is this different from the AI Visibility Report?</button>
+        <div class="faq-answer">
+          <p>The AI Visibility Report measures your current citation rate across ChatGPT, Perplexity, and Google AI Overviews. It tells you whether and where you appear. The Entity and Contribution Report diagnoses why you appear or don't, by auditing the external signals AI engines use to validate your brand. Most clients run the Visibility Report first to establish a baseline, then the Entity Report to build the improvement plan.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">How long does it take to see results after acting on the recommendations?</button>
+        <div class="faq-answer">
+          <p>Directory and profile improvements often begin influencing AI citations within two to four weeks. Earned media placements in trade publications typically get indexed and influence Perplexity and Claude within four to eight weeks. Named expert citation loops build over months, but the compounding effect is significant: once an executive is treated as an authoritative voice by AI engines, it becomes a durable citation advantage. Wikipedia creation, when prerequisites are met, tends to have the longest lead time but the broadest impact across all platforms.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">Which AI platforms does the entity report target?</button>
+        <div class="faq-answer">
+          <p>The report covers ChatGPT, Perplexity AI, Claude, and Google AI Overviews, the four primary platforms where B2B buyers conduct research. Each platform weights entity signals differently: ChatGPT relies heavily on training data and long-standing authoritative sources; Perplexity is most responsive to recent, well-indexed earned media; Claude weights authoritative and consistently described entities; Google AI Overviews has the most overlap with traditional SEO signals but responds strongly to structured entity data. Every recommended action in the report is tagged with the platforms it targets.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">What do you need from us to produce the report?</button>
+        <div class="faq-answer">
+          <p>Your company name, website URL, and the names of two to three direct competitors. We handle all the research, signal auditing, and competitive analysis from there. The report is delivered as a structured PDF with each section clearly labeled and the priority action list ready to hand to your team.</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ── Bottom CTA ── -->
+<section class="section section--cta">
+  <div class="container">
+    <h2 class="section-title">Ready to find out where your signal gaps are?</h2>
+    <p class="section-lead">Submit your company and competitors above and get your report in minutes.</p>
+    <a href="#entity-report-form" class="btn btn-primary">Get my free report</a>
+  </div>
+</section>
