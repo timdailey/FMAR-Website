@@ -33,3 +33,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - .gitattributes
+  - vendor
+  - .bundle
+  - node_modules
