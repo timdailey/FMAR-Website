@@ -1,0 +1,324 @@
+---
+layout: default
+title: Local AI Visibility Report – Fix My AI Rank
+description: Find out how AI platforms like ChatGPT, Perplexity, and Claude see your local business, and what to fix first.
+permalink: /local-visibility-report/
+---
+
+<!-- ── Hero + Form ── -->
+<section class="hero" id="local-report-form">
+  <div class="container">
+    <div class="hero-layout">
+
+      <div class="hero-copy">
+        <p class="section-label">Local Visibility Report</p>
+        <h1>Your Local AI Visibility Report</h1>
+        <p class="hero-sub">Find out how AI platforms like ChatGPT, Perplexity, and Claude see your local business, and what to fix first.</p>
+        <div class="value-prop-list">
+          <div class="value-prop">
+            <strong>Real data</strong>
+            <p>AI mention rates from live API testing, not estimates.</p>
+          </div>
+          <div class="value-prop">
+            <strong>Google AI Overviews</strong>
+            <p>We check whether your business appears in Google's AI summary boxes.</p>
+          </div>
+          <div class="value-prop">
+            <strong>Actionable</strong>
+            <p>A prioritized list of fixes tied directly to your results.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-form-wrap">
+        <form class="form-card"
+              data-webhook="https://tangyslice.app.n8n.cloud/webhook/lo-intake"
+              data-redirect="{{ '/local-visibility-thank-you/' | relative_url }}"
+              data-success-msg="Thanks — check your email to confirm your report request.">
+          <h3 class="form-card-title">Get your free local visibility report</h3>
+
+          <p class="form-section-label">Business identity</p>
+          <div class="form-group">
+            <label for="business_name">Business name <span class="req">*</span></label>
+            <input type="text" id="business_name" name="business_name" required>
+          </div>
+          <div class="form-group">
+            <label for="website_url">Website URL <span class="req">*</span></label>
+            <input type="url" id="website_url" name="website_url" required placeholder="https://">
+          </div>
+          <div class="form-group--full form-subgrid-2">
+            <div class="form-group">
+              <label for="vertical">Vertical <span class="req">*</span></label>
+              <select id="vertical" name="vertical" required>
+                <option value="" disabled selected>Select your industry</option>
+                <option value="Home Services">Home Services</option>
+                <option value="Legal Services">Legal Services</option>
+                <option value="Medical & Dental">Medical & Dental</option>
+                <option value="Food & Hospitality">Food & Hospitality</option>
+                <option value="Financial Services">Financial Services</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Personal Services">Personal Services</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="Retail">Retail</option>
+                <option value="Education & Childcare">Education & Childcare</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sub_category">Sub-category <span class="req">*</span></label>
+              <input type="text" id="sub_category" name="sub_category" required placeholder="Describe your specific service, e.g. Residential HVAC installation and repair">
+            </div>
+          </div>
+
+          <p class="form-section-label">Location</p>
+          <div class="form-group">
+            <label for="city">City <span class="req">*</span></label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="form-group">
+            <label for="state">State <span class="req">*</span></label>
+            <select id="state" name="state" required>
+              <option value="" disabled selected>Select your state</option>
+              <option value="Alabama">Alabama</option>
+              <option value="Alaska">Alaska</option>
+              <option value="Arizona">Arizona</option>
+              <option value="Arkansas">Arkansas</option>
+              <option value="California">California</option>
+              <option value="Colorado">Colorado</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Delaware">Delaware</option>
+              <option value="District of Columbia">District of Columbia</option>
+              <option value="Florida">Florida</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Hawaii">Hawaii</option>
+              <option value="Idaho">Idaho</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Indiana">Indiana</option>
+              <option value="Iowa">Iowa</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Kentucky">Kentucky</option>
+              <option value="Louisiana">Louisiana</option>
+              <option value="Maine">Maine</option>
+              <option value="Maryland">Maryland</option>
+              <option value="Massachusetts">Massachusetts</option>
+              <option value="Michigan">Michigan</option>
+              <option value="Minnesota">Minnesota</option>
+              <option value="Mississippi">Mississippi</option>
+              <option value="Missouri">Missouri</option>
+              <option value="Montana">Montana</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Nevada">Nevada</option>
+              <option value="New Hampshire">New Hampshire</option>
+              <option value="New Jersey">New Jersey</option>
+              <option value="New Mexico">New Mexico</option>
+              <option value="New York">New York</option>
+              <option value="North Carolina">North Carolina</option>
+              <option value="North Dakota">North Dakota</option>
+              <option value="Ohio">Ohio</option>
+              <option value="Oklahoma">Oklahoma</option>
+              <option value="Oregon">Oregon</option>
+              <option value="Pennsylvania">Pennsylvania</option>
+              <option value="Rhode Island">Rhode Island</option>
+              <option value="South Carolina">South Carolina</option>
+              <option value="South Dakota">South Dakota</option>
+              <option value="Tennessee">Tennessee</option>
+              <option value="Texas">Texas</option>
+              <option value="Utah">Utah</option>
+              <option value="Vermont">Vermont</option>
+              <option value="Virginia">Virginia</option>
+              <option value="Washington">Washington</option>
+              <option value="West Virginia">West Virginia</option>
+              <option value="Wisconsin">Wisconsin</option>
+              <option value="Wyoming">Wyoming</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="service_area">Service area <span class="opt">(optional)</span></label>
+            <input type="text" id="service_area" name="service_area" placeholder="List the cities or towns you serve, separated by commas">
+          </div>
+
+          <p class="form-section-label">Contact</p>
+          <div class="form-group">
+            <label for="firstname">First name <span class="req">*</span></label>
+            <input type="text" id="firstname" name="firstname" required>
+          </div>
+          <div class="form-group">
+            <label for="lastname">Last name <span class="req">*</span></label>
+            <input type="text" id="lastname" name="lastname" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I accept the <a href="{{ '/terms/' | relative_url }}">terms of service</a> and <a href="{{ '/privacy/' | relative_url }}">privacy policy</a>.</label>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" data-label="Get my free report">Get my free report</button>
+          <div class="form-message"></div>
+          <p class="form-disclaimer">Free report. No credit card required. Delivered to your inbox.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Why this matters ── -->
+<section class="section" id="why-it-matters">
+  <div class="container">
+    <p class="section-label">Why this matters</p>
+    <h2 class="section-title">Local Buyers Are Asking AI Before They Ask Google</h2>
+    <p class="section-lead">A growing share of "who should I call" decisions now start in ChatGPT, Perplexity, or a Google AI Overview, not a list of ten blue links.</p>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11.5a7 7 0 0 1 14 0C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        </div>
+        <h3>What is local AI visibility?</h3>
+        <p>How often, and how accurately, your business is named when someone asks an AI platform a location-based question like "best HVAC company near me." It's the local map pack, reborn as a conversational answer.</p>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Why local SEO isn't enough anymore</h3>
+        <p>A strong Google ranking doesn't guarantee an AI recommendation. AI platforms weigh directory consistency, Google Business Profile completeness, and independent third-party confirmation, not just your own site.</p>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>What's at stake</h3>
+        <p>Most buyers now use generative AI to research purchases. A customer down the street can search for exactly what you offer and never see your name if your local signals aren't in place.</p>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>The good news: it's fixable</h3>
+        <p>Local AI visibility comes down to a short, well-defined list of signals. No rebuild required, just knowing exactly which ones are missing for your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How it works ── -->
+<section class="section section--dark">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">Three steps. One clear local picture.</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3 class="step-title">We test AI platforms for your business</h3>
+        <p>We run standardized local search queries for your vertical and service area across ChatGPT, Perplexity, Claude, and Google AI Overviews, and record whether your business gets mentioned.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3 class="step-title">We audit your local signals</h3>
+        <p>We check your Google Business Profile completeness, NAP consistency across directories, review volume, and local citation footprint against nearby competitors.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3 class="step-title">You get a prioritized fix list</h3>
+        <p>Every gap is ranked by impact and effort, so you know exactly what to fix first to start showing up when local customers ask AI platforms for a recommendation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── What's in the report ── -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">What you get</p>
+    <h2 class="section-title">What's in your Local Visibility Report</h2>
+    <div class="feature-grid">
+
+      <div class="feature-item">
+        <h3>AI Platform Visibility Scorecard</h3>
+        <p>Your mention rate on ChatGPT, Perplexity, and Claude across 10 real local search queries, with a query-by-query breakdown showing exactly which searches you appear on and which you don't.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Google AI Overviews Check</h3>
+        <p>Whether your business is named in Google's AI-generated summary box for your core local search terms, the AI answer that appears above every other result.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Local Trust Signal Audit</h3>
+        <p>The status of the four core signals AI platforms check before recommending a local business: Google Business Profile verification, NAP consistency, review rating, and review count.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Directory Listing Opportunity Map</h3>
+        <p>The specific directories, like Yelp, BBB, Angi, and HomeAdvisor, worth claiming or completing, ranked by how directly each one affects your AI visibility.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Schema Markup Gap Checklist</h3>
+        <p>The exact structured data missing from your website, in plain English, what it tells AI platforms, and how much effort each fix takes.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Ranked Action Plan and Tracking Template</h3>
+        <p>Every fix ordered by value, with what to do, why it matters, and the effort involved, plus a monthly tracking template so you can measure your progress against your baseline score.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section section--alt" id="faq">
+  <div class="container container--narrow">
+    <p class="section-label">Frequently asked questions</p>
+    <h2 class="section-title">Common questions</h2>
+    <ul class="faq-list">
+
+      <li class="faq-item">
+        <button class="faq-question">Is this report specific to my city, or just my industry?</button>
+        <div class="faq-answer">
+          <p>Both. We run queries that combine your vertical, sub-category, and location, so the results reflect what a real local customer would see when they ask an AI platform for a recommendation in your area.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">How is this different from the AI Visibility Report?</button>
+        <div class="faq-answer">
+          <p>The AI Visibility Report is built for brands competing nationally or globally on category terms. The Local Visibility Report is built for businesses that serve a specific city or region, and tests the local, near-me, and service-area queries that actually drive local buying decisions.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">Do I need a Google Business Profile to get useful results?</button>
+        <div class="faq-answer">
+          <p>No, but if you have one, we'll audit it as part of the report. If you don't, the report will flag that as a priority action, since it's one of the strongest signals AI platforms use to verify a local business.</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">Is this report really free?</button>
+        <div class="faq-answer">
+          <p>Yes. The Local Visibility Report is free and delivered automatically. We offer paid consulting and implementation services for businesses that want hands-on help executing the recommendations.</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ── Bottom CTA ── -->
+<section class="section section--cta">
+  <div class="container">
+    <h2 class="section-title">See how AI sees your business</h2>
+    <p class="section-lead">It takes a minute. Your report is delivered to your inbox.</p>
+    <a href="#local-report-form" class="btn btn-primary">Get my free local report</a>
+  </div>
+</section>
