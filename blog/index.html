@@ -31,12 +31,7 @@ description: Insights on AI visibility, GEO, AEO, and getting your brand cited b
     {% assign featured_author = site.data.authors[featured.author] %}
     {% assign featured_words = featured.content | number_of_words %}
     {% assign featured_read = featured_words | divided_by: 200 | plus: 1 %}
-    <a href="{{ featured.url | relative_url }}" class="blog-featured{% if featured.image %} blog-featured--has-image{% endif %}" data-category="{{ featured.category | downcase | replace: ' ', '-' }}">
-      {% if featured.image %}
-      <div class="blog-featured-image">
-        <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
-      </div>
-      {% endif %}
+    <a href="{{ featured.url | relative_url }}" class="blog-featured" data-category="{{ featured.category | downcase | replace: ' ', '-' }}">
       <div class="blog-featured-body">
         <div class="blog-featured-meta">
           {% if featured.category %}<span class="post-category-badge">{{ featured.category }}</span>{% endif %}
@@ -72,7 +67,6 @@ description: Insights on AI visibility, GEO, AEO, and getting your brand cited b
       {% assign card_post = post %}
       {% capture card_html %}
       <a href="{{ card_post.url | relative_url }}" class="blog-card" data-category="{{ card_post.category | downcase | replace: ' ', '-' }}">
-        {% if card_post.image %}<div class="blog-card-image"><img src="{{ card_post.image | relative_url }}" alt="{{ card_post.title }}"></div>{% endif %}
         <div class="blog-card-top">
           {% if card_post.category %}<span class="post-category-badge">{{ card_post.category }}</span>{% endif %}
           <h3 class="blog-card-title">{{ card_post.title }}</h3>
@@ -99,7 +93,6 @@ description: Insights on AI visibility, GEO, AEO, and getting your brand cited b
       {% assign card_post = post %}
       {% capture card_html %}
       <a href="{{ card_post.url | relative_url }}" class="blog-card" data-category="{{ card_post.category | downcase | replace: ' ', '-' }}">
-        {% if card_post.image %}<div class="blog-card-image"><img src="{{ card_post.image | relative_url }}" alt="{{ card_post.title }}"></div>{% endif %}
         <div class="blog-card-top">
           {% if card_post.category %}<span class="post-category-badge">{{ card_post.category }}</span>{% endif %}
           <h3 class="blog-card-title">{{ card_post.title }}</h3>

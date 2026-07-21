@@ -1,0 +1,285 @@
+---
+layout: default
+title: Local AI Visibility Report for Plastic Surgery Practices – Fix My AI Rank
+description: Find out how ChatGPT, Perplexity, and Google AI Overviews recommend plastic surgery practices in your market, and what to fix first to get cited.
+permalink: /plastic-surgery-ai-visibility-report/
+faq:
+  - q: Is this report specific to plastic and cosmetic surgery practices?
+    a: Yes. Every query we run and every signal we check is scoped to how AI platforms evaluate plastic and cosmetic surgery practices specifically, including the review platforms, board-certification signals, and procedure-specific searches that matter in this category.
+  - q: Does this cover specific procedures, or just my practice as a whole?
+    a: Both. We test broad "best plastic surgeon near me" style queries as well as procedure-specific searches, like rhinoplasty, breast augmentation, or body contouring, in your city, since AI platforms often recommend different practices depending on the exact procedure a buyer asks about.
+  - q: Do you check RealSelf and Zwivel, or just Google Business Profile?
+    a: We check all of them. Google Business Profile is one signal, but AI platforms weigh review-and-reputation platforms specific to medical aesthetics, RealSelf, Zwivel, and Vitals among them, more heavily than a typical local business. The report audits your presence across all of these.
+  - q: Is this report really free?
+    a: Yes. The report is free and delivered automatically. We offer paid consulting and implementation services for practices that want hands-on help executing the recommendations.
+---
+
+<!-- ── Hero + Form ── -->
+<section class="hero" id="local-report-form">
+  <div class="container">
+    <div class="hero-layout">
+
+      <div class="hero-copy">
+        <p class="section-label">Local Visibility Report for Plastic Surgery</p>
+        <h1>Is Your Practice Invisible When AI Recommends a Plastic Surgeon?</h1>
+        <p class="hero-sub">Find out how ChatGPT, Perplexity, and Google AI Overviews answer "best plastic surgeon near me" in your market, and whether your practice is in the answer.</p>
+        <div class="value-prop-list">
+          <div class="value-prop">
+            <strong>Real data</strong>
+            <p>AI mention rates from live testing, not estimates.</p>
+          </div>
+          <div class="value-prop">
+            <strong>Built for med aesthetics</strong>
+            <p>We check RealSelf, Zwivel, and Vitals, not generic directories.</p>
+          </div>
+          <div class="value-prop">
+            <strong>Actionable</strong>
+            <p>A prioritized list of fixes tied directly to your results.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-form-wrap">
+        <form class="form-card"
+              data-webhook="https://tangyslice.app.n8n.cloud/webhook/lo-intake"
+              data-redirect="{{ '/local-visibility-thank-you/' | relative_url }}"
+              data-success-msg="Thanks — check your email to confirm your report request.">
+          <h3 class="form-card-title">Get your free practice visibility report</h3>
+
+          <input type="hidden" name="vertical" value="Medical & Dental">
+          <input type="hidden" name="sub_category" value="Plastic and cosmetic surgery procedures and consultations">
+
+          <p class="form-section-label">Practice identity</p>
+          <div class="form-group">
+            <label for="business_name">Practice name <span class="req">*</span></label>
+            <input type="text" id="business_name" name="business_name" required>
+          </div>
+          <div class="form-group">
+            <label for="website_url">Website URL <span class="req">*</span></label>
+            <input type="url" id="website_url" name="website_url" required placeholder="https://">
+          </div>
+
+          <p class="form-section-label">Location</p>
+          <div class="form-group">
+            <label for="city">City <span class="req">*</span></label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="form-group">
+            <label for="state">State <span class="req">*</span></label>
+            <select id="state" name="state" required>
+              <option value="" disabled selected>Select your state</option>
+              <option value="Alabama">Alabama</option>
+              <option value="Alaska">Alaska</option>
+              <option value="Arizona">Arizona</option>
+              <option value="Arkansas">Arkansas</option>
+              <option value="California">California</option>
+              <option value="Colorado">Colorado</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Delaware">Delaware</option>
+              <option value="District of Columbia">District of Columbia</option>
+              <option value="Florida">Florida</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Hawaii">Hawaii</option>
+              <option value="Idaho">Idaho</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Indiana">Indiana</option>
+              <option value="Iowa">Iowa</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Kentucky">Kentucky</option>
+              <option value="Louisiana">Louisiana</option>
+              <option value="Maine">Maine</option>
+              <option value="Maryland">Maryland</option>
+              <option value="Massachusetts">Massachusetts</option>
+              <option value="Michigan">Michigan</option>
+              <option value="Minnesota">Minnesota</option>
+              <option value="Mississippi">Mississippi</option>
+              <option value="Missouri">Missouri</option>
+              <option value="Montana">Montana</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Nevada">Nevada</option>
+              <option value="New Hampshire">New Hampshire</option>
+              <option value="New Jersey">New Jersey</option>
+              <option value="New Mexico">New Mexico</option>
+              <option value="New York">New York</option>
+              <option value="North Carolina">North Carolina</option>
+              <option value="North Dakota">North Dakota</option>
+              <option value="Ohio">Ohio</option>
+              <option value="Oklahoma">Oklahoma</option>
+              <option value="Oregon">Oregon</option>
+              <option value="Pennsylvania">Pennsylvania</option>
+              <option value="Rhode Island">Rhode Island</option>
+              <option value="South Carolina">South Carolina</option>
+              <option value="South Dakota">South Dakota</option>
+              <option value="Tennessee">Tennessee</option>
+              <option value="Texas">Texas</option>
+              <option value="Utah">Utah</option>
+              <option value="Vermont">Vermont</option>
+              <option value="Virginia">Virginia</option>
+              <option value="Washington">Washington</option>
+              <option value="West Virginia">West Virginia</option>
+              <option value="Wisconsin">Wisconsin</option>
+              <option value="Wyoming">Wyoming</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="service_area">Service area <span class="opt">(optional)</span></label>
+            <input type="text" id="service_area" name="service_area" placeholder="List the cities or towns you serve, separated by commas">
+          </div>
+
+          <p class="form-section-label">Contact</p>
+          <div class="form-group">
+            <label for="firstname">First name <span class="req">*</span></label>
+            <input type="text" id="firstname" name="firstname" required>
+          </div>
+          <div class="form-group">
+            <label for="lastname">Last name <span class="req">*</span></label>
+            <input type="text" id="lastname" name="lastname" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I accept the <a href="{{ '/terms/' | relative_url }}">terms of service</a> and <a href="{{ '/privacy/' | relative_url }}">privacy policy</a>.</label>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" data-label="Get my free report">Get my free report</button>
+          <div class="form-message"></div>
+          <p class="form-disclaimer">Free report. No credit card required. Delivered to your inbox.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Why this matters ── -->
+<section class="section" id="why-it-matters">
+  <div class="container">
+    <p class="section-label">Why this matters</p>
+    <h2 class="section-title">Patients Are Asking AI Before They Ask Google</h2>
+    <p class="section-lead">A growing share of "who's the best plastic surgeon near me" research now starts in ChatGPT, Perplexity, or a Google AI Overview, not a search results page.</p>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11.5a7 7 0 0 1 14 0C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        </div>
+        <h3>What is AI visibility for a practice?</h3>
+        <p>How often, and how accurately, your practice is named when someone asks an AI platform a question like "best rhinoplasty surgeon in Austin" or "top-rated breast augmentation near me." It's the map pack, reborn as a conversational recommendation.</p>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Why your Google ranking isn't enough</h3>
+        <p>A strong Google presence doesn't guarantee an AI recommendation. AI platforms weigh RealSelf and Zwivel review volume, board-certification signals, and independent third-party confirmation, not just your own website.</p>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>What's at stake</h3>
+        <p>A prospective patient can search for exactly the procedure you specialize in, in your city, and never hear your name if your AI signals aren't in place. That's a consult lost before your team ever picks up the phone.</p>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>The good news: it's fixable</h3>
+        <p>AI visibility for a practice comes down to a short, well-defined list of signals: your review platforms, your schema, and your listings. No rebrand required, just knowing exactly which ones are missing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── What makes this niche different ── -->
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <p class="section-label">Built for this category</p>
+    <h2 class="section-title">Why Plastic Surgery Marketing Needs a Different Playbook</h2>
+    <p style="color:var(--color-muted); line-height:1.7">Generic local SEO tools check Yelp, Angi, and the Better Business Bureau. Those platforms barely register when an AI model is deciding which plastic surgeon to recommend. This report checks the sources that actually carry weight in medical aesthetics: RealSelf, where patients read verified reviews and "Worth It" ratings; Zwivel, a growing consultation and booking platform AI models increasingly cite; and Vitals, which carries board-certification and credential data AI systems use to validate a surgeon's legitimacy.</p>
+    <p style="color:var(--color-muted); line-height:1.7; margin-top:1rem">We also test procedure-specific queries, not just brand-level searches. A practice can be well-cited for "plastic surgeon in Miami" and completely absent for "mommy makeover Miami" or "revision rhinoplasty Miami," and those procedure-level gaps are where consults are actually being lost.</p>
+  </div>
+</section>
+
+<!-- ── How it works ── -->
+<section class="section section--dark">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">Three steps. One clear picture of your practice.</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3 class="step-title">We test AI platforms for your practice</h3>
+        <p>We run standardized queries, both brand-level ("best plastic surgeon in [city]") and procedure-specific ("rhinoplasty surgeon in [city]"), across ChatGPT, Perplexity, Claude, and Google AI Overviews.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3 class="step-title">We audit your reputation signals</h3>
+        <p>We check your Google Business Profile, RealSelf and Zwivel presence, Vitals credentialing, review volume, and NAP consistency against the other practices in your market.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3 class="step-title">You get a prioritized fix list</h3>
+        <p>Every gap is ranked by impact and effort, so your marketing team or agency knows exactly what to fix first to start showing up when prospective patients ask AI for a recommendation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── What's in the report ── -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">What you get</p>
+    <h2 class="section-title">What's in Your Practice Visibility Report</h2>
+    <div class="feature-grid">
+
+      <div class="feature-item">
+        <h3>AI Platform Visibility Scorecard</h3>
+        <p>Your mention rate on ChatGPT, Perplexity, and Claude across brand-level and procedure-specific queries, with a query-by-query breakdown.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Google AI Overviews Check</h3>
+        <p>Whether your practice is named in Google's AI-generated summary box for your core "near me" and procedure-specific searches.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Reputation Platform Audit</h3>
+        <p>Your presence and completeness across RealSelf, Zwivel, Vitals, and Google Business Profile, the sources AI platforms trust most in medical aesthetics.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Procedure-Level Gap Map</h3>
+        <p>Which specific procedures AI platforms already associate with your practice, and which ones you're invisible for, ranked by opportunity.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Schema Markup Gap Checklist</h3>
+        <p>The exact structured data missing from your website, including physician and procedure schema, and how much effort each fix takes.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Ranked Action Plan and Tracking Template</h3>
+        <p>Every fix ordered by value, with what to do, why it matters, and a monthly tracking template to measure progress against your baseline.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% include faq-section.html %}
+
+<!-- ── Bottom CTA ── -->
+<section class="section section--cta">
+  <div class="container">
+    <h2 class="section-title">See how AI sees your practice</h2>
+    <p class="section-lead">It takes a minute. Your report is delivered to your inbox.</p>
+    <a href="#local-report-form" class="btn btn-primary">Get my free practice report</a>
+  </div>
+</section>
