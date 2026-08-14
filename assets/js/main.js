@@ -23,7 +23,13 @@ const FREE_EMAIL_DOMAINS = new Set([
   'tempmail.com','temp-mail.org','fakeinbox.com','dispostable.com'
 ]);
 
+// Specific test/allowlisted addresses that bypass the free-email block
+const ALLOWLISTED_EMAILS = new Set([
+  'theoj178@gmail.com',
+]);
+
 function isBlockedEmail(email) {
+  if (ALLOWLISTED_EMAILS.has(email.toLowerCase())) return false;
   const domain = email.split('@')[1]?.toLowerCase();
   return domain ? FREE_EMAIL_DOMAINS.has(domain) : false;
 }
