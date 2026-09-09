@@ -1,5 +1,6 @@
 ---
 layout: post
+related_report: /entity-report/
 redirect_from:
   - /2026/06/17/where-does-chatgpt-get-its-information/
 title: "Where Does ChatGPT Get Its Information? What Marketers Need to Know"

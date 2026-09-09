@@ -1,5 +1,6 @@
 ---
 layout: post
+related_report: /entity-report/
 redirect_from:
   - /2026/04/04/how-chatgpt-perplexity-choose-brands-to-cite/
 title: "How ChatGPT and Perplexity Choose Which Brands to Cite"

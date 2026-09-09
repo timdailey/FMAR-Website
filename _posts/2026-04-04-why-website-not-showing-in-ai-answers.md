@@ -1,5 +1,6 @@
 ---
 layout: post
+related_report: /entity-report/
 redirect_from:
   - /2026/04/04/why-website-not-showing-in-ai-answers/
   - /why-website-not-showing-in-ai-answers-2/

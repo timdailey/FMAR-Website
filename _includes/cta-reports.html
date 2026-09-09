@@ -1,7 +1,26 @@
 <section class="section section--cta">
   <div class="container">
-    <h2 class="section-title">Free reports for your AI visibility</h2>
-    <p class="section-lead">See exactly where your brand stands in AI-generated answers — and what to fix first. Three free audits covering citations, entity signals, schema, and page-level optimization.</p>
-    <a href="{{ '/reports/' | relative_url }}" class="btn btn-primary">See all free reports</a>
+    {% case page.related_report %}
+    {% when '/entity-report/' %}
+      <h2 class="section-title">Not sure why competitors get cited instead of you?</h2>
+      <p class="section-lead">The Entity and Contribution Report finds the third-party signal gaps — Wikipedia, G2, Crunchbase, and more — causing AI systems to skip your brand.</p>
+      <a href="{{ '/entity-report/' | relative_url }}" class="btn btn-primary">Get the free Entity Report</a>
+    {% when '/local-visibility-report/' %}
+      <h2 class="section-title">See how AI platforms describe your local business</h2>
+      <p class="section-lead">The Local AI Visibility Report checks how ChatGPT, Perplexity, and Claude represent your business today, and what to fix first.</p>
+      <a href="{{ '/local-visibility-report/' | relative_url }}" class="btn btn-primary">Get the free Local Visibility Report</a>
+    {% when '/page-optimization-report/' %}
+      <h2 class="section-title">Turn this into a page-level fix list</h2>
+      <p class="section-lead">The Page Optimization Report audits any URL for schema, structure, and GEO gaps — and hands you a prioritized checklist in minutes.</p>
+      <a href="{{ '/page-optimization-report/' | relative_url }}" class="btn btn-primary">Get the free Page Optimization Report</a>
+    {% when '/#report-form' %}
+      <h2 class="section-title">See where your brand stands right now</h2>
+      <p class="section-lead">The AI Visibility Report benchmarks your brand across ChatGPT, Perplexity, and Google AI Overviews, with a prioritized action plan.</p>
+      <a href="{{ '/#report-form' | relative_url }}" class="btn btn-primary">Run your free AI Visibility Report</a>
+    {% else %}
+      <h2 class="section-title">Free reports for your AI visibility</h2>
+      <p class="section-lead">See exactly where your brand stands in AI-generated answers — and what to fix first. Three free audits covering citations, entity signals, schema, and page-level optimization.</p>
+      <a href="{{ '/reports/' | relative_url }}" class="btn btn-primary">See all free reports</a>
+    {% endcase %}
   </div>
 </section>

@@ -1,5 +1,6 @@
 ---
 layout: post
+related_report: /#report-form
 redirect_from:
   - /2026/04/04/geo-vs-seo-difference/
   - /geo-vs-seo-difference-2/
