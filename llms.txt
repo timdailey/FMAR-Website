@@ -1,0 +1,62 @@
+# Fix My AI Rank
+
+> Fix My AI Rank helps B2B companies get cited in AI-generated answers (ChatGPT, Perplexity, Google AI Overviews, Claude) through entity signal audits, schema markup fixes, and Generative Engine Optimization (GEO) / Answer Engine Optimization (AEO).
+
+Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing agency. The site offers free, automated AI visibility reports plus paid GEO/AEO services for companies that rank well on Google but are missing from AI-generated answers.
+
+## Reports
+
+- [AI Visibility Report](https://fixmyairank.com/): Free report benchmarking a company's entity signals, content gaps, and schema markup against its top competitors.
+- [Entity and Contribution Report](https://fixmyairank.com/entity-report/): Identifies third-party signal gaps (Wikipedia, Wikidata, G2, Crunchbase, etc.) that cause AI systems to recommend competitors first.
+- [Local AI Visibility Report](https://fixmyairank.com/local-visibility-report/): Audits how ChatGPT, Perplexity, and Claude see a local business and what to fix first.
+- [Page Optimization Report](https://fixmyairank.com/page-optimization-report/): Full GEO and SEO audit of a single URL with copy-paste schema fixes and a prioritized checklist.
+- [Local AI Visibility Report for Plastic Surgery Practices](https://fixmyairank.com/plastic-surgery-ai-visibility-report/): Industry-specific version of the local visibility report for cosmetic surgery practices.
+
+## Glossary
+
+- [What Is AI Visibility?](https://fixmyairank.com/glossary/ai-visibility/): Definition and why it matters.
+- [What Is Answer Engine Optimization (AEO)?](https://fixmyairank.com/glossary/answer-engine-optimization/)
+- [What Are Entity Signals?](https://fixmyairank.com/glossary/entity-signals/): GEO definition and examples.
+- [What Is an Entity in GEO?](https://fixmyairank.com/glossary/entity/): And why it matters.
+- [What Is Google AI Overviews?](https://fixmyairank.com/glossary/google-ai-overviews/): GEO guide for brands.
+- [What Is Retrieval-Augmented Generation (RAG)?](https://fixmyairank.com/glossary/retrieval-augmented-generation/)
+- [Schema Markup Checklist for AI Visibility](https://fixmyairank.com/glossary/schema-markup/)
+- [What Is Share of AI Voice?](https://fixmyairank.com/glossary/share-of-ai-voice/): The GEO metric explained.
+- [What Is an AI Citation?](https://fixmyairank.com/glossary/what-is-an-ai-citation/): GEO definition and examples.
+
+## Blog
+
+- [RealSelf, Zwivel, and Vitals: Which Directories Actually Move the Needle for AI Citations in Med Aesthetics](https://fixmyairank.com/blog/realself-zwivel-vitals-directories/)
+- [The Local AI Visibility Checklist for Cosmetic Surgery Practices](https://fixmyairank.com/blog/local-ai-visibility-checklist-cosmetic-surgery/)
+- [Plastic Surgery Marketing Agency vs. DIY: What AI Visibility Changes About the Decision](https://fixmyairank.com/blog/plastic-surgery-marketing-agency-vs-diy/)
+- [Marketing for Plastic Surgery Practices: The Complete Guide for the AI Search Era](https://fixmyairank.com/blog/marketing-for-plastic-surgery-practices/)
+- [How to Optimize for AI Search: A Step-by-Step Guide](https://fixmyairank.com/blog/how-to-optimize-for-ai-search/)
+- [AEO Tools: An Evaluator's Framework Before You Buy Anything](https://fixmyairank.com/blog/aeo-tools/)
+- [Where Does ChatGPT Get Its Information? What Marketers Need to Know](https://fixmyairank.com/blog/where-does-chatgpt-get-its-information/)
+- [From SEO to GEO: What Transfers, What Doesn't, and How to Sequence the Work](https://fixmyairank.com/blog/seo-to-geo/)
+- [What Is an Answer Engine?](https://fixmyairank.com/blog/what-is-an-answer-engine/)
+- [SEO vs GEO vs AEO: What's the Difference?](https://fixmyairank.com/blog/seo-vs-geo-vs-aeo/)
+- [How to Rank in Google AI Overviews](https://fixmyairank.com/blog/how-to-rank-in-google-ai-overviews/)
+- [The GEO Audit: What to Check and How to Fix It](https://fixmyairank.com/blog/geo-audit/)
+- [What Is Answer Engine Optimization (AEO)?](https://fixmyairank.com/blog/what-is-answer-engine-optimization/)
+- [LLM Visibility: What It Is and How to Measure It](https://fixmyairank.com/blog/llm-visibility/)
+- [How to Track Your Brand's AI Visibility](https://fixmyairank.com/blog/how-to-track-ai-visibility/)
+- [How the AI Visibility Report Works](https://fixmyairank.com/blog/how-the-ai-visibility-report-works/)
+- [10 AI Visibility Tools for Generative Engine Optimization (2026)](https://fixmyairank.com/blog/ai-visibility-tools-geo-2026/)
+- [Why Your Website Isn't Showing Up in AI Answers](https://fixmyairank.com/blog/why-website-not-showing-in-ai-answers/)
+- [The Schema Markup Checklist That Makes AI Systems Take You Seriously](https://fixmyairank.com/blog/schema-markup-checklist-ai-visibility/)
+- [How ChatGPT and Perplexity Choose Which Brands to Cite](https://fixmyairank.com/blog/how-chatgpt-perplexity-choose-brands-to-cite/)
+- [GEO vs. SEO: What's the Difference and Do You Need Both?](https://fixmyairank.com/blog/geo-vs-seo-difference/)
+- [Your SEO Is Working. AI Has Never Heard of You.](https://fixmyairank.com/blog/your-seo-is-working-ai-hasnt-heard-of-you/)
+
+## Company
+
+- [About](https://fixmyairank.com/about/): Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing agency.
+- [Services](https://fixmyairank.com/services/): Paid services that close the gaps identified in the free reports, plus custom AI-powered lead magnet builds.
+- [FAQ](https://fixmyairank.com/faq/)
+- [Contact](https://fixmyairank.com/contact/)
+
+## Optional
+
+- [Privacy Policy](https://fixmyairank.com/privacy/)
+- [Terms of Service](https://fixmyairank.com/terms/)
