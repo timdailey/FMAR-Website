@@ -184,3 +184,7 @@ The AI Visibility Toolkit is available as a standalone add-on at $99 per month p
 - Content generation and page optimization tools integrated within the same platform
 
 Writesonic GEO plans start at $249 per month. Full Action Center and multi-engine tracking are available on higher tiers.
+
+## Not Ready for a Subscription Yet?
+
+Every tool above is a monitoring platform: you pay, then you watch a dashboard. If you don't have a baseline yet, or you'd rather see a specific, prioritized fix list before committing to a subscription, [Fix My AI Rank works the other way around]({{ '/ai-visibility-platform/' | relative_url }}) — a free report first, a dashboard never.
