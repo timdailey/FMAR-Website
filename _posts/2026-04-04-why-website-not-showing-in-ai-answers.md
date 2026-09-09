@@ -2,6 +2,8 @@
 layout: post
 redirect_from:
   - /2026/04/04/why-website-not-showing-in-ai-answers/
+  - /why-website-not-showing-in-ai-answers-2/
+  - /why-website-not-showing-in-ai-answers/
 title: "Why Your Website Isn't Showing Up in AI Answers"
 description: The most common reasons a website doesn't appear in AI-generated answers - and how to fix them in order of impact.
 image: /assets/images/posts/why-website-not-showing-in-ai-answers-thumb.webp

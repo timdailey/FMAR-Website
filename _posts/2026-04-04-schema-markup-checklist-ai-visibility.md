@@ -2,6 +2,8 @@
 layout: post
 redirect_from:
   - /2026/04/04/schema-markup-checklist-ai-visibility/
+  - /schema-markup-checklist-ai-visibility
+  - /schema-markup-checklist-ai-visibility/
 title: "The Schema Markup Checklist That Makes AI Systems Take You Seriously"
 description: A complete JSON-LD implementation guide covering every schema type that influences AI citation - Organization, WebSite, FAQPage, Article, Product, and BreadcrumbList.
 image: /assets/images/posts/schema-markup-checklist-ai-visibility-thumb.webp

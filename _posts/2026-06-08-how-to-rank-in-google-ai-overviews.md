@@ -2,6 +2,8 @@
 layout: post
 redirect_from:
   - /2026/06/08/how-to-rank-in-google-ai-overviews/
+  - /how-to-rank-in-google-ai-overviews
+  - /how-to-rank-in-google-ai-overviews/
 title: "How to Rank in Google AI Overviews"
 description: Four actions that improve your Google AI Overviews inclusion, in the order that typically produces results fastest — from FAQPage schema to topical authority.
 image: /assets/images/posts/how-to-rank-in-google-ai-overviews-thumb.webp

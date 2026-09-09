@@ -2,6 +2,8 @@
 layout: post
 redirect_from:
   - /2026/06/09/seo-vs-geo-vs-aeo/
+  - /seo-vs-geo-vs-aeo
+  - /seo-vs-geo-vs-aeo/
 title: "SEO vs GEO vs AEO: What's the Difference?"
 description: SEO, GEO, and AEO get used interchangeably but produce different outcomes and require different signals. Here's how to tell them apart and decide where to invest.
 image: /assets/images/posts/seo-vs-geo-vs-aeo-thumb.webp

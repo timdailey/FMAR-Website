@@ -2,6 +2,8 @@
 layout: post
 redirect_from:
   - /2026/06/10/what-is-an-answer-engine/
+  - /what-is-an-answer-engine
+  - /what-is-an-answer-engine/
 title: What Is an Answer Engine?
 description: Answer engines are AI systems that respond to questions directly rather than returning a list of links. Here's what that means for your brand.
 image: /assets/images/posts/what-is-an-answer-engine-thumb.webp
