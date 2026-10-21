@@ -68,17 +68,19 @@ document.querySelectorAll('form[data-webhook]').forEach(form => {
       btn.textContent = btn.dataset.label || 'Submit';
     };
 
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    if (msg) { msg.className = 'form-message'; msg.textContent = ''; }
-
-    // Honeypot check
+    // Honeypot check — bots get no feedback
     const honeypot = form.querySelector('input[name="_hp_website"]');
     if (honeypot && honeypot.value) return;
 
     // Timing check — reject if under 4 seconds
     const tsField = form.querySelector('input[name="_form_ts"]');
-    if (tsField && Date.now() - parseInt(tsField.value) < 4000) return;
+    if (tsField && Date.now() - parseInt(tsField.value) < 4000) {
+      return showError('Please wait a moment, then try again.');
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    if (msg) { msg.className = 'form-message'; msg.textContent = ''; }
 
     // Work email check
     const emailInput = form.querySelector('input[type="email"]');
