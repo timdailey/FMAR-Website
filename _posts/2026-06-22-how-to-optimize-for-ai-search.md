@@ -110,7 +110,7 @@ Model updates shift citation patterns without warning. The reduction in brand re
 
 **Responsible team:** Marketing operations or SEO. **Timeline:** Baseline setup in week one, ongoing monthly reporting.
 
-[The monthly AI visibility tracking framework]({{ '/how-to-track-ai-visibility/' | relative_url }}) covers how to build and run a consistent measurement process.
+[The monthly AI visibility tracking framework]({{ '/blog/how-to-track-ai-visibility/' | relative_url }}) covers how to build and run a consistent measurement process.
 
 ## What AI Engines Actually Trust
 
