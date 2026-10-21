@@ -37,3 +37,4 @@ exclude:
   - vendor
   - .bundle
   - node_modules
+  - _archive

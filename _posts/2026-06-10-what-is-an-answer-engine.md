@@ -44,4 +44,4 @@ The brands that appear in AI-generated answers tend to share a few characteristi
 
 ## How to find out where you stand
 
-The fastest way to assess your AI visibility is to run the same buyer-intent queries your prospects are asking and see whether your brand appears in the answers. That's exactly what our [AI Visibility Report](/reports/) does — we run the queries, benchmark you against competitors, and show you what's missing.
+The fastest way to assess your AI visibility is to run the same buyer-intent queries your prospects are asking and see whether your brand appears in the answers. That's exactly what our [AI Visibility Report](/#report-form) does — we run the queries, benchmark you against competitors, and show you what's missing.

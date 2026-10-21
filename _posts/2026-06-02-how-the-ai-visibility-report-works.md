@@ -1,6 +1,5 @@
 ---
 layout: post
-related_report: /#report-form
 redirect_from:
   - /2026/06/02/how-the-ai-visibility-report-works/
 title: "How the AI Visibility Report Works"

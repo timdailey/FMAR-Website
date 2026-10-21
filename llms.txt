@@ -2,15 +2,11 @@
 
 > Fix My AI Rank helps B2B companies get cited in AI-generated answers (ChatGPT, Perplexity, Google AI Overviews, Claude) through entity signal audits, schema markup fixes, and Generative Engine Optimization (GEO) / Answer Engine Optimization (AEO).
 
-Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing agency. The site offers free, automated AI visibility reports plus paid GEO/AEO services for companies that rank well on Google but are missing from AI-generated answers.
+Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing agency. The site offers a free, automated AI visibility report for companies that rank well on Google but are missing from AI-generated answers.
 
-## Reports
+## Report
 
 - [AI Visibility Report](https://fixmyairank.com/): Free report benchmarking a company's entity signals, content gaps, and schema markup against its top competitors.
-- [Entity and Contribution Report](https://fixmyairank.com/entity-report/): Identifies third-party signal gaps (Wikipedia, Wikidata, G2, Crunchbase, etc.) that cause AI systems to recommend competitors first.
-- [Local AI Visibility Report](https://fixmyairank.com/local-visibility-report/): Audits how ChatGPT, Perplexity, and Claude see a local business and what to fix first.
-- [Page Optimization Report](https://fixmyairank.com/page-optimization-report/): Full GEO and SEO audit of a single URL with copy-paste schema fixes and a prioritized checklist.
-- [Local AI Visibility Report for Plastic Surgery Practices](https://fixmyairank.com/plastic-surgery-ai-visibility-report/): Industry-specific version of the local visibility report for cosmetic surgery practices.
 
 ## Glossary
 
@@ -26,10 +22,6 @@ Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing a
 
 ## Blog
 
-- [RealSelf, Zwivel, and Vitals: Which Directories Actually Move the Needle for AI Citations in Med Aesthetics](https://fixmyairank.com/blog/realself-zwivel-vitals-directories/)
-- [The Local AI Visibility Checklist for Cosmetic Surgery Practices](https://fixmyairank.com/blog/local-ai-visibility-checklist-cosmetic-surgery/)
-- [Plastic Surgery Marketing Agency vs. DIY: What AI Visibility Changes About the Decision](https://fixmyairank.com/blog/plastic-surgery-marketing-agency-vs-diy/)
-- [Marketing for Plastic Surgery Practices: The Complete Guide for the AI Search Era](https://fixmyairank.com/blog/marketing-for-plastic-surgery-practices/)
 - [How to Optimize for AI Search: A Step-by-Step Guide](https://fixmyairank.com/blog/how-to-optimize-for-ai-search/)
 - [AEO Tools: An Evaluator's Framework Before You Buy Anything](https://fixmyairank.com/blog/aeo-tools/)
 - [Where Does ChatGPT Get Its Information? What Marketers Need to Know](https://fixmyairank.com/blog/where-does-chatgpt-get-its-information/)
@@ -52,7 +44,6 @@ Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing a
 ## Company
 
 - [About](https://fixmyairank.com/about/): Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing agency.
-- [Services](https://fixmyairank.com/services/): Paid services that close the gaps identified in the free reports, plus custom AI-powered lead magnet builds.
 - [FAQ](https://fixmyairank.com/faq/)
 - [Contact](https://fixmyairank.com/contact/)
 

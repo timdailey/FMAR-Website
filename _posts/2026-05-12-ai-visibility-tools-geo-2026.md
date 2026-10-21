@@ -60,7 +60,7 @@ AthenaHQ offers self-serve and custom enterprise plans. Pricing is credit-based.
 
 ### 2. Fix My AI Rank
 
-[Fix My AI Rank](https://fixmyairank.com) is a GEO auditing and consulting service that provides a free AI Visibility Report for brands. The report tests citation rates across ChatGPT, Perplexity, and Claude using buyer-intent queries.
+[Fix My AI Rank](https://fixmyairank.com) is a GEO auditing tool that provides a free AI Visibility Report for brands. The report tests citation rates across ChatGPT, Perplexity, and Claude using buyer-intent queries.
 
 **Key features:**
 
@@ -71,7 +71,7 @@ AthenaHQ offers self-serve and custom enterprise plans. Pricing is credit-based.
 - Competitor citation benchmarking
 - Prioritized action plan organized by impact and execution order
 
-Fix My AI Rank combines the free report with consulting services for brands that want to implement GEO improvements.
+The report is free, and its prioritized action plan is designed for your team to implement directly.
 
 ### 3. Frase
 

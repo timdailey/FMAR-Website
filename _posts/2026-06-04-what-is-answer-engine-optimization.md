@@ -110,4 +110,4 @@ Before investing in new content, it's worth checking whether your existing pages
 
 **Test 4:** Do you have content that directly addresses comparison queries? "How does [your product] compare to [competitor]?" is one of the most common AI query patterns for buyers in evaluation mode. If that answer isn't on your site in a clear, structured form, you're likely absent from those responses by default.
 
-Most companies that go through these four tests find at least two areas where AEO improvements are fast and high-impact. The full picture — including how your entity signals and schema compare to competitors — is what an [AI Visibility Report]({{ '/reports/' | relative_url }}) surfaces.
+Most companies that go through these four tests find at least two areas where AEO improvements are fast and high-impact. The full picture — including how your entity signals and schema compare to competitors — is what an [AI Visibility Report]({{ '/#report-form' | relative_url }}) surfaces.
