@@ -7,6 +7,7 @@ Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing a
 ## Report
 
 - [AI Visibility Report](https://fixmyairank.com/): Free report benchmarking a company's entity signals, content gaps, and schema markup against its top competitors.
+- [AI Visibility Platform](https://fixmyairank.com/ai-visibility-platform/): How a free, specific report compares with subscription AI visibility monitoring platforms.
 
 ## Glossary
 
@@ -23,7 +24,7 @@ Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing a
 ## Blog
 
 - [How to Optimize for AI Search: A Step-by-Step Guide](https://fixmyairank.com/blog/how-to-optimize-for-ai-search/)
-- [AEO Tools: An Evaluator's Framework Before You Buy Anything](https://fixmyairank.com/blog/aeo-tools/)
+- [How to Evaluate AI Visibility Tools Before You Buy One](https://fixmyairank.com/blog/aeo-tools/)
 - [Where Does ChatGPT Get Its Information? What Marketers Need to Know](https://fixmyairank.com/blog/where-does-chatgpt-get-its-information/)
 - [From SEO to GEO: What Transfers, What Doesn't, and How to Sequence the Work](https://fixmyairank.com/blog/seo-to-geo/)
 - [What Is an Answer Engine?](https://fixmyairank.com/blog/what-is-an-answer-engine/)
@@ -34,7 +35,7 @@ Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing a
 - [LLM Visibility: What It Is and How to Measure It](https://fixmyairank.com/blog/llm-visibility/)
 - [How to Track Your Brand's AI Visibility](https://fixmyairank.com/blog/how-to-track-ai-visibility/)
 - [How the AI Visibility Report Works](https://fixmyairank.com/blog/how-the-ai-visibility-report-works/)
-- [10 AI Visibility Tools for Generative Engine Optimization (2026)](https://fixmyairank.com/blog/ai-visibility-tools-geo-2026/)
+- [10 Best AI Visibility Tools for GEO & AEO in 2026](https://fixmyairank.com/blog/ai-visibility-tools-geo-2026/)
 - [Why Your Website Isn't Showing Up in AI Answers](https://fixmyairank.com/blog/why-website-not-showing-in-ai-answers/)
 - [The Schema Markup Checklist That Makes AI Systems Take You Seriously](https://fixmyairank.com/blog/schema-markup-checklist-ai-visibility/)
 - [How ChatGPT and Perplexity Choose Which Brands to Cite](https://fixmyairank.com/blog/how-chatgpt-perplexity-choose-brands-to-cite/)

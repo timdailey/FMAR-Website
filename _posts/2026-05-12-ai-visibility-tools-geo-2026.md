@@ -6,6 +6,7 @@ title: "10 Best AI Visibility Tools for GEO & AEO in 2026"
 description: Compare the top AI visibility tools for tracking brand citations in ChatGPT, Perplexity, Claude, and Google AI Overviews — what each one measures, who it's for, and how to pick one.
 image: /assets/images/posts/ai-visibility-tools-geo-2026-thumb.webp
 date: 2026-05-12
+last_modified: 2026-10-21
 author: tim_dailey
 category: GEO
 tags: [GEO tools, AI visibility, AI citations, share of AI voice, AEO]
