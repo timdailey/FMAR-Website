@@ -48,17 +48,17 @@ You'll delegate the work. First, grasp the scope and sequence to staff, define, 
 
 This isn't an SEO update. This is a new way content gets surfaced, selected, and cited.
 
-Traditional SEO optimizes for keyword density, backlink volume, and page authority. Algorithms return a ranked list of links. [AI answer engines]({{ '/what-is-an-answer-engine/' | relative_url }}) like ChatGPT, Perplexity, Google AI Overviews, and Claude synthesize an answer. They select citations based on structured signals, entity clarity, and topical authority. Earning a citation is different from earning a ranking. The two disciplines require different strategies, different signals, and different measurement frameworks.
+Traditional SEO optimizes for keyword density, backlink volume, and page authority. Algorithms return a ranked list of links. [AI answer engines]({{ '/glossary/answer-engine-optimization/#what-is-an-answer-engine' | relative_url }}) like ChatGPT, Perplexity, Google AI Overviews, and Claude synthesize an answer. They select citations based on structured signals, entity clarity, and topical authority. Earning a citation is different from earning a ranking. The two disciplines require different strategies, different signals, and different measurement frameworks.
 
 The overlap data shows this clearly. Only 12% of links cited by leading AI platforms overlapped with Google's top 10 results for the same queries. If your team measures AI search visibility using traditional rankings as a proxy, you're missing roughly 88% of the citation opportunity.
 
 Traditional rankings aren't irrelevant. A page ranking first on Google has a 33.07% chance of appearing in AI Overviews. A page ranking tenth has a 13.04% chance. The more useful way to read those numbers: even a page in position one gets ignored by AI Overviews 67% of the time. SEO and GEO are complementary. The problem is treating one as a substitute for the other.
 
-The AI search environment now spans at least ten distinct platforms, including ChatGPT, Perplexity, [Google AI Overviews]({{ '/how-to-rank-in-google-ai-overviews/' | relative_url }}), Claude, Gemini, and others. A multi-platform visibility strategy is necessary. Model volatility adds risk. A single model update can shift citation patterns significantly. This is why monitoring capability needs to be built alongside optimization work, not added later.
+The AI search environment now spans at least ten distinct platforms, including ChatGPT, Perplexity, [Google AI Overviews]({{ '/blog/how-to-rank-in-google-ai-overviews/' | relative_url }}), Claude, Gemini, and others. A multi-platform visibility strategy is necessary. Model volatility adds risk. A single model update can shift citation patterns significantly. This is why monitoring capability needs to be built alongside optimization work, not added later.
 
 The four primary levers for improving AI search visibility are freshness, structure, authority, and multi-platform presence. Every roadmap step below maps to one or more of these.
 
-[How SEO, GEO, and AEO differ and how to sequence investment]({{ '/seo-vs-geo-vs-aeo/' | relative_url }})
+[How SEO, GEO, and AEO differ and how to sequence investment]({{ '/blog/geo-vs-seo-difference/' | relative_url }})
 
 ## The GEO Implementation Roadmap
 
@@ -130,4 +130,9 @@ GEO is a young discipline. Measurement standards are inconsistent across platfor
 
 Citation accuracy is a real risk. When AI engines misattribute claims or cite your content in a distorting context, the damage is reputational and hard to correct quickly. There's no equivalent of a Google reconsideration request for a misattributed AI citation.
 
-Budget conversations are also harder. The ROI cycle for topical authority development is long. Before over-allocating budget to unverified tools, running a [GEO audit]({{ '/geo-audit/' | relative_url }}) gives leadership hard evidence of where the gaps are and a clear baseline to measure future lift against. Build explicit interim milestones into your plan: schema implementation completion, entity audit closure, first cluster published, citation baseline established. Each is a defensible proof of progress before citation lift becomes measurable.
+Budget conversations are also harder. The ROI cycle for topical authority development is long. Before over-allocating budget to unverified tools, running a [GEO audit]({{ '/blog/why-website-not-showing-in-ai-answers/#how-to-audit-each-cause' | relative_url }}) gives leadership hard evidence of where the gaps are and a clear baseline to measure future lift against. Build explicit interim milestones into your plan: schema implementation completion, entity audit closure, first cluster published, citation baseline established. Each is a defensible proof of progress before citation lift becomes measurable.
+
+## Related Reading
+
+- [Where Does ChatGPT Get Its Information? What Marketers Need to Know]({{ '/blog/where-does-chatgpt-get-its-information/' | relative_url }})
+- [From SEO to GEO: What Transfers, What Doesn't, and How to Sequence the Work]({{ '/blog/seo-to-geo/' | relative_url }})

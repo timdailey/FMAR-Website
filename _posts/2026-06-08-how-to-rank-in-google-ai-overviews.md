@@ -105,3 +105,9 @@ Two tracking methods work in parallel:
 **Manual query testing.** Once a month, run your target informational queries in Google (incognito browser, clean session) and record whether an AI Overview appears, whether your brand or content is sourced in it, and which competitors appear. This is the direct measurement. It's the only way to confirm actual inclusion rather than eligibility.
 
 Changes to the schema tend to show up in Search Console within one to two weeks. Changes to AI Overviews inclusion take longer to observe because they depend on Google's crawl cycle and how frequently AI Overviews are refreshed for specific queries. Testing monthly gives you enough data to see whether changes are having an effect without over-indexing on session-level noise.
+
+## Related Reading
+
+- [What Is Google AI Overviews?]({{ '/glossary/google-ai-overviews/' | relative_url }})
+- [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }})
+- [How to Optimize for AI Search: A Step-by-Step Guide]({{ '/blog/how-to-optimize-for-ai-search/' | relative_url }})

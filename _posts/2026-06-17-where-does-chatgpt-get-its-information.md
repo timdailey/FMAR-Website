@@ -28,7 +28,7 @@ faq:
 
 Picture this: a marketing leader opens ChatGPT and types in a search for her brand. The response mentions two competitors by name, describes one of them with accurate positioning, and her company doesn't appear anywhere. She tries a few variations. Same result. Her brand has a website, a LinkedIn page, a reasonable SEO footprint. The model has never heard of her.
 
-[AI answer engines]({{ '/what-is-an-answer-engine/' | relative_url }}) are now a primary discovery surface for buyers doing research. The brands that understand how ChatGPT actually sources its answers gain a real advantage. The ones that assume it works like traditional SEO and run the same playbook will keep getting the same result. Where ChatGPT gets its information is a specific, answerable question, and the answer shapes everything about how you should be building visibility.
+[AI answer engines]({{ '/glossary/answer-engine-optimization/#what-is-an-answer-engine' | relative_url }}) are now a primary discovery surface for buyers doing research. The brands that understand how ChatGPT actually sources its answers gain a real advantage. The ones that assume it works like traditional SEO and run the same playbook will keep getting the same result. Where ChatGPT gets its information is a specific, answerable question, and the answer shapes everything about how you should be building visibility.
 
 ## The Model Is Not Doing What You Think It Is
 
@@ -46,7 +46,7 @@ The knowledge cutoff is real, but for most brand visibility gaps, it's a seconda
 
 ## Why Some Brands Appear, and Others Don't
 
-What appears in a ChatGPT answer is not random and not purely a reflection of SEO rank. The underlying mechanic is entity confidence. The model weights its responses toward entities it can describe with high confidence, meaning it encountered consistent, corroborated signals about that entity across multiple sources during training. This is why [SEO, GEO, and AEO]({{ '/seo-vs-geo-vs-aeo/' | relative_url }}) require different strategies and different signals. Ranking in Google and appearing in ChatGPT depend on entirely separate systems.
+What appears in a ChatGPT answer is not random and not purely a reflection of SEO rank. The underlying mechanic is entity confidence. The model weights its responses toward entities it can describe with high confidence, meaning it encountered consistent, corroborated signals about that entity across multiple sources during training. This is why [SEO, GEO, and AEO]({{ '/blog/geo-vs-seo-difference/' | relative_url }}) require different strategies and different signals. Ranking in Google and appearing in ChatGPT depend on entirely separate systems.
 
 The model doesn't simply count how many times a brand appears. It develops a weighted picture of what a brand is across many different sources. A brand that appears in a hundred owned blog posts but almost nowhere else gives the model a single-source signal. A brand described accurately in ten independent publications, analyst reports, and industry databases gives the model corroborated confirmation. The second brand will almost always win on entity confidence, even if the first published more total content.
 
@@ -82,7 +82,7 @@ Large language models favor clearly structured, declarative content. They extrac
 
 Video and audio content is not directly ingested the same way text is. Transcripts and text-based summaries are what actually contribute to the training signal. If your best thinking lives in a podcast, it's invisible to the model until it exists as text.
 
-Once you've worked through these four levers, a [GEO audit]({{ '/geo-audit/' | relative_url }}) gives you a structured way to check your progress across citation testing, entity signal completeness, schema coverage, and content gaps.
+Once you've worked through these four levers, a [GEO audit]({{ '/blog/why-website-not-showing-in-ai-answers/#how-to-audit-each-cause' | relative_url }}) gives you a structured way to check your progress across citation testing, entity signal completeness, schema coverage, and content gaps.
 
 ## What Marketers Can't Fully Control
 
@@ -94,6 +94,12 @@ This section exists because honest guidance requires it. The four levers above a
 
 **Third-party coverage is not fully within your control.** A publication deciding to cover your brand, an analyst choosing to include you in a report, a Wikipedia editor determining your company meets notability standards: these are external judgments. You can influence them through outreach, positioning clarity, and genuine newsworthiness. You cannot manufacture them the way you can publish a blog post.
 
-**AI product behavior varies across providers.** What builds visibility in ChatGPT may not transfer identically to Perplexity, Claude, or [Google AI Overviews]({{ '/how-to-rank-in-google-ai-overviews/' | relative_url }}). Each model was trained on a different corpus with different weighting decisions. Diversifying your signals across structured data, third-party coverage, and consistent entity profiles gives you the best cross-model coverage, but don't assume full portability.
+**AI product behavior varies across providers.** What builds visibility in ChatGPT may not transfer identically to Perplexity, Claude, or [Google AI Overviews]({{ '/blog/how-to-rank-in-google-ai-overviews/' | relative_url }}). Each model was trained on a different corpus with different weighting decisions. Diversifying your signals across structured data, third-party coverage, and consistent entity profiles gives you the best cross-model coverage, but don't assume full portability.
 
 Start now anyway. The brands building strong entity profiles today will carry that advantage into future training cycles. The ones waiting for clearer feedback loops will be playing catch-up.
+
+## Related Reading
+
+- [How ChatGPT and Perplexity Choose Which Brands to Cite]({{ '/blog/how-chatgpt-perplexity-choose-brands-to-cite/' | relative_url }})
+- [What Is Retrieval-Augmented Generation (RAG)?]({{ '/glossary/retrieval-augmented-generation/' | relative_url }})
+- [How to Optimize for AI Search: A Step-by-Step Guide]({{ '/blog/how-to-optimize-for-ai-search/' | relative_url }})

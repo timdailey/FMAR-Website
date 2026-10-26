@@ -189,3 +189,9 @@ Writesonic GEO plans start at $249 per month. Full Action Center and multi-engin
 ## Not Ready for a Subscription Yet?
 
 Every tool above is a monitoring platform: you pay, then you watch a dashboard. If you don't have a baseline yet, or you'd rather see a specific, prioritized fix list before committing to a subscription, [Fix My AI Rank works the other way around]({{ '/ai-visibility-platform/' | relative_url }}) — a free report first, a dashboard never.
+
+## Related Reading
+
+- [How to Evaluate AI Visibility Tools Before You Buy One]({{ '/blog/aeo-tools/' | relative_url }})
+- [How to Track Your Brand's AI Visibility]({{ '/blog/how-to-track-ai-visibility/' | relative_url }})
+- [How the AI Visibility Report Works]({{ '/blog/how-the-ai-visibility-report-works/' | relative_url }})

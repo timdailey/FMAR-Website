@@ -12,12 +12,11 @@ Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing a
 ## Glossary
 
 - [What Is AI Visibility?](https://fixmyairank.com/glossary/ai-visibility/): Definition and why it matters.
-- [What Is Answer Engine Optimization (AEO)?](https://fixmyairank.com/glossary/answer-engine-optimization/)
-- [What Are Entity Signals?](https://fixmyairank.com/glossary/entity-signals/): GEO definition and examples.
-- [What Is an Entity in GEO?](https://fixmyairank.com/glossary/entity/): And why it matters.
+- [What Is Answer Engine Optimization (AEO)?](https://fixmyairank.com/glossary/answer-engine-optimization/): AEO definition, what an answer engine is, and how AEO differs from SEO and GEO.
+- [What Are Entity Signals? (And What Is an Entity in GEO?)](https://fixmyairank.com/glossary/entity-signals/): Definitions, the signals that matter, and how to measure them.
 - [What Is Google AI Overviews?](https://fixmyairank.com/glossary/google-ai-overviews/): GEO guide for brands.
 - [What Is Retrieval-Augmented Generation (RAG)?](https://fixmyairank.com/glossary/retrieval-augmented-generation/)
-- [Schema Markup Checklist for AI Visibility](https://fixmyairank.com/glossary/schema-markup/)
+- [Schema Markup Checklist for AI Visibility](https://fixmyairank.com/glossary/schema-markup/): Organization, WebSite, FAQPage, Article, Product, and BreadcrumbList JSON-LD with examples.
 - [What Is Share of AI Voice?](https://fixmyairank.com/glossary/share-of-ai-voice/): The GEO metric explained.
 - [What Is an AI Citation?](https://fixmyairank.com/glossary/what-is-an-ai-citation/): GEO definition and examples.
 
@@ -27,20 +26,13 @@ Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing a
 - [How to Evaluate AI Visibility Tools Before You Buy One](https://fixmyairank.com/blog/aeo-tools/)
 - [Where Does ChatGPT Get Its Information? What Marketers Need to Know](https://fixmyairank.com/blog/where-does-chatgpt-get-its-information/)
 - [From SEO to GEO: What Transfers, What Doesn't, and How to Sequence the Work](https://fixmyairank.com/blog/seo-to-geo/)
-- [What Is an Answer Engine?](https://fixmyairank.com/blog/what-is-an-answer-engine/)
-- [SEO vs GEO vs AEO: What's the Difference?](https://fixmyairank.com/blog/seo-vs-geo-vs-aeo/)
 - [How to Rank in Google AI Overviews](https://fixmyairank.com/blog/how-to-rank-in-google-ai-overviews/)
-- [The GEO Audit: What to Check and How to Fix It](https://fixmyairank.com/blog/geo-audit/)
-- [What Is Answer Engine Optimization (AEO)?](https://fixmyairank.com/blog/what-is-answer-engine-optimization/)
-- [LLM Visibility: What It Is and How to Measure It](https://fixmyairank.com/blog/llm-visibility/)
 - [How to Track Your Brand's AI Visibility](https://fixmyairank.com/blog/how-to-track-ai-visibility/)
 - [How the AI Visibility Report Works](https://fixmyairank.com/blog/how-the-ai-visibility-report-works/)
 - [10 Best AI Visibility Tools for GEO & AEO in 2026](https://fixmyairank.com/blog/ai-visibility-tools-geo-2026/)
-- [Why Your Website Isn't Showing Up in AI Answers](https://fixmyairank.com/blog/why-website-not-showing-in-ai-answers/)
-- [The Schema Markup Checklist That Makes AI Systems Take You Seriously](https://fixmyairank.com/blog/schema-markup-checklist-ai-visibility/)
+- [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)](https://fixmyairank.com/blog/why-website-not-showing-in-ai-answers/)
 - [How ChatGPT and Perplexity Choose Which Brands to Cite](https://fixmyairank.com/blog/how-chatgpt-perplexity-choose-brands-to-cite/)
-- [GEO vs. SEO: What's the Difference and Do You Need Both?](https://fixmyairank.com/blog/geo-vs-seo-difference/)
-- [Your SEO Is Working. AI Has Never Heard of You.](https://fixmyairank.com/blog/your-seo-is-working-ai-hasnt-heard-of-you/)
+- [GEO vs. SEO vs. AEO: What's the Difference and Do You Need Both?](https://fixmyairank.com/blog/geo-vs-seo-difference/)
 
 ## Company
 

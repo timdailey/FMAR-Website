@@ -4,10 +4,15 @@ redirect_from:
   - /2026/04/04/why-website-not-showing-in-ai-answers/
   - /why-website-not-showing-in-ai-answers-2/
   - /why-website-not-showing-in-ai-answers/
-title: "Why Your Website Isn't Showing Up in AI Answers"
-description: The most common reasons a website doesn't appear in AI-generated answers - and how to fix them in order of impact.
+  - /2026/06/05/geo-audit/
+  - /geo-audit
+  - /geo-audit/
+  - /blog/geo-audit/
+title: "Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)"
+description: The most common reasons a website doesn't appear in AI-generated answers, a four-part audit to find which one is yours, and the order to fix them in.
 image: /assets/images/posts/why-website-not-showing-in-ai-answers-thumb.webp
 date: 2026-04-04
+last_modified: 2026-10-26
 author: tim_dailey
 category: AI Visibility
 tags: [AI visibility, entity signals, schema markup, GEO, AI citations]
@@ -18,6 +23,10 @@ takeaways:
 faq:
   - q: Why isn't my website showing up in AI answers?
     a: The most common reasons a website doesn't appear in AI-generated answers are missing entity signals (incomplete profiles on G2, Capterra, Crunchbase, and Google Business Profile), absent schema markup (particularly Organization JSON-LD on the homepage), content that buries answers instead of leading with them, and inconsistent or thin third-party validation. Most companies have more than one of these issues simultaneously.
+  - q: What is a GEO audit?
+    a: A GEO audit is a structured review of the signals that determine whether AI systems cite your brand. It covers four areas - citation testing (how often and how accurately you appear in AI responses), entity signal review (whether your external profiles are complete and consistent), schema markup audit (whether your site communicates brand and content facts to AI crawlers), and content gap analysis (whether the site has the content types AI systems draw on most).
+  - q: How is a GEO audit different from an SEO audit?
+    a: An SEO audit examines page rankings, crawlability, backlinks, and keyword performance. A GEO audit examines brand entity recognition, schema completeness, and citation performance across AI platforms. Some inputs overlap, but the outputs are measured differently and the fixes often differ. A brand can pass an SEO audit and still have significant GEO gaps.
   - q: Does having a good Google ranking help with AI visibility?
     a: Partially. Good Google rankings and AI visibility overlap in areas like content quality and technical crawlability. But AI systems weight different signals - entity recognition, schema markup, third-party citations, and direct-answer content structure. A brand can rank well on Google and still be invisible in AI-generated answers because the signals AI systems use to form confidence about a brand are largely separate from what drives search rankings.
   - q: How do I test whether my brand appears in AI answers?
@@ -102,6 +111,30 @@ The fixes don't all take the same amount of time. Schema markup is a fast develo
 
 Most companies can move meaningfully on the fast fixes in a week or two. The impact on AI citation shows up faster than most people expect, particularly on Perplexity, which retrieves live web content, and on [Google AI Overviews]({{ '/glossary/google-ai-overviews/' | relative_url }}), which responds quickly to schema changes.
 
+## How to Audit Each Cause
+
+If you want to know which of these problems is yours, run a four-part GEO audit. Start with the first part, because the citation data tells you what's happening and the other three tell you why.
+
+**1. Citation testing.** Pick ten questions your buyers would realistically ask an AI system about your category and run them on ChatGPT, Perplexity, and Claude. For each answer, note whether you appeared, where, whether the description was accurate, and which competitors were named. The pattern points to the cause: absent from ChatGPT but present on Perplexity usually means weak entity signals but fresh content, while present but described inaccurately means your external profiles contradict each other. Absent everywhere usually means very weak entity signals or content that isn't structured for extraction. The [monthly tracking framework]({{ '/blog/how-to-track-ai-visibility/' | relative_url }}) turns this into a repeatable process.
+
+**2. Entity signal review.** Check that profiles exist on Wikipedia and Wikidata, Google Business Profile, G2 and Capterra, Crunchbase, and LinkedIn, and that each describes your company the same way your site does. Conflicting descriptions ("AI software platform" on one directory, "data analytics company" on another) produce hedged citations or none. Alignment matters as much as presence. See [what entity signals are]({{ '/glossary/entity-signals/' | relative_url }}).
+
+**3. Schema markup audit.** Run the homepage and key pages through Google's Rich Results Test and check for Organization schema on the homepage (with `sameAs` links to your external profiles), FAQPage schema on FAQ content, Article schema on posts, and BreadcrumbList on multi-level pages. Note what's missing and what's implemented but broken. The [schema markup guide]({{ '/glossary/schema-markup/' | relative_url }}) has JSON-LD examples.
+
+**4. Content gap analysis.** Check whether the site has the content types AI systems draw on most: FAQ pages, comparison pages, how-to guides, case studies with quantified results, and original research. For each, the answer is binary: present or not. Present but badly structured (FAQ with no schema, case studies with no numbers) goes on the fix list rather than the build list.
+
+### What to Fix First
+
+The order that produces the fastest measurable results:
+
+1. **Schema fixes.** Organization schema on the homepage and FAQPage schema on existing FAQ content. Hours of developer work, and the effect on engines that crawl live content can show up within weeks.
+2. **Entity profile completion.** Claim or update Google Business Profile, G2, Capterra, Crunchbase, and LinkedIn with one consistent description.
+3. **Content restructuring.** Apply the first-sentence test to your highest-traffic pages: does each H2 lead with a direct answer? Add FAQ blocks where they're missing.
+4. **Content creation.** Fill the gaps restructuring can't fix: missing comparison pages, how-to guides, and case studies. The [step-by-step optimization guide]({{ '/blog/how-to-optimize-for-ai-search/' | relative_url }}) covers this phase.
+5. **Longer-lead entity building.** Press coverage, Wikidata, analyst mentions. Slow, but the most durable.
+
+Run the audit once to set a baseline and again six months later to measure progress. The citation-testing part can be repeated monthly.
+
 ## How to Find Out Exactly What's Holding You Back
 
 The five issues above cover the majority of cases, but they're not a complete diagnosis for any individual company. The specific gaps, and the order in which to address them, depend on what's already in place, what your competitors have done, and which AI platforms matter most for your category.
@@ -109,3 +142,8 @@ The five issues above cover the majority of cases, but they're not a complete di
 Running a manual test takes about five minutes. Open ChatGPT, Perplexity, Claude, and Google and ask the questions your buyers would ask when evaluating vendors in your space. Record where you appear, where you don't, and who's being named instead. That gives you a baseline.
 
 A full AI Visibility Report goes further. It tests your brand across all four platforms using real buyer-intent queries, audits your entity signals and schema markup, benchmarks everything against your top competitors, and delivers a prioritized action plan with specific fixes in execution order.
+
+## Related Reading
+
+- [How ChatGPT and Perplexity Choose Which Brands to Cite]({{ '/blog/how-chatgpt-perplexity-choose-brands-to-cite/' | relative_url }})
+- [How to Rank in Google AI Overviews]({{ '/blog/how-to-rank-in-google-ai-overviews/' | relative_url }})

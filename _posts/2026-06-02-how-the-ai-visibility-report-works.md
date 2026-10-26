@@ -95,3 +95,9 @@ The report is a point-in-time audit. It captures how your brand performs across 
 It doesn't guarantee citation improvements. GEO isn't deterministic. The fixes we recommend are the ones most consistently associated with improved citation performance across the audits we've run, but AI platforms make their own decisions and those decisions are not fully predictable.
 
 What the report does provide: a structured view of where you stand today, benchmarked against your named competitors, with a prioritized list of changes targeting the gaps most likely to affect how AI platforms describe and recommend your brand.
+
+## Related Reading
+
+- [AI Visibility Platform: Free Reports + Done-for-You Fixes]({{ '/ai-visibility-platform/' | relative_url }})
+- [How to Track Your Brand's AI Visibility]({{ '/blog/how-to-track-ai-visibility/' | relative_url }})
+- [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }})
