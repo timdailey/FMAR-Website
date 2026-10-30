@@ -163,3 +163,4 @@ The trade-off is cost and setup time. A manual tracking sheet costs nothing and 
 - [10 Best AI Visibility Tools for GEO & AEO in 2026]({{ '/blog/ai-visibility-tools-geo-2026/' | relative_url }})
 - [How to Evaluate AI Visibility Tools Before You Buy One]({{ '/blog/aeo-tools/' | relative_url }})
 - [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }})
+- [How to Read Your AI Visibility Report (and What to Fix First)]({{ '/blog/how-to-read-your-ai-visibility-report/' | relative_url }})

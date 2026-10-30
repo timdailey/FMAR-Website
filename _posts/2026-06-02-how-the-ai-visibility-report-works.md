@@ -101,3 +101,4 @@ What the report does provide: a structured view of where you stand today, benchm
 - [AI Visibility Platform: Free Reports + Done-for-You Fixes]({{ '/ai-visibility-platform/' | relative_url }})
 - [How to Track Your Brand's AI Visibility]({{ '/blog/how-to-track-ai-visibility/' | relative_url }})
 - [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }})
+- [How to Read Your AI Visibility Report (and What to Fix First)]({{ '/blog/how-to-read-your-ai-visibility-report/' | relative_url }})
