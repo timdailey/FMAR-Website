@@ -94,3 +94,4 @@ If you know of a primary-source statistic that belongs here, or one we have wron
 - [GEO vs. SEO vs. AEO: What's the Difference and Do You Need Both?]({{ '/blog/geo-vs-seo-difference/' | relative_url }})
 - [What Is Generative Engine Optimization (GEO)?]({{ '/what-is-generative-engine-optimization-geo/' | relative_url }})
 - [How to Rank in Google AI Overviews]({{ '/blog/how-to-rank-in-google-ai-overviews/' | relative_url }})
+- [Do Backlinks Matter for AI Search? What the Evidence Says]({{ '/blog/do-backlinks-matter-for-ai-search/' | relative_url }})

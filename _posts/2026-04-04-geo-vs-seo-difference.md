@@ -198,3 +198,4 @@ The good news: the GEO gap is currently measurable and improvable faster than do
 - [Where Does ChatGPT Get Its Information? What Marketers Need to Know]({{ '/blog/where-does-chatgpt-get-its-information/' | relative_url }})
 - [What Is Generative Engine Optimization (GEO)?]({{ '/what-is-generative-engine-optimization-geo/' | relative_url }})
 - [AI Search Statistics (2026): Citable Numbers on AI Overviews, AI Mode, and AI Citations]({{ '/blog/ai-search-statistics/' | relative_url }})
+- [Do Backlinks Matter for AI Search? What the Evidence Says]({{ '/blog/do-backlinks-matter-for-ai-search/' | relative_url }})
