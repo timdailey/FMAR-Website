@@ -136,3 +136,4 @@ Budget conversations are also harder. The ROI cycle for topical authority develo
 
 - [Where Does ChatGPT Get Its Information? What Marketers Need to Know]({{ '/blog/where-does-chatgpt-get-its-information/' | relative_url }})
 - [From SEO to GEO: What Transfers, What Doesn't, and How to Sequence the Work]({{ '/blog/seo-to-geo/' | relative_url }})
+- [How Long Does It Take to Show Up in AI Answers? A Realistic Timeline]({{ '/blog/how-long-does-it-take-to-show-up-in-ai-answers/' | relative_url }})
