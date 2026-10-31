@@ -110,4 +110,4 @@ Changes to the schema tend to show up in Search Console within one to two weeks.
 
 - [What Is Google AI Overviews?]({{ '/glossary/google-ai-overviews/' | relative_url }})
 - [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }})
-- [How to Optimize for AI Search: A Step-by-Step Guide]({{ '/blog/how-to-optimize-for-ai-search/' | relative_url }})
+- [AI Search Optimization Guide: A Step-by-Step Roadmap for 2026]({{ '/blog/how-to-optimize-for-ai-search/' | relative_url }})
