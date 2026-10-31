@@ -111,6 +111,6 @@ Start now anyway. The brands building strong entity profiles today will carry th
 
 ## Related Reading
 
-- [How ChatGPT and Perplexity Choose Which Brands to Cite]({{ '/blog/how-chatgpt-perplexity-choose-brands-to-cite/' | relative_url }})
+- [How ChatGPT, Perplexity and Google AI Overviews Choose Which Brands to Cite]({{ '/blog/how-chatgpt-perplexity-choose-brands-to-cite/' | relative_url }})
 - [What Is Retrieval-Augmented Generation (RAG)?]({{ '/glossary/retrieval-augmented-generation/' | relative_url }})
 - [AI Search Optimization Guide: A Step-by-Step Roadmap for 2026]({{ '/blog/how-to-optimize-for-ai-search/' | relative_url }})
