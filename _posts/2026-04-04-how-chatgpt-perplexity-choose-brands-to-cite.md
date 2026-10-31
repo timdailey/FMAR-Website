@@ -134,3 +134,4 @@ That foundation is buildable. The schema takes a developer an afternoon. The pro
 
 - [Where Does ChatGPT Get Its Information? What Marketers Need to Know]({{ '/blog/where-does-chatgpt-get-its-information/' | relative_url }})
 - [How to Track Your Brand's AI Visibility]({{ '/blog/how-to-track-ai-visibility/' | relative_url }})
+- [How to Find Which Sources ChatGPT and Perplexity Cite in Your Industry]({{ '/blog/find-which-sources-chatgpt-perplexity-cite/' | relative_url }})

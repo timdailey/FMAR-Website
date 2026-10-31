@@ -164,3 +164,4 @@ The trade-off is cost and setup time. A manual tracking sheet costs nothing and 
 - [How to Evaluate AI Visibility Tools Before You Buy One]({{ '/blog/aeo-tools/' | relative_url }})
 - [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }})
 - [How to Read Your AI Visibility Report (and What to Fix First)]({{ '/blog/how-to-read-your-ai-visibility-report/' | relative_url }})
+- [How to Find Which Sources ChatGPT and Perplexity Cite in Your Industry]({{ '/blog/find-which-sources-chatgpt-perplexity-cite/' | relative_url }})
