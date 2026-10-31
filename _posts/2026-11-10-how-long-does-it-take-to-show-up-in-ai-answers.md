@@ -91,6 +91,6 @@ If a page has been indexed for a month or more and nothing has changed, the caus
 
 ## Related Reading
 
-- [How to Optimize for AI Search: A Step-by-Step Guide]({{ '/blog/how-to-optimize-for-ai-search/' | relative_url }})
+- [AI Search Optimization Guide: A Step-by-Step Roadmap for 2026]({{ '/blog/how-to-optimize-for-ai-search/' | relative_url }})
 - [How to Track Your Brand's AI Visibility]({{ '/blog/how-to-track-ai-visibility/' | relative_url }})
 - [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }})
