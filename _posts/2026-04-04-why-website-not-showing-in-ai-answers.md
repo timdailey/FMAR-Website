@@ -148,3 +148,4 @@ A full AI Visibility Report goes further. It tests your brand across all four pl
 - [How ChatGPT and Perplexity Choose Which Brands to Cite]({{ '/blog/how-chatgpt-perplexity-choose-brands-to-cite/' | relative_url }})
 - [How to Rank in Google AI Overviews]({{ '/blog/how-to-rank-in-google-ai-overviews/' | relative_url }})
 - [How Long Does It Take to Show Up in AI Answers? A Realistic Timeline]({{ '/blog/how-long-does-it-take-to-show-up-in-ai-answers/' | relative_url }})
+- [llms.txt: What It Is, Whether It Works, and How to Create One]({{ '/blog/what-is-llms-txt/' | relative_url }})
