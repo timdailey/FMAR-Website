@@ -3,19 +3,20 @@ layout: post
 redirect_from:
   - /2026/06/17/where-does-chatgpt-get-its-information/
 title: "Where Does ChatGPT Get Its Information? What Marketers Need to Know"
-description: ChatGPT draws from a fixed training corpus, not live search. Understanding how it builds entity confidence explains why some brands appear in AI answers and others don't.
+description: ChatGPT answers draw on a training corpus and, when search is used, on live web results. Understanding how it builds entity confidence explains why some brands appear in AI answers and others don't.
 image: /assets/images/posts/where-does-chatgpt-get-its-information-thumb.webp
 date: 2026-06-17
+last_modified: 2026-11-19
 author: tim_dailey
 category: GEO
 tags: [ChatGPT, entity signals, AI visibility, GEO, training data]
 takeaways:
-  - ChatGPT draws from a fixed training corpus, not live search, so strategies built on publishing fresh content miss the actual problem.
+  - ChatGPT answers draw on a training corpus and, when search is used, on live web results. Strategies built only on publishing fresh content miss the entity-recognition problem behind most visibility gaps.
   - The model builds entity confidence from corroborated signals across independent sources, not from the volume of content on your own site.
   - Closing the visibility gap requires consistent entity profiles, schema markup, earned third-party mentions, and content structured for extraction.
 faq:
   - q: Does ChatGPT search the internet for answers?
-    a: Not by default. The base model draws from a static training dataset collected before a knowledge cutoff date. Browsing is an optional capability that most users don't enable or trigger in standard sessions. Any strategy built on the assumption that ChatGPT is actively searching live content is built on a flawed foundation.
+    a: "It can. The base model draws from training data collected before a knowledge cutoff date, but ChatGPT also has a search feature. OpenAI documents a search crawler, OAI-SearchBot, that surfaces websites in ChatGPT search, and a separate agent, ChatGPT-User, that visits pages when a user asks. Whether a given answer uses live search depends on the product, plan, and question. A strategy that assumes either mode alone is incomplete."
   - q: What is ChatGPT's knowledge cutoff date, and does it matter for my brand?
     a: The cutoff means the model has not processed content published after a certain point. But for most brand visibility gaps, the cutoff is a secondary factor. The primary issue is whether the model had enough consistent, corroborated signals to build a confident entity representation before that cutoff. Brands well represented in the training data before the cutoff appear in responses. Brands not represented often don't, regardless of how much they publish afterward.
   - q: Where does ChatGPT get its information about specific companies or brands?
@@ -24,6 +25,14 @@ faq:
     a: Almost always an entity recognition gap. Your competitor has been described more consistently and with more third-party corroboration across the sources the model trained on. This is a gap that can be closed with the right approach — entity profile consolidation, schema implementation, and earned third-party mentions are where to start.
   - q: How do I get my brand mentioned in ChatGPT answers?
     a: Consolidate your entity profile across all indexable surfaces, implement Organization schema with sameAs links to your external profiles, earn corroborating third-party mentions in publications likely to have been in the training corpus, and structure your on-site content for LLM extractability. The AI visibility tracking framework covers how to measure your progress monthly across ChatGPT, Perplexity, Claude, and Google AI Overviews.
+  - q: Where does ChatGPT get its info from?
+    a: "From two main places. One is its training data, which includes web text from crawled pages, books, structured databases, and licensed content collected before a cutoff date. The other, when search is used, is live web results. For questions about a specific brand, the quality of what was written about it across independent sources matters most."
+  - q: How does ChatGPT get its information?
+    a: "Through training, during which it learns patterns and associations from a large body of text, and, when search is used, by looking up web pages at the time of the question. It does not look facts up in a database. It generates answers from learned associations plus any search results provided."
+  - q: Where does ChatGPT get its data?
+    a: "The data comes from the sources used to train the model and, for search answers, from web pages that OpenAI's search crawler can access. OpenAI publishes documentation on its crawlers, including how site owners can allow or block them in robots.txt."
+  - q: Does ChatGPT use real-time information?
+    a: "When it uses search, yes: it can draw on current web pages. When it does not, its answers reflect training data up to a cutoff date. Because you can't always tell which mode produced an answer, check whether the answer includes links to web sources."
 ---
 
 Picture this: a marketing leader opens ChatGPT and types in a search for her brand. The response mentions two competitors by name, describes one of them with accurate positioning, and her company doesn't appear anywhere. She tries a few variations. Same result. Her brand has a website, a LinkedIn page, a reasonable SEO footprint. The model has never heard of her.
@@ -36,11 +45,13 @@ Most marketers building [AI visibility]({{ '/glossary/ai-visibility/' | relative
 
 That assumption produces the wrong strategy. It leads teams to focus on content volume and link equity when the actual problem is entity recognition: whether the model has enough consistent, corroborated information to describe your brand confidently. Those are different problems with different fixes. The discipline of addressing the second problem is [generative engine optimization]({{ '/what-is-generative-engine-optimization-geo/' | relative_url }}).
 
-The model doesn't browse the internet when you ask it a question. It draws from a fixed corpus of text collected before a specific knowledge cutoff date. When you submit a query, the model generates a response based on patterns it learned during training. It doesn't memorize facts the way a database does. It develops weighted associations between concepts, entities, and descriptions. When you ask about a brand, the model generates a response based on how that brand was described, discussed, and corroborated across its training data.
+The base model doesn't look anything up on its own when you ask it a question. It draws from a fixed corpus of text collected before a specific knowledge cutoff date. When you submit a query, the model generates a response based on patterns it learned during training. It doesn't memorize facts the way a database does. It develops weighted associations between concepts, entities, and descriptions. When you ask about a brand, the model generates a response based on how that brand was described, discussed, and corroborated across its training data.
 
 ChatGPT's training data covers a wide range of sources: web text from crawled pages, books, structured databases, licensed content, and various publicly available corpora. Not all sources carry equal weight. The model's confidence in any given entity reflects both the volume and the consistency of signals it encountered during training.
 
 ChatGPT has browsing capabilities that can pull live information, but most users in standard chat sessions don't enable or trigger them, though this varies by subscription tier and context. The default behavior is memory, not search. If your visibility plan depends on the model crawling your latest content, the plan has a structural flaw.
+
+**Update, November 2026:** OpenAI now documents a search crawler, OAI-SearchBot, that is used to surface websites in ChatGPT's search features, and a separate agent, ChatGPT-User, that visits pages when a user asks a question ([OpenAI crawler documentation](https://developers.openai.com/api/docs/bots)). So some answers draw on live web results, and others rely on training data. You can't always tell which, and the tactics below help in both cases, since entity clarity is what lets either mode describe your brand accurately. Whether your pages are crawlable by the search crawler is covered in the [tracking and audit guides]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }}).
 
 The knowledge cutoff is real, but for most brand visibility gaps, it's a secondary issue. Brands represented in the training data before the cutoff appear in responses. Brands that weren't often don't, regardless of how much they published afterward. The gap is not primarily about recency. It's about how the model learned to think about your brand before training ended.
 
