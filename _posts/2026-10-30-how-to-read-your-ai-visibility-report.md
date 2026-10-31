@@ -116,3 +116,4 @@ If you're new to the term, [what AI visibility is]({{ '/glossary/ai-visibility/'
 - [How the AI Visibility Report Works]({{ '/blog/how-the-ai-visibility-report-works/' | relative_url }})
 - [How to Track Your Brand's AI Visibility]({{ '/blog/how-to-track-ai-visibility/' | relative_url }})
 - [Why Your Website Isn't Showing Up in AI Answers (and How to Audit It)]({{ '/blog/why-website-not-showing-in-ai-answers/' | relative_url }})
+- [How to Structure a Stakeholder Report on AI Visibility (Free Template)]({{ '/blog/ai-visibility-stakeholder-report-template/' | relative_url }})
