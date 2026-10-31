@@ -165,3 +165,4 @@ Budget conversations are also harder. The ROI cycle for topical authority develo
 - [From SEO to GEO: What Transfers, What Doesn't, and How to Sequence the Work]({{ '/blog/seo-to-geo/' | relative_url }})
 - [How Long Does It Take to Show Up in AI Answers? A Realistic Timeline]({{ '/blog/how-long-does-it-take-to-show-up-in-ai-answers/' | relative_url }})
 - [llms.txt: What It Is, Whether It Works, and How to Create One]({{ '/blog/what-is-llms-txt/' | relative_url }})
+- [The AI Citation Checklist: 20 Checks Before You Publish a Page]({{ '/blog/ai-citation-checklist/' | relative_url }})
