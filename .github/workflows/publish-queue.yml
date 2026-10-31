@@ -1,0 +1,75 @@
+name: Publish queued content
+
+# Content is prepared ahead of time as one commit per publish date, each tagged
+# publish/YYYY-MM-DD-slug. Every morning this job applies the commits whose date has
+# arrived to main, checks that the site still builds, pushes, and triggers the deploy.
+# Applied tags are renamed to published/..., so deleting a publish/... tag cancels that item.
+
+on:
+  schedule:
+    - cron: "0 12 * * *" # 12:00 UTC = 7:00 AM EST / 8:00 AM EDT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: publish-queue
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+      - name: Apply due content
+        id: apply
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin --tags --force
+          today=$(date -u +%F)
+          applied=()
+          failed=0
+          for tag in $(git tag -l 'publish/*' | sort); do
+            due=${tag#publish/}
+            due=${due:0:10}
+            if [[ "$due" > "$today" ]]; then continue; fi
+            echo "Applying $tag (due $due)"
+            if ! git cherry-pick -x "$tag^{commit}"; then
+              git cherry-pick --abort || true
+              echo "::error::Conflict applying $tag. Resolve by hand; nothing from this tag onward was applied."
+              failed=1
+              break
+            fi
+            applied+=("$tag")
+          done
+          if [ ${#applied[@]} -eq 0 ]; then
+            echo "Nothing due."
+            exit $failed
+          fi
+          if ! JEKYLL_ENV=production bundle exec jekyll build; then
+            echo "::error::Site build failed after applying ${applied[*]}; nothing was pushed."
+            exit 1
+          fi
+          git push origin HEAD:main
+          for tag in "${applied[@]}"; do
+            git push origin "refs/tags/$tag:refs/tags/published/${tag#publish/}"
+            git push origin ":refs/tags/$tag"
+          done
+          # Pushes made with GITHUB_TOKEN do not start other workflows, so start the deploy directly.
+          gh workflow run jekyll.yml --ref main
+          exit $failed
