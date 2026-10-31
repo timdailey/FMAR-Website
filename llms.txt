@@ -35,6 +35,7 @@ Fix My AI Rank is built and operated by TangySlice Collective, a B2B marketing a
 - [How ChatGPT and Perplexity Choose Which Brands to Cite](https://fixmyairank.com/blog/how-chatgpt-perplexity-choose-brands-to-cite/)
 - [GEO vs. SEO vs. AEO: What's the Difference and Do You Need Both?](https://fixmyairank.com/blog/geo-vs-seo-difference/)
 - [How Long Does It Take to Show Up in AI Answers? A Realistic Timeline](https://fixmyairank.com/blog/how-long-does-it-take-to-show-up-in-ai-answers/)
+- [llms.txt: What It Is, Whether It Works, and How to Create One](https://fixmyairank.com/blog/what-is-llms-txt/)
 
 ## Company
 
