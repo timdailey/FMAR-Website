@@ -1,11 +1,48 @@
+// GA4 event helper — never send PII (email, company, website) as parameters
+function track(name, params) {
+  if (typeof gtag === 'function') gtag('event', name, params || {});
+}
+
+// Fire an event, then run next() once GA confirms it or after 500ms,
+// so a page redirect can't cut the event off (and ad blockers can't stall it)
+function trackThen(name, params, next) {
+  let done = false;
+  const go = () => { if (!done) { done = true; next(); } };
+  track(name, Object.assign({}, params, { transport_type: 'beacon', event_callback: go }));
+  setTimeout(go, 500);
+}
+
 // FAQ accordion
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    if (!isOpen) {
+      item.classList.add('open');
+      track('faq_open', { question: btn.textContent.trim().slice(0, 100) });
+    }
   });
+});
+
+// CTA clicks that lead to the report form
+document.addEventListener('click', e => {
+  const link = e.target.closest('a[href*="#report-form"]');
+  if (!link) return;
+  let location = 'page_body';
+  if (link.closest('header')) location = 'header';
+  else if (link.closest('footer')) location = 'footer';
+  else if (link.closest('.hero, .page-hero')) location = 'hero';
+  else if (link.closest('.section--cta')) location = 'bottom_cta';
+  else if (link.closest('.post-content')) location = 'post_inline';
+  track('cta_click', { cta_location: location });
+});
+
+// Form engagement — first focus in each webhook form
+document.querySelectorAll('form[data-webhook]').forEach(form => {
+  form.addEventListener('focusin', () => {
+    track('form_start', { form_id: form.dataset.formId || 'unknown' });
+  }, { once: true });
 });
 
 // Free email domains blocklist
@@ -62,7 +99,11 @@ document.querySelectorAll('form[data-webhook]').forEach(form => {
     const btn = form.querySelector('button[type="submit"]');
     const msg = form.querySelector('.form-message');
 
-    const showError = text => {
+    const formId = form.dataset.formId || 'unknown';
+    let redirecting = false;
+
+    const showError = (text, errorType) => {
+      track('form_error', { form_id: formId, error_type: errorType });
       if (msg) { msg.className = 'form-message error'; msg.textContent = text; }
       btn.disabled = false;
       btn.textContent = btn.dataset.label || 'Submit';
@@ -75,7 +116,7 @@ document.querySelectorAll('form[data-webhook]').forEach(form => {
     // Timing check — reject if under 4 seconds
     const tsField = form.querySelector('input[name="_form_ts"]');
     if (tsField && Date.now() - parseInt(tsField.value) < 4000) {
-      return showError('Please wait a moment, then try again.');
+      return showError('Please wait a moment, then try again.', 'timing');
     }
 
     btn.disabled = true;
@@ -85,7 +126,7 @@ document.querySelectorAll('form[data-webhook]').forEach(form => {
     // Work email check
     const emailInput = form.querySelector('input[type="email"]');
     if (emailInput && isBlockedEmail(emailInput.value)) {
-      return showError('Please use your work email address.');
+      return showError('Please use your work email address.', 'free_email');
     }
 
     // Strip internal spam fields before sending
@@ -102,22 +143,29 @@ document.querySelectorAll('form[data-webhook]').forEach(form => {
       });
       if (!res.ok) throw new Error('Server error');
       if (form.dataset.redirect) {
-        window.location.href = form.dataset.redirect;
+        redirecting = true;
+        trackThen('generate_lead', { form_id: formId }, () => {
+          window.location.href = form.dataset.redirect;
+        });
         return;
       }
+      track('generate_lead', { form_id: formId });
       if (msg) {
         msg.className = 'form-message success';
         msg.textContent = form.dataset.successMsg || 'Thanks! We\'ll be in touch soon.';
       }
       form.reset();
     } catch {
+      track('form_error', { form_id: formId, error_type: 'server' });
       if (msg) {
         msg.className = 'form-message error';
         msg.textContent = 'Something went wrong. Please try again.';
       }
     } finally {
-      btn.disabled = false;
-      btn.textContent = btn.dataset.label || 'Submit';
+      if (!redirecting) {
+        btn.disabled = false;
+        btn.textContent = btn.dataset.label || 'Submit';
+      }
     }
   });
 });

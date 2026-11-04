@@ -22,7 +22,8 @@ permalink: /contact/
   <div class="container">
     <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:0.5rem">Not ready for a call?</h2>
     <p style="color:var(--color-muted);margin-bottom:2rem">Send us a note and we'll get back to you within one business day.</p>
-    <form data-webhook="https://tangyslice.app.n8n.cloud/webhook/contact-us"
+    <form data-form-id="contact"
+          data-webhook="https://tangyslice.app.n8n.cloud/webhook/contact-us"
           data-redirect="{{ '/contact-thank-you/' | relative_url }}"
           data-success-msg="Message received — we'll be in touch within one business day."
           style="max-width:560px">

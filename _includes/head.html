@@ -58,7 +58,13 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-G8834P64H5');
+  {% if page.url == '/' %}{% assign content_group = 'home' %}
+  {% elsif page.url contains '/blog/' %}{% assign content_group = 'blog' %}
+  {% elsif page.url contains '/glossary/' %}{% assign content_group = 'glossary' %}
+  {% elsif page.url contains '/what-is-generative-engine-optimization-geo/' %}{% assign content_group = 'pillar' %}
+  {% elsif page.url contains '/about/' %}{% assign content_group = 'about' %}
+  {% else %}{% assign content_group = 'other' %}{% endif %}
+  gtag('config', 'G-G8834P64H5', { content_group: '{{ content_group }}' });
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
